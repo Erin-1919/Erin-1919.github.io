@@ -1,6 +1,6 @@
 title: "Mingke Erin Li"
 author: "Mingke Erin Li"
-description: #todo
+description: "dot dot dot"
 permalink: /:title/
 lang: "en"
 excerpt_separator: "\n\n\n"
@@ -17,10 +17,10 @@ minimal: true             # use a dark header
 # Menu
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {file: "index.html", title: "Home", icon: home}
-  - {file: "README.md", title: "About me", icon: address-card}
-  - {file: "blog.md", title: "Blog", icon: adn}
-  - {file: "Mingke_CV_2021.pdf", title: "CV", icon: file}
+  - {file: "index.html", title: "Home"}
+  - {file: "README.md", title: "About me"}
+  - {file: "blog.md", title: "Blog"}
+  - {file: "Mingke_CV_2021.pdf", title: "CV"}
   
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Mail, icon: envelope, url: "mailto:mingke.li@ucalgary.ca"}
