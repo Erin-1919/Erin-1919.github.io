@@ -5,10 +5,10 @@ layout: post
 
 ![terrain](https://images.unsplash.com/photo-1472101126021-3910d43690a9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1191&q=80)
 
-So... How to determine an appropriate resolution for the digital elevation model (DEM)?
+### So... How to determine an appropriate resolution for the digital elevation model (DEM)?
 > > We need a grid resolution that optimally reflects the complexity of a terrain; one that can represent the majority of the geomorphic features. Suitable cell size can be derived for a given set of sampled elevations (e.g., contours or points), to fit the complexity of the terrain and/or the scale of work for the targeted application (Hengl and Evans, 2009).
 
-These are some points to be considered after reviewing literature:
+### These are some points to be considered after reviewing literature:
 1. The original source. 
     * When modeling elevation from vector contours, one needs to consider the horizontal and vertical intervals or the total length of the contours
     * DEM products gained from satellites (e.g., ASTER and SRTM) have fixed resolutions, increasing resolution from available datasets does not generate more information
