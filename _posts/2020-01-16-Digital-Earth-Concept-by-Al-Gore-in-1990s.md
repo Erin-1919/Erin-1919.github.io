@@ -3,7 +3,7 @@ title: "Digital Earth Concept by Al Gore in 1990s"
 layout: post
 ---
 
-![terrain]( https://images.unsplash.com/photo-1584974292709-5c2f0619971b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80)
+![DigitalEarth]( https://images.unsplash.com/photo-1584974292709-5c2f0619971b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80)
 
 > > The tools we have most commonly used to interact with data, such as the "desktop metaphor" employed by the Macintosh and Windows operating systems, are not really suited to this new challenge. I believe we need a "Digital Earth". A multi-resolution, three-dimensional representation of the planet, into which we can embed vast quantities of geo-referenced data. -- Al Gore, Given at the California Science Center, Los Angeles, California, on January 31, 1998.
 
