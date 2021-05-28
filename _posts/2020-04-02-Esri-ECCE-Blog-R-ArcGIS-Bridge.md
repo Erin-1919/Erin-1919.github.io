@@ -3,8 +3,6 @@ title: "Esri ECCE Blog – R ArcGIS Bridge"
 layout: post
 ---
 
-![hex](https://ecce.esri.ca/wp-content/uploads/2020/03/5_Example_of_grid.png)
-
 This is a blog post on Esri ECCE website: [Modeling Line Features on DGGS Grids in the R-ArcGIS Environment](https://ecce.esri.ca/ucalgary-blog/2020/03/24/modeling-line-features-dggs-r-arcgis/)
 
 ### Step 1. Generate DGGS grids with three different configurations covering the study area in the R environment
