@@ -1,5 +1,5 @@
 ---
-title: "AUTOCARTO Conference 2020 "
+title: "AutoCarto Conference 2020 "
 layout: post
 ---
 
