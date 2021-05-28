@@ -17,4 +17,3 @@ This is the second time I participated in the Esri ECCE App Challenge. We were e
 
 [Watch Video](https://youtu.be/NpTDdZ8eVqw)
 
-{% include embed.html url="https://youtu.be/NpTDdZ8eVqw?list=PLdgq5G0ox73W8EPLi2z1sP8ymKG3Ib74_" %}
