@@ -3,8 +3,6 @@ title: "Esri ECCE Blog – Handy Script Tool"
 layout: post
 ---
 
-![plot](https://ecce.esri.ca/wp-content/uploads/2019/03/Snipaste_2019-03-02_15-38-51.png)
-
 This is a blog post on Esri ECCE website: [Handy Script Tool to Summarize Tree Characteristics within a Moving Search Window]( https://ecce.esri.ca/unb-blog/2019/03/11/handy-script-tool-to-summarize-tree-characteristics-within-a-moving-search-window/)
 
 ```
