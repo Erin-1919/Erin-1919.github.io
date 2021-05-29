@@ -5,8 +5,7 @@ permalink: /:title/
 lang: "en"
 excerpt_separator: "\n\n\n"
 date_format: "%B %d, %Y"
-icon: 🔥 # the emoji used as the favicon
-last_updated: true # set to true if you want to display last updated in the footer
+favicon: assets/favicon.ico # the emoji used as the favicon
 
 # Layout
 
