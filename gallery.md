@@ -4,6 +4,6 @@ title: Gallery
 gallery_path: "assets/img/pexels"
 ---
 
-This is a photo gallery made from the static files in the `assets/img/pexels` folder. 
+A gallery of photographs I took.
 
 {% include gallery.html gallery_path=page.gallery_path %}
