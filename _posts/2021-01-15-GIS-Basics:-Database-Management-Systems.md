@@ -69,10 +69,10 @@ File organization means the physical organization of the records on the secondar
  
 **Main references**
 
-Linder, W., 2009. Digital photogrammetry, Berlin: Springer.
 Rigaux et al., 2002. Spatial databases: with application to GIS, San Francisco: Morgan Kaufmann Publishers.
 
 Stefanakis, E., 2014. Geographic Databases and Information Systems, North Charleston, SC: CreateSpace Independent Publishing Platform.
+
 Stefanakis, E., 2015. Web Mapping and Geospatial Web Services: An Introduction, North Charleston, SC: CreateSpace Independent Publishing Platform.
 
 Tomlin, C.D., 1990. Geographic information systems and cartographic modeling, Englewood Cliffs, N.J.: Prentice-Hall.
