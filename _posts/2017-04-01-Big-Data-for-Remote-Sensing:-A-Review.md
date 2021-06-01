@@ -35,18 +35,8 @@ Figure 2. Analysis of the entire remote sensing data processing flow.
 **High complexity.** The high complexity of remote sensing big data comes from three aspects: metadata, format diversity, and data velocity. First, metadata describes the composition of data and the approach by which they were acquired, whose fast growth is always accompanied by that of remote sensing data [12]. For example, the number of metadata records in EOSDIS exceeds 129 million and grows at the rate of 66,000 every day [9]. Besides, the structures of organized metadata are also complex. The geo-metadata usually consist of image parameters, map parameters, projection parameters, and satellite or sensor parameters, which vary with different swath widths, basic sizes, geographical locations, map usages, projection methods, orbital heights, etc. [10]. Second, the complexity of remote sensing big data also lies in the various data formats including HDF, GeoTIFF, netCDF and so on. Each of these data formats has different physical structure, operation interface and library [13]. What is more important, a lot of remote sensing data are based on real-time acquisition and computing. Although the volume and the rate of data gathering may be manageable for a single data center, nation-wide or global data archives are storing massive data waiting for processing [10]. 
 
 Table 1. Examples of different spatial, temporal, and spectral resolution of remote sensing systems <sup>1</sup>.
-| Data Product  | Provider        | Spatial Resolution (m)  | Pass Over Time        | Spectral Resolution (band) |
-|---------------|-----------------|-------------------------|-----------------------|----------------------------|
-|Landsat 5 TM	  |NASA/USGS	      |30, 120	          |Every 16 days        |7     |
-|Landsat 7 ETM+ |NASA/USGS	      |15, 30, 60	        |Every 16 days	      |8     |
-|Landsat 8      |NASA/USGS		    |15, 30, 60, 100	  |Every 16 days	      |11    |
-|AVHRR/3        |NASA/USGS		    |1090	              |Twice daily	        |5     |
-|MODIS          |NASA		          |250, 500, 1000	    |Daily	              |36    |
-|QuickBird      |Digital Globe		|0.61	              |Every 2.4-5.9 days	  |5     |
-|GOES           |NOAA		          |1000, 4000, 8000	  |8 per hour in the Continental US |6   |
-|IKONOS         |Digital Globe	  |1	                |Every 3 days		      |5     |
-|SPOT           |EADS/Astrium		  |60000	            |Every 1-3 days		    |5     |
-|ASTER          |NASA/Government of Japan |15, 90	    |Daily                |15    |
+
+![Table1](/assets/img/20170401/Table1.png)
 
 <sup>1</sup> Derived from Wikipedia (https://en.wikipedia.org/wiki/Remote_sensing_satellite_and_data_overview)
 
