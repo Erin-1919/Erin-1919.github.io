@@ -11,7 +11,7 @@ Since human beings entered the information age, data carriers and data repositor
 
 ![Figure1](/assets/img/20170401/Figure1.png)
 
-Figure 1. Spotlight on big data in different countries (based on Google Trends; acquired in August 2013; derived from [5].)
+Figure 1. Spotlight on big data in different countries (based on Google Trends; acquired in August 2013; derived from [5]).
 
 Nevertheless, how can we prepare ourselves for the coming of the big data era becomes a big issue nowadays, because the traditional technologies and approaches with which we manage the “moderate” data have become out-of-date. In the context of remote sensing, the digitized world, as well as mobile sensors, are main generators of big data, which are tremendously complicated. As with the big data applications in social and economic fields, remote sensing big data are also of little value until they are understood, processed and analyzed. Therefore, we need the improved technologies and methods to harness the huge volume of remote sensing data and to make the most effective use of them.  
 
@@ -48,14 +48,14 @@ Table 1. Examples of different spatial, temporal, and spectral resolution of rem
 |SPOT           |EADS/Astrium		  |60000	            |Every 1-3 days		    |5     |
 |ASTER          |NASA/Government of Japan |15, 90	    |Daily                |15    |
 
-<sup>1</sup> Derived from Wikipedia (https://en.wikipedia.org/wiki/Remote_sensing_satellite_and _data_overview)
+<sup>1</sup> Derived from Wikipedia (https://en.wikipedia.org/wiki/Remote_sensing_satellite_and_data_overview)
 
 ## 3. REMOTE SENSING BIG DATA CHALLENGES
 As an on-the-flow analysis, the remote sensing analysis can be divided into three stages: management, processing, and application (Figure 3). The management stage includes data acquisition, data storage, and data transmission. As mentioned above, remote sensing big data are always in huge volume combined with real-time acquisition and multi-scales, so identifying the most important and most closely-related data in the shortest time is of great significance for data owning. Efficient data storage and data delivery are crucial as well. In terms of data processing, these massive remote sensing data cause challenges in every sub-stage including image fusion, classification, radiometric correction, image enhancement, etc. When applying remote sensing data in the real world, challenges lie in visualization as well as practical collaboration between distributed data centers. The following paragraphs elaborate special challenges and their reasons in each data analyzing stage. 
 
 ![Figure3](/assets/img/20170401/Figure3.png)
 
-Figure 3. The satellite network for earth observation (Derived from [10].)
+Figure 3. The satellite network for earth observation (Derived from [10]).
 
 ### 3.1. MANAGEMENT
 **Acquisition and Identification.** Data acquisition is an important part based on which people can derive data values and address a real remote sensing problem. Challenges exist during acquisition because of heterogeneity of remote sensing data sets. Data gathered from airborne vehicles, satellites or other sensing devices should be preprocessed by geometric correction, atmospheric correction, terrain correction, geo-referencing, and noise removal, during which the data quality can be improved [14]. Furthermore, data will be meaningless unless they are utilized in real applications [15]. The main challenge of remote sensing big data, which is different from the traditional one is how to identify the valuable data, filter “no interest” data, and even combine data from different sources with different formats to solve real-world problems [12]. 
