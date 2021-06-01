@@ -9,7 +9,7 @@ layout: post
 
 I set up a [mind map](https://drive.google.com/file/d/11nuzFqrosP19N0ncjL1-rthJ9jmMqWtB/view?usp=sharing) and wrote detailed [documentation](https://drive.google.com/file/d/1hn2AbcAKBWCZrBU3ng4gLPpaCu2OhDs3/view?usp=sharing) to help myself organize, understand, and memorize knowledge and concepts regarding GIS when preparing for my PhD candidacy exam. 
 
-This is the first part of the doc: **Database Management Systems**.
+This is the second part of the doc: **Database Management Systems**.
 
 Database management systems or DBMS for geospatial data is the kernel of a GIS. This is a super big topic, and I will stay here for a while. I will go through the DBMS basics and DBMS development. 
  
