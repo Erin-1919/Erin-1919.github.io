@@ -1,5 +1,5 @@
 ---
-title: "Big Data for Remote Sensing A Review"
+title: "Big Data for Remote Sensing: A Review"
 layout: post
 ---
 
