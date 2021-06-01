@@ -5,7 +5,7 @@ layout: post
 
 ![mindmap](/assets/img/20210112/mind_map_part.png)
 
-I suppose nobody would think a PhD candidacy exam is a fun stuff. Mine was scheduled for Jan. 12th, 2021. I survived, although the whole prep. was overwhelming and intense. I started the prep. study in the middle of Nov., and it lasted for about two months, obviously, throughout the whole Christmas. One of my examiners is in the field of photogrammetry, so I had to study from zero and went through all kinds of calculus/linear algebra equations. I'm not here to complain but hope to encourage people who have to go through a PhD candidacy exam but do not come with an idealy matched background -- like me -- hold a Master of Science in Forestry but do a PhD in Geomatics Engineering. 
+I suppose nobody would think a PhD candidacy exam is a fun stuff. Mine was scheduled for Jan. 12th, 2021. I survived, although the whole prep. was overwhelming and intense. I started the prep. study in the middle of Nov., and it lasted for about two months, obviously, throughout the whole Christmas. One of my examiners is in the field of photogrammetry, so I had to learn from scratch and went through all kinds of calculus/linear algebra equations. I'm not here to complain but hope to encourage people who have to go through a PhD candidacy exam but do not come with an idealy matched background -- like me -- hold a Master of Science in Forestry but do a PhD in Geomatics Engineering. 
 
 Here are some points I would recommend:
 - Start early and set up small goals for each week.
