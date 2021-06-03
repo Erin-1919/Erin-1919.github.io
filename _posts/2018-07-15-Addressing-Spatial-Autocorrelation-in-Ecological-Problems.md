@@ -6,7 +6,7 @@ layout: post
 ![Ecological](https://images.unsplash.com/photo-1534709153997-d6659469f951?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80)
 
 >> Everything is related to everything else, but near things are more related than distant things.
->> The first law of geography, Tobler, 1970
+>> -- The first law of geography, Tobler, 1970
 
 ## The definition of spatial autocorrelation
 By the 1990s, the field of spatial analysis had been witnessed to matured in both concepts and methods, becoming increasingly fundamental in a lot of disciplines including geography, ecology, sociology, urban planning, environmental studies, etc. (Getis 2007). As its core concept, spatial autocorrelation has attracted more attention from researchers. Spatial autocorrelation shows the correlation among variables across georeferenced space, defined as the observed value of the variable at one locality is dependent on the values at neighboring localities (Sokal 1977). The larger the correspondence between two paired values of a variable, the greater the degree of spatial autocorrelation. Generally, if high (or low) values of the variate are associated with high (or low) values at surrounding localities, the spatial autocorrelation is positive; while if high (or low) values are surrounded by low (or high) values, the spatial autocorrelation is negative. If they do not show conspicuous similarity or dissimilarity, then spatial autocorrelation will not be in evidence (Getis 2007). The typical classification of the spatial situations is based on the nature of 1) regular or irregular system of sites; 2) individual sites being points or regions, and 3) associated variables being discrete or continuous (Besag 1974)
