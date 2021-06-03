@@ -3,6 +3,9 @@ title: "Spatial Synchrony of Insect Populations: A Review"
 layout: post
 ---
 
+![Forest](https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1051&q=80)
+
+
 ## Understanding of spatial synchrony of forest insects 
 The spatial synchrony of forest insect populations refers to geographically disjunct population densities that tend to be temporally correlated (Liebhold et al 2012). Synchronous insect population growth was hypothesized as a cause of the occurrence of an insect outbreak, and the spatial extent of synchronous insect population increases was believed as the most crucial evidence to classify this insect as noxious pests or not (Liebhold et al 2012). Furthermore, understanding the causal mechanisms behind large-scale synchrony of forest insect populations was believed as one of the key insights for outbreak onset forecasting, although predicting potential insect outbreaks would remain a challenge accounting for climate changes as well as habitat modifications (Bouchard et al. 2018). 
 
