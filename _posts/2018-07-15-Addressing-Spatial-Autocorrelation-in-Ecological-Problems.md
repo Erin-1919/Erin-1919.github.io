@@ -6,6 +6,7 @@ layout: post
 ![Ecological](https://images.unsplash.com/photo-1534709153997-d6659469f951?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80)
 
 >> Everything is related to everything else, but near things are more related than distant things.
+>> 
 >> -- The first law of geography, Tobler, 1970
 
 ## The definition of spatial autocorrelation
