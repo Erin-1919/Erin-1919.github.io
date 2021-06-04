@@ -1,5 +1,5 @@
 ---
-title:  "Python for Everyone Esri Course"
+title:  "Python for Everyone – Esri Course"
 layout: post
 ---
 
