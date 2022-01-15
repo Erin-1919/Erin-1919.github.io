@@ -10,4 +10,4 @@ Our lab was invited to host the [ISPRS WG IV/7 (Geo-Data Management) Webinar](ht
 ### Short description:
 Discrete Global Grid Systems (DGGS) are increasingly being adopted for modelling, analysis, and visualization of geospatial data. DGGS have been identified as the backbone of modern Digital Earth frameworks as they “improve the way information is referenced to the earth.” This webinar will provide an overview of the DGGS concepts, DGGS initiatives in Canada, and the research directions and outcomes of our group at the University of Calgary.
 
-[Recorded webinar](https://www.youtube.com/c/ISPRSSC/videos)
+[Recorded webinar](https://www.youtube.com/watch?v=FWGl4lSrIyA)
