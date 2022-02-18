@@ -49,3 +49,10 @@ We investigated the spatial-temporal patterns of spruce budworm (Choristoneura f
 **Li, M.**; MacLean, D.A.; Hennigar, C.R.; Ogilvie, J. Spatial-tempol patterns of spruce budworm defoliation within measured plots in Quebec. The 9th Bi-Annual Eastern Canada - USA Forest Science Conference, Fredericton, Canada
 
 **Li, M.**; MacLean, D.A. GIS analyses of factors influencing spruce budworm outbreak initiation in northern New Brunswick. SERG International Workshop, Edmonton, Canada
+
+## Other Invited Presentations
+### 2022
+Quantization, Analysis, and Application of Terrain Data Modeled in Discrete Global Grid Systems. Presented at the International Society for Photogrammetry and Remote Sensing Work Group IV/7 (Geo-Data Management) Webinar, Online.
+
+### 2021
+Integration Platform for Canadian Terrain Data: A DGGS Perspective. Presented at the Natural Resources Canada, Online.
