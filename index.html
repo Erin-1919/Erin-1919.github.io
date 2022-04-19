@@ -7,76 +7,39 @@ title: "Hello World"
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - 4 Panel Timeline CSS</title>
-        <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Source+Sans+Pro:400" rel="stylesheet">
-<link rel="stylesheet" href="./style.css">
+  <title>CodePen - Swiper - Timeline Progressbar</title>
+  <link rel='stylesheet' href='https://unpkg.com/swiper/swiper-bundle.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<section id="timeline">
-  
-  <div class="tl-item">
-    
-    <div class="tl-bg" style="background-image: url(https://placeimg.com/801/801/nature)"></div>
-    
-    <div class="tl-year">
-      <p class="f2 heading--sanSerif">2011</p>
+<div class="container">
+  <div class="swiper-container-wrapper swiper-container-wrapper--timeline">
+    <!-- Timeline -->
+    <ul class="swiper-pagination-custom">
+      <li class='swiper-pagination-switch first active'><span class='switch-title'>1911</span></li>
+      <li class='swiper-pagination-switch'><span class='switch-title'>1970</span></li>
+      <li class='swiper-pagination-switch'><span class='switch-title'>2021</span></li>
+      <li class='swiper-pagination-switch last'><span class='switch-title'>3000</span></li>
+    </ul>
+    <!-- Progressbar -->
+    <div class="swiper-pagination swiper-pagination-progressbar swiper-pagination-horizontal"></div>
+    <!-- Swiper -->
+    <div class="swiper swiper-container swiper-container--timeline">
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"><span class="title">Swiper Timeline Progressbar</span></div>
+        <div class="swiper-slide"><span class="title">Title 2</span></div>
+        <div class="swiper-slide"><span class="title">Title 3</span></div>
+        <div class="swiper-slide"><span class="title">Title 4</span></div>
+      </div>
     </div>
-
-    <div class="tl-content">
-      <h1>Lorem ipsum dolor sit</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
-    </div>
-
   </div>
-
-  <div class="tl-item">
-    
-    <div class="tl-bg" style="background-image: url(https://placeimg.com/802/802/nature)"></div>
-    
-    <div class="tl-year">
-      <p class="f2 heading--sanSerif">2013</p>
-    </div>
-
-    <div class="tl-content">
-      <h1 class="f3 text--accent ttu">Vestibulum laoreet lorem</h1>
-      <p>Suspendisse potenti. Sed sollicitudin eros lorem, eget accumsan risus dictum id. Maecenas dignissim ipsum vel mi rutrum egestas. Donec mauris nibh, facilisis ut hendrerit vel, fringilla sed felis. Morbi sed nisl et arcu.</p>
-    </div>
-
-  </div>
-
-  <div class="tl-item">
-    
-    <div class="tl-bg" style="background-image: url(https://placeimg.com/803/803/nature)"></div>
-    
-    <div class="tl-year">
-      <p class="f2 heading--sanSerif">2014</p>
-    </div>
-
-    <div class="tl-content">
-      <h1 class="f3 text--accent ttu">Phasellus mauris elit</h1>
-      <p>Mauris cursus magna at libero lobortis tempor. Suspendisse potenti. Aliquam interdum vulputate neque sit amet varius. Maecenas ac pulvinar nisi. Fusce vitae nunc ultrices, tristique dolor at, porttitor dolor. Etiam id cursus arcu, in dapibus nibh. Pellentesque non porta leo. Nulla eros odio, egestas quis efficitur vel, pretium sed.</p>
-    </div>
-
-  </div>
-
-  <div class="tl-item">
-    
-    <div class="tl-bg" style="background-image: url(https://placeimg.com/800/800/nature)"></div>
-    
-    <div class="tl-year">
-      <p class="f2 heading--sanSerif">2016</p>
-    </div>
-
-    <div class="tl-content">
-      <h1 class="f3 text--accent ttu">Mauris vitae nunc elem</h1>
-      <p>Suspendisse ac mi at dolor sodales faucibus. Nunc sagittis ornare purus non euismod. Donec vestibulum efficitur tortor, eget efficitur enim facilisis consequat. Vivamus laoreet laoreet elit. Ut ut varius metus, bibendum imperdiet ex. Curabitur diam quam, blandit at risus nec, pulvinar porttitor lorem. Pellentesque dolor elit.</p>
-    </div>
-
-  </div>
-</section>
+</div>
 <!-- partial -->
-  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js'></script><script  src="./script.js"></script>
+
 </body>
 </html>
