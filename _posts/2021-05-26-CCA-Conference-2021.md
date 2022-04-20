@@ -5,7 +5,7 @@ layout: post
 
 ![PPT](/assets/img/20210527/ppt.png)
 
-There are over 40 people who provide presentations on a wide variety of geospatial topics at this year's CCA Conference. I am honored to present on Day 2 Session 3: Remote Sensing and Earth Modelling, with the title "Integration of Multi-source Terrain Data on Discrete Global Grids in Canada". 
+There were over 40 researchers presenting a wide variety of geospatial topics at this year's CCA Conference. Mine was on Day 2 Session 3: Remote Sensing and Earth Modelling, with the topic "Integration of Multi-source Terrain Data on Discrete Global Grids in Canada". 
 
 ### Abstract
 
