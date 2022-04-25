@@ -8,7 +8,7 @@ layout: page
 ### 2021
 **Li, M.**; McGrath, H.; Stefanakis, E. Integration of Heterogeneous Terrain Data into Discrete Global Grid Systems. Cartography and Geographic Information Science. 48(6), 546-564. https://doi.org/10.1080/15230406.2021.1966648
 
-[PDF](https://github.com/Erin-1919/Erin-1919.github.io/blob/master/assets/pdf/2021%20Li%20et%20al.pdf)
+[PDF](https://Erin-1919.github.io/assets/pdf/2021%20Li%20et%20al.pdf)
 
 <details>
   <summary>Abstract</summary>
@@ -18,7 +18,7 @@ The Canadian Digital Elevation Model (CDEM) and the High-Resolution Digital Elev
 ### 2020
 **Li, M.**; Stefanakis, E. Geospatial Operations of Discrete Global Grid Systems – A Comparison with Traditional GIS. Journal of Geovisualization and Spatial Analysis 4(2), 26. https://doi.org/10.1007/s41651-020-00066-3
 
-[PDF](https://github.com/Erin-1919/Erin-1919.github.io/blob/master/assets/pdf/2020%20Li%20and%20Stefanakis.pdf)
+[PDF](https://Erin-1919.github.io/assets/pdf/2020%20Li%20and%20Stefanakis.pdf)
 
 <details>
   <summary>Abstract</summary>
@@ -27,7 +27,7 @@ As the foundation of the next-generation Digital Earth, Discrete Global Grid Sys
 
 **Li, M.**; Stefanakis, E. Geo-feature Modeling Uncertainties in Discrete Global Grids: A Case Study of Downtown Calgary, Canada. Geomatica 74, 175-195.  https://doi.org/10.1139/geomat-2020-0011
 
-[PDF](https://github.com/Erin-1919/Erin-1919.github.io/blob/master/assets/pdf/2020b%20Li%20and%20Stefanakis.pdf)
+[PDF](https://Erin-1919.github.io/assets/pdf/2020b%20Li%20and%20Stefanakis.pdf)
 
 <details>
   <summary>Abstract</summary>
@@ -37,7 +37,7 @@ The Open Geospatial Consortium has officially adopted discrete global grid syste
 ### 2019
 **Li, M.**; MacLean, D.A.; Hennigar, C.R.; Ogilvie, J. Previous Year Outbreak Conditions and Spring Climate Predict Spruce Budworm Population Changes in the Following Year. Forest Ecology and Management 458, 117737. https://doi.org/10.1016/j.foreco.2019.117737
 
-[PDF](https://github.com/Erin-1919/Erin-1919.github.io/blob/master/assets/pdf/2019b%20Li%20et%20al.pdf)
+[PDF](https://Erin-1919.github.io/assets/pdf/2019b%20Li%20et%20al.pdf)
 
 <details>
   <summary>Abstract</summary>
@@ -46,7 +46,7 @@ We determined effects of local spruce budworm (Choristoneura fumiferana Clem.; S
 
 **Li, M.**; MacLean, D.A.; Hennigar, C.R.; Ogilvie, J. Spatial-Temporal Patterns of Spruce Budworm Defoliation within Plots in Québec. Forests 10, 232. https://doi.org/10.3390/f10030232
 
-[PDF](https://github.com/Erin-1919/Erin-1919.github.io/blob/master/assets/pdf/2019a%20Li%20et%20al.pdf)
+[PDF](https://Erin-1919.github.io/assets/pdf/2019a%20Li%20et%20al.pdf)
 
 <details>
   <summary>Abstract</summary>
