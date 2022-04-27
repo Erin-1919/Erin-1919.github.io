@@ -5,6 +5,8 @@ layout: post
 
 ![background](/assets/img/20220325/background.png)
 
+This is the contract project report submitted to NRCan.
+
 ## Introduction
 In southern New Brunswick, Canada, seasonal flooding takes place around St. John River. According to the report by the Government of New Brunswick, flooding is largely caused by meteorological conditions: thick snowpack remains for a long period each year until the spring thaw when snowmelt runoff flows into rivers, which leads to local overflows [1]. Additionally, the accumulations of rain and the rising temperatures can accelerate snowmelt and surface runoff [1]. Flooding can cause serious damage and inconvenience for citizens' daily life, and flood susceptibility prediction can help the government and citizens to make response strategies. 
 
