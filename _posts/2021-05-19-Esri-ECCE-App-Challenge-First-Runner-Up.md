@@ -1,5 +1,5 @@
 ---
-title:  "Esri ECCE App Challenge Runner Up"
+title:  "Esri ECCE App Challenge First Runner Up"
 layout: post
 ---
 
