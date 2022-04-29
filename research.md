@@ -5,6 +5,25 @@ layout: page
 ---
 
 ## Peer-reviewed Publications
+### 2022
+**Li, M.**; McGrath, H.; Stefanakis, E. Topographic Operations in Hexagonal Discrete Global Grid Systems. International Journal of Applied Earth Observation and Geoinformation. Under review.
+
+PDF
+
+<details>
+  <summary>Abstract</summary>
+Discrete Global Grid Systems (DGGS) have been increasingly adopted as the framework of multi-source geospatial data. Previous research largely studied the mathematical foundation, developed open-sourced DGGS libraries, and explored their application as integration platforms. This study investigated the analytical operations in a pure hexagonal DGGS environment, including descriptive statistics, topographic analysis, and topographic indices. Experiments across multiple resolutions were carried out in three areas with various roughness in Alberta, Canada. With five algorithms proposed to calculate slope gradient and aspect, the cell-based, pair-wise comparison showed strong positive relationships between the gradient resulted from various algorithms. Resolutions influenced the detection of elevation changes and the rate of changes, and the degree of such influence also depended on the terrain roughness. This research sets the stage for the analytical development of general DGGS and helps to bridge the gap between the existing DGGS implementations and DGGS-driven decision-making in the real world.
+</details>
+
+**Li, M.**; McGrath, H.; Stefanakis, E. Geovisualization of Hydrological Flow in Hexagonal Grid Systems. Geographies. 2022(2), 227–244. https://doi.org/10.3390/geographies2020016
+
+[PDF](https://Erin-1919.github.io/assets/pdf/2022a%20Li%20et%20al.pdf)
+
+<details>
+  <summary>Abstract</summary>
+Recent research has extended conventional hydrological algorithms into a hexagonal grid and noted that hydrological modeling on a hexagonal mesh grid outperformed that on a rectangular grid. Among the hydrological products, flow routing grids are the base of many other hydrological simulations, such as flow accumulation, watershed delineation, and stream networks. However, most of the previous research adopted the D6 algorithm, which is analogous to the D8 algorithm over a rectangular grid, to produce flow routing. This paper explored another four methods regarding generating flow directions in a hexagonal grid, based on four algorithms of slope aspect computation. We also developed and visualized hexagonal-grid-based hydrological operations, including flow accumulation, watershed delineation, and hydrological indices computation. Experiments were carried out across multiple grid resolutions with various terrain roughness. The results showed that flow direction can vary among different approaches, and the impact of such variation can propagate to flow accumulation, watershed delineation, and hydrological indices production, which was reflected by the cell-wise comparison and visualization. This research is practical for hydrological analysis in hexagonal, hierarchical grids, such as Discrete Global Grid Systems, and the developed operations can be used in flood modeling in the real world. 
+</details>
+
 ### 2021
 **Li, M.**; McGrath, H.; Stefanakis, E. Integration of Heterogeneous Terrain Data into Discrete Global Grid Systems. Cartography and Geographic Information Science. 48(6), 546-564. https://doi.org/10.1080/15230406.2021.1966648
 
