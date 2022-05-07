@@ -6,18 +6,14 @@ layout: page
 
 ## Peer-reviewed Publications
 ### 2022
-**Li, M.**; McGrath, H.; Stefanakis, E. Topographic Operations in Hexagonal Discrete Global Grid Systems. International Journal of Applied Earth Observation and Geoinformation. Under review.
-
-PDF
+**Li, M.**; McGrath, H.; Stefanakis, E. Topographic Operations in Hexagonal Discrete Global Grid Systems. International Journal of Applied Earth Observation and Geoinformation. Under review. **DOI** | **PDF**
 
 <details>
   <summary>Abstract</summary>
 Discrete Global Grid Systems (DGGS) have been increasingly adopted as the framework of multi-source geospatial data. Previous research largely studied the mathematical foundation, developed open-sourced DGGS libraries, and explored their application as integration platforms. This study investigated the analytical operations in a pure hexagonal DGGS environment, including descriptive statistics, topographic analysis, and topographic indices. Experiments across multiple resolutions were carried out in three areas with various roughness in Alberta, Canada. With five algorithms proposed to calculate slope gradient and aspect, the cell-based, pair-wise comparison showed strong positive relationships between the gradient resulted from various algorithms. Resolutions influenced the detection of elevation changes and the rate of changes, and the degree of such influence also depended on the terrain roughness. This research sets the stage for the analytical development of general DGGS and helps to bridge the gap between the existing DGGS implementations and DGGS-driven decision-making in the real world.
 </details>
 
-**Li, M.**; McGrath, H.; Stefanakis, E. Geovisualization of Hydrological Flow in Hexagonal Grid Systems. Geographies. 2022(2), 227–244. https://doi.org/10.3390/geographies2020016
-
-[PDF](https://Erin-1919.github.io/assets/pdf/2022a%20Li%20et%20al.pdf)
+**Li, M.**; McGrath, H.; Stefanakis, E. Geovisualization of Hydrological Flow in Hexagonal Grid Systems. Geographies. 2022(2), 227–244. [**DOI**](https://doi.org/10.3390/geographies2020016) | [**PDF**](https://Erin-1919.github.io/assets/pdf/2022a%20Li%20et%20al.pdf)
 
 <details>
   <summary>Abstract</summary>
@@ -25,9 +21,7 @@ Recent research has extended conventional hydrological algorithms into a hexagon
 </details>
 
 ### 2021
-**Li, M.**; McGrath, H.; Stefanakis, E. Integration of Heterogeneous Terrain Data into Discrete Global Grid Systems. Cartography and Geographic Information Science. 48(6), 546-564. https://doi.org/10.1080/15230406.2021.1966648
-
-[PDF](https://Erin-1919.github.io/assets/pdf/2021%20Li%20et%20al.pdf)
+**Li, M.**; McGrath, H.; Stefanakis, E. Integration of Heterogeneous Terrain Data into Discrete Global Grid Systems. Cartography and Geographic Information Science. 48(6), 546-564. [**DOI**](https://doi.org/10.1080/15230406.2021.1966648) | [**PDF**](https://Erin-1919.github.io/assets/pdf/2021%20Li%20et%20al.pdf)
 
 <details>
   <summary>Abstract</summary>
@@ -35,18 +29,14 @@ The Canadian Digital Elevation Model (CDEM) and the High-Resolution Digital Elev
 </details>
 
 ### 2020
-**Li, M.**; Stefanakis, E. Geospatial Operations of Discrete Global Grid Systems – A Comparison with Traditional GIS. Journal of Geovisualization and Spatial Analysis 4(2), 26. https://doi.org/10.1007/s41651-020-00066-3
-
-[PDF](https://Erin-1919.github.io/assets/pdf/2020%20Li%20and%20Stefanakis.pdf)
+**Li, M.**; Stefanakis, E. Geospatial Operations of Discrete Global Grid Systems – A Comparison with Traditional GIS. Journal of Geovisualization and Spatial Analysis 4(2), 26. [**DOI**](https://doi.org/10.1007/s41651-020-00066-3) | [**PDF**](https://Erin-1919.github.io/assets/pdf/2020%20Li%20and%20Stefanakis.pdf)
 
 <details>
   <summary>Abstract</summary>
 As the foundation of the next-generation Digital Earth, Discrete Global Grid Systems (DGGS) have demonstrated both theoretical and practical development, with a variety of state-of-the-art implementations proposed. These emerging DGGS platforms or libraries support preliminary operations such as quantization, cell-level navigation, and conversion between cell addresses and geographical coordinates, while leaving the other more complicated functions unexplored. This paper discusses the functional operations in a DGGS environment, including the essential operations defined by the Open Geospatial Consortium (OGC) Abstract Specification, and the extended operations potentially supported by DGGS. The extended operations are discussed in comparison to the traditional GIS, from the aspects of database techniques, data pre-processing and manipulation, spatial analysis and data interpretation, data computation, and data visualization. It was found that with the OGC-required operations and pre-processing operations as the baseline of development, some function algorithms can facilitate the algorithm development of other analytical functions. Several future research directions regarding the data modeling uncertainties, extended analytic algorithm development, and database and computation technologies are presented. This paper provides a comparison between DGGS and traditional GIS operations and can serve as a reference for future DGGS operation development.
 </details>
 
-**Li, M.**; Stefanakis, E. Geo-feature Modeling Uncertainties in Discrete Global Grids: A Case Study of Downtown Calgary, Canada. Geomatica 74, 175-195.  https://doi.org/10.1139/geomat-2020-0011
-
-[PDF](https://Erin-1919.github.io/assets/pdf/2020b%20Li%20and%20Stefanakis.pdf)
+**Li, M.**; Stefanakis, E. Geo-feature Modeling Uncertainties in Discrete Global Grids: A Case Study of Downtown Calgary, Canada. Geomatica 74, 175-195.  [**DOI**](https://doi.org/10.1139/geomat-2020-0011) | [**PDF**](https://Erin-1919.github.io/assets/pdf/2020b%20Li%20and%20Stefanakis.pdf)
 
 <details>
   <summary>Abstract</summary>
@@ -54,18 +44,14 @@ The Open Geospatial Consortium has officially adopted discrete global grid syste
 </details>
 
 ### 2019
-**Li, M.**; MacLean, D.A.; Hennigar, C.R.; Ogilvie, J. Previous Year Outbreak Conditions and Spring Climate Predict Spruce Budworm Population Changes in the Following Year. Forest Ecology and Management 458, 117737. https://doi.org/10.1016/j.foreco.2019.117737
-
-[PDF](https://Erin-1919.github.io/assets/pdf/2019b%20Li%20et%20al.pdf)
+**Li, M.**; MacLean, D.A.; Hennigar, C.R.; Ogilvie, J. Previous Year Outbreak Conditions and Spring Climate Predict Spruce Budworm Population Changes in the Following Year. Forest Ecology and Management 458, 117737. [**DOI**](https://doi.org/10.1016/j.foreco.2019.117737) | [**PDF**](https://Erin-1919.github.io/assets/pdf/2019b%20Li%20et%20al.pdf)
 
 <details>
   <summary>Abstract</summary>
 We determined effects of local spruce budworm (Choristoneura fumiferana Clem.; SBW) population level, proximity to sites with high SBW populations, insecticide spray, and environmental variables on SBW populations from 2014 to 2018, the outbreak initiation period in northern New Brunswick, Canada. SBW second instar larvae (L2) per branch data collected at 1100–2000 sample points per year were used to create annual interpolated population rasters. Fishnet sample points extracted from these rasters were overlaid with georeferenced layers of 46 possible predictor variables including forest composition, climate, topography, site quality, and insecticide treatment. Results showed that local SBW population in the previous year, proximity to sites with high SBW populations, and early spring climate were consistently the most important predictors over the 5 study years. Simultaneous autoregressive models were used to address spatial autocorrelation when forecasting the SBW L2 population, and a linear mixed effects model was fit to aggregate data for 2015–2018. The models reduced spatial dependence in the residuals, and explained 68–79% of variance in annual L2 levels and 53% of variance over the 4 years combined. Sensitivity analysis showed that locations with 5–10 more SBW L2 per branch than observed values, or 20–40 km closer to high population sites in the previous year could have up to 24 more L2 in the current year. Cumulative degree days in April helped to estimate the upper and lower bounds of the population. Expansion and retraction of SBW outbreak initiation were mathematically described. Understanding which variables influence SBW outbreak initiation and population level assists in design of small area target-specific insecticide spray applications and helps focus SBW L2 sampling on predicted outbreak hot spots.
 </details>
 
-**Li, M.**; MacLean, D.A.; Hennigar, C.R.; Ogilvie, J. Spatial-Temporal Patterns of Spruce Budworm Defoliation within Plots in Québec. Forests 10, 232. https://doi.org/10.3390/f10030232
-
-[PDF](https://Erin-1919.github.io/assets/pdf/2019a%20Li%20et%20al.pdf)
+**Li, M.**; MacLean, D.A.; Hennigar, C.R.; Ogilvie, J. Spatial-Temporal Patterns of Spruce Budworm Defoliation within Plots in Québec. Forests 10, 232. [**DOI**](https://doi.org/10.3390/f10030232) | [**PDF**](https://Erin-1919.github.io/assets/pdf/2019a%20Li%20et%20al.pdf)
 
 <details>
   <summary>Abstract</summary>
@@ -74,16 +60,10 @@ We investigated the spatial-temporal patterns of spruce budworm (Choristoneura f
 
 ## Conference Presentations
 ### 2021
-**Li, M.**; McGrath, H.; Stefanakis, E. Integration of Multi-source Terrain Data on Discrete Global Grids in Canada. 2021 Canadian Cartographic Association Conference, Online
-
-[Recorded Presentation](https://drive.google.com/file/d/1I0YnzykCr2wq41E5z4sy4xFBjiChINmA/view?usp=sharing)
+**Li, M.**; McGrath, H.; Stefanakis, E. Integration of Multi-source Terrain Data on Discrete Global Grids in Canada. 2021 Canadian Cartographic Association Conference, Online. [**Recorded Presentation**](https://drive.google.com/file/d/1I0YnzykCr2wq41E5z4sy4xFBjiChINmA/view?usp=sharing)
 
 ### 2020
-**Li, M.**; Stefanakis, E.; McGrath, H. National terrain data management on Discrete Global Grids in Canada. AutoCarto 2020, Online
-
-[PDF](https://cartogis.org/docs/autocarto/2020/docs/abstracts/3h%20National%20Terrain%20Data%20Management%20on%20Discrete%20Global%20Grids%20in%20Canada.pdf)
-  
-[Recorded Presentation](https://cartogis.org/docs/autocarto/2020/docs/presentations/3h%20National%20Terrain%20Data%20Management%20on%20Discrete%20Global%20Grids%20in%20Canada.mp4)
+**Li, M.**; Stefanakis, E.; McGrath, H. National terrain data management on Discrete Global Grids in Canada. AutoCarto 2020, Online. [**PDF**](https://cartogis.org/docs/autocarto/2020/docs/abstracts/3h%20National%20Terrain%20Data%20Management%20on%20Discrete%20Global%20Grids%20in%20Canada.pdf) | [**Recorded Presentation**](https://cartogis.org/docs/autocarto/2020/docs/presentations/3h%20National%20Terrain%20Data%20Management%20on%20Discrete%20Global%20Grids%20in%20Canada.mp4)
 
 ### 2018
 **Li, M.**; MacLean, D.A.; Hennigar, C.R.; Ogilvie, J. Spatial-tempol patterns of spruce budworm defoliation within measured plots in Quebec. The 9th Bi-Annual Eastern Canada - USA Forest Science Conference, Fredericton, Canada
@@ -92,9 +72,7 @@ We investigated the spatial-temporal patterns of spruce budworm (Choristoneura f
 
 ## Other Invited Presentations
 ### 2022
-Quantization, Analysis, and Application of Terrain Data Modeled in Discrete Global Grid Systems. Presented at the International Society for Photogrammetry and Remote Sensing Work Group IV/7 (Geo-Data Management) Webinar, Online.
-
-[Recorded Presentation](https://www.youtube.com/watch?v=FWGl4lSrIyA)
+Quantization, Analysis, and Application of Terrain Data Modeled in Discrete Global Grid Systems. Presented at the International Society for Photogrammetry and Remote Sensing Work Group IV/7 (Geo-Data Management) Webinar, Online. [**Recorded Presentation**](https://www.youtube.com/watch?v=FWGl4lSrIyA)
 
 ### 2021
 Integration Platform for Canadian Terrain Data: A DGGS Perspective. Presented at the Natural Resources Canada, Online.
