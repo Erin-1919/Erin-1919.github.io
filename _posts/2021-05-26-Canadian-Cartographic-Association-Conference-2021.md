@@ -1,5 +1,5 @@
 ---
-title: "CCA Conference 2021"
+title: "Canadian Cartographic Association Conference 2021"
 layout: post
 ---
 
