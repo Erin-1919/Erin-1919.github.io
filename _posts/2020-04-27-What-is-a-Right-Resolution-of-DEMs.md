@@ -1,5 +1,5 @@
 ---
-title: "Determine a Right DEM Resolution"
+title: "What is a Right Resolution of DEMs?"
 layout: post
 ---
 
