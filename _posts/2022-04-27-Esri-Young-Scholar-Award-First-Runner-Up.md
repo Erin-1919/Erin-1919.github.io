@@ -1,5 +1,5 @@
 ---
-title:  "Esri Young Scholar Award First Runner Up"
+title:  "Esri Young Scholar Award — First Runner Up"
 layout: post
 ---
 
