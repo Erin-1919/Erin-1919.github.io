@@ -1,5 +1,5 @@
 ---
-title: "Esri ECCE Blog – Handy Script Tool"
+title: "Esri ECCE Blog – Customized Script Tool in ArcGIS"
 layout: post
 ---
 
