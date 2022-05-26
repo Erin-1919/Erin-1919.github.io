@@ -59,20 +59,23 @@ We investigated the spatial-temporal patterns of spruce budworm (Choristoneura f
 </details>
 
 ## Conference Presentations
+### 2022
+**Li, M.**; McGrath, H.; Stefanakis, E. Analytical operations for terrain data modeled in Discrete Global Grid Systems. Canadian Cartographic Association Conference, May 2022, Online. [**Pre-Recorded Presentation**](https://drive.google.com/file/d/1DECGOtfzUCyaSrtsDGUxXjXPVS3JcYSJ/view?usp=sharing)
+  
 ### 2021
-**Li, M.**; McGrath, H.; Stefanakis, E. Integration of Multi-source Terrain Data on Discrete Global Grids in Canada. 2021 Canadian Cartographic Association Conference, Online. [**Recorded Presentation**](https://drive.google.com/file/d/1I0YnzykCr2wq41E5z4sy4xFBjiChINmA/view?usp=sharing)
+**Li, M.**; McGrath, H.; Stefanakis, E. Integration of multi-source terrain data on Discrete Global Grids in Canada. Canadian Cartographic Association Conference, May 2021, Online. [**Pre-Recorded Presentation**](https://drive.google.com/file/d/1I0YnzykCr2wq41E5z4sy4xFBjiChINmA/view?usp=sharing)
 
 ### 2020
-**Li, M.**; Stefanakis, E.; McGrath, H. National terrain data management on Discrete Global Grids in Canada. AutoCarto 2020, Online. [**PDF**](https://cartogis.org/docs/autocarto/2020/docs/abstracts/3h%20National%20Terrain%20Data%20Management%20on%20Discrete%20Global%20Grids%20in%20Canada.pdf) / [**Recorded Presentation**](https://cartogis.org/docs/autocarto/2020/docs/presentations/3h%20National%20Terrain%20Data%20Management%20on%20Discrete%20Global%20Grids%20in%20Canada.mp4)
+**Li, M.**; Stefanakis, E.; McGrath, H. National terrain data management on Discrete Global Grids in Canada. AutoCarto 2020, Oct. 2020, Online. [**PDF**](https://cartogis.org/docs/autocarto/2020/docs/abstracts/3h%20National%20Terrain%20Data%20Management%20on%20Discrete%20Global%20Grids%20in%20Canada.pdf) / [**Pre-Recorded Presentation**](https://cartogis.org/docs/autocarto/2020/docs/presentations/3h%20National%20Terrain%20Data%20Management%20on%20Discrete%20Global%20Grids%20in%20Canada.mp4)
 
 ### 2018
-**Li, M.**; MacLean, D.A.; Hennigar, C.R.; Ogilvie, J. Spatial-tempol patterns of spruce budworm defoliation within measured plots in Quebec. The 9th Bi-Annual Eastern Canada - USA Forest Science Conference, Fredericton, Canada
+**Li, M.**; MacLean, D.A.; Hennigar, C.R.; Ogilvie, J. Spatial-tempol patterns of spruce budworm defoliation within measured plots in Québec. The 9th Bi-Annual Eastern Canada - USA Forest Science Conference, Oct. 2018, Fredericton, Canada.
 
-**Li, M.**; MacLean, D.A. GIS analyses of factors influencing spruce budworm outbreak initiation in northern New Brunswick. SERG International Workshop, Edmonton, Canada
+**Li, M.**; MacLean, D.A. GIS analyses of factors influencing spruce budworm outbreak initiation in northern New Brunswick. SERG International Workshop, Feb. 2018, Edmonton, Canada.
 
 ## Other Invited Presentations
 ### 2022
-Quantization, Analysis, and Application of Terrain Data Modeled in Discrete Global Grid Systems. Presented at the International Society for Photogrammetry and Remote Sensing Work Group IV/7 (Geo-Data Management) Webinar, Online. [**Recorded Presentation**](https://www.youtube.com/watch?v=FWGl4lSrIyA)
+Quantization, Analysis, and Application of Terrain Data Modeled in Discrete Global Grid Systems. Presented at the International Society for Photogrammetry and Remote Sensing Work Group IV/7 (Geo-Data Management) Webinar, Jan. 2022, Online. [**Recorded Presentation**](https://www.youtube.com/watch?v=FWGl4lSrIyA)
 
 ### 2021
-Integration Platform for Canadian Terrain Data: A DGGS Perspective. Presented at the Natural Resources Canada, Online.
+Integration Platform for Canadian Terrain Data: A DGGS Perspective. Presented at the Natural Resources Canada, Apr. 2021, Online.
