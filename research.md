@@ -75,6 +75,8 @@ We investigated the spatial-temporal patterns of spruce budworm (Choristoneura f
 
 ## Other Invited Presentations
 ### 2022
+Geospatial Data Analysis in Discrete Global Grid Systems – Progress and Perspectives. Presented at the China Agricultural University, May 2022, Online.  
+
 Quantization, Analysis, and Application of Terrain Data Modeled in Discrete Global Grid Systems. Presented at the International Society for Photogrammetry and Remote Sensing Work Group IV/7 (Geo-Data Management) Webinar, Jan. 2022, Online. [**Recorded Presentation**](https://www.youtube.com/watch?v=FWGl4lSrIyA)
 
 ### 2021
