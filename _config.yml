@@ -27,7 +27,7 @@ external:                  # shows a footer with social links - for available ic
   - {title: Mail, icon: envelope, url: "mailto:mingke.li@ucalgary.ca"}
   - {title: GitHub, icon: github, url: "https://github.com/Erin-1919"}
   - {title: ResearchGate, icon: researchgate, url: "https://www.researchgate.net/profile/Mingke-Li"}
-  - {title: LinkedIn, icon: linkedin, url: "www.linkedin.com/in/mingke-erin-li"}
+  - {title: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/in/mingke-erin-li"}
 
 comments:
 #  disqus_shortname: ""    # see https://disqus.com/
