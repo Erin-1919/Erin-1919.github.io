@@ -6,14 +6,14 @@ layout: page
 
 ## Peer-reviewed Publications
 ### 2022
-**Li, M.**; McGrath, H.; Stefanakis, E. Topographic Operations in Hexagonal Discrete Global Grid Systems. International Journal of Applied Earth Observation and Geoinformation. Under review. **DOI** / **PDF**
+**Li, M.**; McGrath, H.; Stefanakis, E. Topographic Operations in Hexagonal Discrete Global Grid Systems. International Journal of Applied Earth Observation and Geoinformation 113, 102985. [**DOI**](https://doi.org/10.1016/j.jag.2022.102985) / [**PDF**](https://Erin-1919.github.io/assets/pdf/2022c%20Li%20et%20al.pdf)
 
 <details>
   <summary>Abstract</summary>
-Discrete Global Grid Systems (DGGS) have been increasingly adopted as the framework of multi-source geospatial data. Previous research largely studied the mathematical foundation, developed open-sourced DGGS libraries, and explored their application as integration platforms. This study investigated the analytical operations in a pure hexagonal DGGS environment, including descriptive statistics, topographic analysis, and topographic indices. Experiments across multiple resolutions were carried out in three areas with various roughness in Alberta, Canada. With five algorithms proposed to calculate slope gradient and aspect, the cell-based, pair-wise comparison showed strong positive relationships between the gradient resulted from various algorithms. Resolutions influenced the detection of elevation changes and the rate of changes, and the degree of such influence also depended on the terrain roughness. This research sets the stage for the analytical development of general DGGS and helps to bridge the gap between the existing DGGS implementations and DGGS-driven decision-making in the real world.
+Discrete Global Grid Systems (DGGS) have been increasingly adopted as a standard framework for multi-source geospatial data. Previous research largely studied the mathematical foundation of discrete global grids, developed open-source libraries, and explored their application as data integration platforms. This study investigated the multi-resolution terrain analysis in a pure hexagonal DGGS environment, including descriptive statistics, topographic parameters, and topographic indices. Experiments across multiple grid resolutions were carried out in three study areas with different terrain roughness in Alberta, Canada. Five algorithms were proposed to calculate both the slope gradient and terrain aspect. A cell-based pair-wise comparison showed a strong positive correlation between the gradient values as calculated from five algorithms. The grid resolutions as well as the terrain roughness had a clear effect on the computed slope gradient and topographic indices. This research aims to enhance the analytical functionality of hexagonal DGGS to better support decision-making in real world problems.
 </details>
 
-**Li, M.**; McGrath, H.; Stefanakis, E. Geovisualization of Hydrological Flow in Hexagonal Grid Systems. Geographies. 2022(2), 227–244. [**DOI**](https://doi.org/10.3390/geographies2020016) / [**PDF**](https://Erin-1919.github.io/assets/pdf/2022a%20Li%20et%20al.pdf)
+**Li, M.**; McGrath, H.; Stefanakis, E. Geovisualization of Hydrological Flow in Hexagonal Grid Systems. Geographies 2022(2), 227–244. [**DOI**](https://doi.org/10.3390/geographies2020016) / [**PDF**](https://Erin-1919.github.io/assets/pdf/2022a%20Li%20et%20al.pdf)
 
 <details>
   <summary>Abstract</summary>
@@ -21,7 +21,7 @@ Recent research has extended conventional hydrological algorithms into a hexagon
 </details>
 
 ### 2021
-**Li, M.**; McGrath, H.; Stefanakis, E. Integration of Heterogeneous Terrain Data into Discrete Global Grid Systems. Cartography and Geographic Information Science. 48(6), 546-564. [**DOI**](https://doi.org/10.1080/15230406.2021.1966648) / [**PDF**](https://Erin-1919.github.io/assets/pdf/2021%20Li%20et%20al.pdf)
+**Li, M.**; McGrath, H.; Stefanakis, E. Integration of Heterogeneous Terrain Data into Discrete Global Grid Systems. Cartography and Geographic Information Science 48(6), 546-564. [**DOI**](https://doi.org/10.1080/15230406.2021.1966648) / [**PDF**](https://Erin-1919.github.io/assets/pdf/2021%20Li%20et%20al.pdf)
 
 <details>
   <summary>Abstract</summary>
