@@ -6,7 +6,7 @@ layout: page
 
 ## Peer-reviewed Publications
 ### 2022
-**Li, M.**; McGrath, H.; Stefanakis, E. Topographic Operations in Hexagonal Discrete Global Grid Systems. International Journal of Applied Earth Observation and Geoinformation 113, 102985. [**DOI**](https://doi.org/10.1016/j.jag.2022.102985) / [**PDF**](https://Erin-1919.github.io/assets/pdf/2022c%20Li%20et%20al.pdf)
+**Li, M.**; McGrath, H.; Stefanakis, E. Multi-resolution topographic analysis in hexagonal Discrete Global Grid Systems. International Journal of Applied Earth Observation and Geoinformation 113, 102985. [**DOI**](https://doi.org/10.1016/j.jag.2022.102985) / [**PDF**](https://Erin-1919.github.io/assets/pdf/2022c%20Li%20et%20al.pdf)
 
 <details>
   <summary>Abstract</summary>
