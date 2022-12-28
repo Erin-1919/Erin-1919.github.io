@@ -80,7 +80,7 @@ We investigated the spatial-temporal patterns of spruce budworm (Choristoneura f
 
 **Li, M.**; MacLean, D.A. GIS analyses of factors influencing spruce budworm outbreak initiation in northern New Brunswick. SERG International Workshop, Feb. 2018, Edmonton, Canada.
 
-## Other Invited Presentations
+## Other Invited Talks
 ### 2022
 Flood Susceptibility Modeling in Discrete Global Grids under Climate Change Scenarios. Presented at the Natural Resources Canada, Oct. 2022, Online.
 
