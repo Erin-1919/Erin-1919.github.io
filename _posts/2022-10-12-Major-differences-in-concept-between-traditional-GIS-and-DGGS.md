@@ -1,8 +1,8 @@
 ---
-title: " Major differences, in concept, between traditional GIS and DGGS "
+title: "Major differences, in concept, between traditional GIS and DGGS"
 layout: post
 ---
-![grid](/assets/img/20221012/ grid.jpg)
+![grid](/assets/img/20221012/grid.jpg)
 
 ## Thematic layers vs. Congruent geography
  
