@@ -67,7 +67,7 @@ We investigated the spatial-temporal patterns of spruce budworm (Choristoneura f
 
 ## Conference Presentations
 ### 2023
-**Li, M.** Flood susceptibility analysis on hexagonal grid meshes: a case study in southern New Brunswick, Canada. Poster presentation at GIS in Education and Research Conference, Mar. 2023, Toronto, Canada. [**Poster**](https://github.com/Erin-1919/Erin-1919.github.io/assets/pdf/ESRI_poster_Li_2022.pdf)
+**Li, M.** Flood susceptibility analysis on hexagonal grid meshes: a case study in southern New Brunswick, Canada. Poster presentation at GIS in Education and Research Conference, Mar. 2023, Toronto, Canada. [**Poster**](https://Erin-1919.github.io/assets/pdf/ESRI_poster_Li_2022.pdf)
 
 ### 2022
 **Li, M.**; McGrath, H.; Stefanakis, E. Analytical operations for terrain data modeled in Discrete Global Grid Systems. Canadian Cartographic Association Conference, May 2022, Online. [**Pre-Recorded Presentation**](https://drive.google.com/file/d/1DECGOtfzUCyaSrtsDGUxXjXPVS3JcYSJ/view?usp=sharing)
