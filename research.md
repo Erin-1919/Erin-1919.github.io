@@ -5,6 +5,14 @@ layout: page
 ---
 
 ## Peer-reviewed Publications
+### 2024
+Liu, J.; Li, J.; Qiao, L.; **Li, M.**; Stefanakis, E.; Zhao, X.; Huang, Q.; Wang, H.; Zhang, C., QuadGridSIM: A quadrilateral grid-based method for high-performance and robust trajectory similarity analysis. Transactions in GIS. 00, 1–25. [**DOI**](https://doi.org/10.1111/tgis.13126) / [**PDF**](https://Erin-1919.github.io/assets/pdf/2024%20Liu%20et%20al.pdf)
+
+<details>
+  <summary>Abstract</summary>
+Measuring trajectory similarity is a fundamental algorithm in trajectory data mining, playing a key role in trajectory clustering, pattern mining, and classification, for instance. However, existing trajectory similarity measures based on vector representation have challenges in achieving both fast and accurate similarity measurements. On one hand, most existing methods have a high computational complexity of O ( n × m ), resulting in low efficiency. On the other hand, many of them are sensitive to trajectory sampling rates and lack of accuracy. This article proposes QuadGridSIM, a quadrilateral grid‐based method for trajectory similarity analysis, which enables high‐performance trajectory similarity measure without the cost of low effectiveness. Specifically, we first realize the multiscale coding representation of trajectory data based on quadrilateral discrete grids. Then, a novel trajectory similarity measure is defined to reduce the computational complexity of O ( n ). Several effectiveness properties of QuadGridSIM are further optimized, including the spatial overlap, directionality, symmetry, and robustness to sampling rate variations. Experimental results based on real‐world and simulated taxi trajectory data indicate that QuadGridSIM outperforms most of the other tested algorithms developed previously in terms of effectiveness, particularly in its robustness regarding trajectory sampling rates. Furthermore, QuadGridSIM exhibits superior performance and is approximately one order of magnitude faster than previous methods in the literature. QuadGridSIM provides a solution to the low‐efficiency problem of massive trajectory similarity analysis and can be applied in many application scenarios, such as route recommendation and suspect detection.
+</details>
+
 ### 2022
 **Li, M.**; McGrath, H.; Stefanakis, E. Multi-scale Flood Mapping under Climate Change Scenarios in Hexagonal Discrete Global Grids. ISPRS International Journal of Geo-Information 11(12), 627. [**DOI**](https://doi.org/10.3390/ijgi11120627) / [**PDF**](https://Erin-1919.github.io/assets/pdf/2022d%20Li%20et%20al.pdf)
 
