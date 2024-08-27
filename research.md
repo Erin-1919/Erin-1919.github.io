@@ -6,7 +6,21 @@ layout: page
 
 ## Peer-reviewed Publications
 ### 2024
-Liu, J.; Li, J.; Qiao, L.; **Li, M.**; Stefanakis, E.; Zhao, X.; Huang, Q.; Wang, H.; Zhang, C., QuadGridSIM: A quadrilateral grid-based method for high-performance and robust trajectory similarity analysis. Transactions in GIS. 00, 1–25. [**DOI**](https://doi.org/10.1111/tgis.13126) / [**PDF**](https://Erin-1919.github.io/assets/pdf/2024%20Liu%20et%20al.pdf)
+Liao, C.; Engwirda, D.; Cooper, M.; **Li, M.**; Fang, Y. Discrete Global Grid System-based flow routing datasets in the Amazon and Yukon basins. Earth System Science Data. Pre-print.
+
+<details>
+  <summary>Abstract</summary>
+Discrete Global Grid systems (DGGS) are emerging spatial data structures widely used to organize geospatial datasets across scales. While DGGS have found applications in various scientific disciplines, including atmospheric science and ecology, their integration into physically based hydrologic models and Earth System Models (ESMs) has been hindered by the lack of flow-routing datasets based on DGGS. In response to this gap, this study pioneers the development of new flow routing datasets using Icosahedral Snyder Equal Area (ISEA) DGGS and a novel mesh-independent flow direction model. We present flow routing datasets for two large basins, the tropical Amazon River Basin and the Arctic Yukon River Basin. These datasets (1) facilitate the adoption of DGGS for hydrologic models and (2) provide flow routing inputs for evaluation of DGGS-based flow routing in the Amazon and Yukon River Basins. The data are available at https://doi.org/10.5281/zenodo.8377765 (Liao, 2023).
+</details>
+
+**Li, M.**; Tousignant, C.; Chaudhuri, C.; Chabbouh, A. Utilizing serverless framework for dynamic visualization and operations in geospatial applications. International Journal of Digital Earth. Accepted.
+
+<details>
+  <summary>Abstract</summary>
+While substantial efforts have been invested in the development of Discrete Global Grid Systems (DGGS) spatial operations and their potential applications in the geospatial domain, it has become evident that there is a demand for an efficient and scalable system to handle the visualization of large-scale DGGS data. This study demonstrated the potential of DGGS in conjunction with the serverless framework for dynamic visualization at various resolutions, which is based on data storage and effective querying using PostgreSQL integrated into Amazon Aurora Serverless. The use of Amazon Web Services (AWS) Lambda for on-the-fly generation of hexagon geometries significantly reduced the storage requirements and improved the speed of the visualization process. In addition, we implemented on-the-fly spatial operations including point binning, thresholding, aggregation, and neighborhood operations in the DGGS, highlighting the capabilities of DGGS in vector and raster processing. The proposed system has shown promising results in terms of efficiency, scalability, and adaptability, making it a viable solution for large-scale geospatial data processing and visualization. Case studies using flood risk data and terrain data further illustrate the system’s practical applicability in on-the-fly spatial operations and rapid visualization.
+</details>
+
+Liu, J.; Li, J.; Qiao, L.; **Li, M.**; Stefanakis, E.; Zhao, X.; Huang, Q.; Wang, H.; Zhang, C. QuadGridSIM: A quadrilateral grid-based method for high-performance and robust trajectory similarity analysis. Transactions in GIS. 00, 1–25. [**DOI**](https://doi.org/10.1111/tgis.13126) / [**PDF**](https://Erin-1919.github.io/assets/pdf/2024%20Liu%20et%20al.pdf)
 
 <details>
   <summary>Abstract</summary>
