@@ -13,7 +13,7 @@ Liao, C.; Engwirda, D.; Cooper, M.; **Li, M.**; Fang, Y. Discrete Global Grid Sy
 Discrete Global Grid systems (DGGS) are emerging spatial data structures widely used to organize geospatial datasets across scales. While DGGS have found applications in various scientific disciplines, including atmospheric science and ecology, their integration into physically based hydrologic models and Earth System Models (ESMs) has been hindered by the lack of flow-routing datasets based on DGGS. In response to this gap, this study pioneers the development of new flow routing datasets using Icosahedral Snyder Equal Area (ISEA) DGGS and a novel mesh-independent flow direction model. We present flow routing datasets for two large basins, the tropical Amazon River Basin and the Arctic Yukon River Basin. These datasets (1) facilitate the adoption of DGGS for hydrologic models and (2) provide flow routing inputs for evaluation of DGGS-based flow routing in the Amazon and Yukon River Basins. The data are available at https://doi.org/10.5281/zenodo.8377765 (Liao, 2023).
 </details>
 
-**Li, M.**; Tousignant, C.; Chaudhuri, C.; Chabbouh, A. Utilizing serverless framework for dynamic visualization and operations in geospatial applications. International Journal of Digital Earth. Accepted.
+**Li, M.**; Tousignant, C.; Chaudhuri, C.; Chabbouh, A. Utilizing serverless framework for dynamic visualization and operations in geospatial applications. International Journal of Digital Earth. 17(1), 2392835. [**DOI**](https://doi.org/10.1080/17538947.2024.2392835) / [**PDF**](https://Erin-1919.github.io/assets/pdf/2024%20Li%20et%20al.pdf)
 
 <details>
   <summary>Abstract</summary>
@@ -28,7 +28,7 @@ Measuring trajectory similarity is a fundamental algorithm in trajectory data mi
 </details>
 
 ### 2022
-**Li, M.**; McGrath, H.; Stefanakis, E. Multi-scale Flood Mapping under Climate Change Scenarios in Hexagonal Discrete Global Grids. ISPRS International Journal of Geo-Information 11(12), 627. [**DOI**](https://doi.org/10.3390/ijgi11120627) / [**PDF**](https://Erin-1919.github.io/assets/pdf/2022d%20Li%20et%20al.pdf)
+**Li, M.**; McGrath, H.; Stefanakis, E. Multi-scale Flood Mapping under Climate Change Scenarios in Hexagonal Discrete Global Grids. ISPRS International Journal of Geo-Information. 11(12), 627. [**DOI**](https://doi.org/10.3390/ijgi11120627) / [**PDF**](https://Erin-1919.github.io/assets/pdf/2022d%20Li%20et%20al.pdf)
 
 <details>
   <summary>Abstract</summary>
