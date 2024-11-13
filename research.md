@@ -106,6 +106,9 @@ We investigated the spatial-temporal patterns of spruce budworm (Choristoneura f
 **Li, M.**; MacLean, D.A. GIS analyses of factors influencing spruce budworm outbreak initiation in northern New Brunswick. SERG International Workshop, Feb. 2018, Edmonton, Canada.
 
 ## Other Invited Talks
+### 2024
+Mapping Methane: A Review of Bottom-up Gridded Inventories. Presented at the 130th OGC Member Meeting, Nov. 2024, Online.
+
 ### 2022
 Flood Susceptibility Modeling in Discrete Global Grids under Climate Change Scenarios. Presented at the Natural Resources Canada, Oct. 2022, Online.
 
@@ -115,3 +118,22 @@ Quantization, Analysis, and Application of Terrain Data Modeled in Discrete Glob
 
 ### 2021
 Integration Platform for Canadian Terrain Data: A DGGS Perspective. Presented at the Natural Resources Canada, Apr. 2021, Online.
+
+## Thesis
+### 2023 
+### Ph.D. Dissertation
+Hexagonal Discrete Global Grid Systems in Topographical and Hydrological Modeling. [**URL**](http://hdl.handle.net/1880/115923)
+
+<details>
+  <summary>Abstract</summary>
+Geographic Information Systems (GIS) have dominated geospatial analysis since the 1960s, where spatial phenomena were normally represented by individual thematic layers at a specific resolution, and commonly projected to a two-dimensional Cartesian coordinate system for analysis. Discrete Global Grid Systems (DGGS), as a “congruent geography”, hierarchically partition the Earth’s surface into nearly uniform cells at various resolutions to provide great opportunities for innovation of legacy GIS. In the past few decades, the development of DGGS focused on fundamental implementations, such as polyhedral projections, indexing mechanisms, and generation of hierarchical grids, while limited efforts were given to the applicability studies in real-world scenarios. This dissertation aimed to bridge the gap between the existing DGGS implementations and DGGS-driven decision-making in the real world, and specifically, demonstrate the applicability of hexagonal DGGS in the domain of topographical and hydrological modeling. To achieve the above goal, this dissertation first reviewed the functional operations in a DGGS environment and compared them to those in the traditional GIS. This dissertation then focused on the terrain data integration, management, and analysis in the Icosahedral Snyder Equal Area Aperture 3 Hexagonal Grid (ISEA3H) DGGS. Specifically, the integration process, including quantization and aggregation, of multi-source terrain data at various granularities was demonstrated. Various topographical and hydrological functions, including slope and aspect, flow direction, flow accumulation, etc., were developed and experimented with various terrain types at different resolutions. Finally, external machine learning algorithms were incorporated into the DGGS and used to predict future flood risks under multiple climate change scenarios. This dissertation promotes the adoption of DGGS in real-world decision-making, particularly in topographical and hydrological modeling. The proposed methodology for heterogenous data integration can facilitate the development of a national elevation data service in the future. The developed spatial operations can enhance the analytical functionality of hexagonal DGGS. The application in flood mapping indicated the feasibility of DGGS as the standard data fabric for multi-source data integration and multi-scale data mining.
+</details>
+  
+### 2019 
+### Master Thesis
+Spatial patterns and factors influencing spruce budworm infestation in Eastern Canada forests. [**URL**](https://unbscholar.lib.unb.ca/handle/1882/14562)
+
+<details>
+  <summary>Abstract</summary>
+A spruce budworm (Choristoneura fumiferana Clem.; SBW) outbreak in Québec spread southward into New Brunswick in 2014. This thesis used spatial analyses of 5 years of SBW population data in northern New Brunswick and tree defoliation data in Québec to examine spatial patterns and factors influencing SBW infestation. Local previous-year SBW population level, proximity to outbreak hot-spots, and April degree-days were important in predicting SBW population levels in New Brunswick, although relationships were inconsistent across years. Models incorporating spatial stuctures [sic] explained 68–79% of the annual variance, and performed better than non-spatial models. A combined-year model with R [squared] = 0.53 consistently underestimated upcoming-year populations. Defoliation patterns quantified in 57 plots in Québec were clustered in 28-47% of cases, which had higher plot-level defoliation and higher deviations. Plot-level defoliation and basal area explained 80% of the variance in individual-tree-defoliation. The thesis contributed to efficient sampling allocation and insecticide treatment targeting infestation.
+</details>
