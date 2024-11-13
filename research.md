@@ -130,7 +130,7 @@ Geographic Information Systems (GIS) have dominated geospatial analysis since th
 </details>
   
 ### 2019 
-### Master Thesis
+### M.Sc. Thesis
 Spatial patterns and factors influencing spruce budworm infestation in Eastern Canada forests. [**URL**](https://unbscholar.lib.unb.ca/handle/1882/14562)
 
 <details>
