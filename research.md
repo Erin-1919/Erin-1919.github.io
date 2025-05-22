@@ -96,13 +96,13 @@ We investigated the spatial-temporal patterns of spruce budworm (Choristoneura f
 **Li, M.** Flood susceptibility analysis on hexagonal grid meshes: a case study in southern New Brunswick, Canada. Poster presentation at GIS in Education and Research Conference, Mar. 2023, Toronto, Canada. [**Poster**](https://Erin-1919.github.io/assets/pdf/ESRI_poster_Li_2022.pdf)
 
 ### 2022
-**Li, M.**; McGrath, H.; Stefanakis, E. Analytical operations for terrain data modeled in Discrete Global Grid Systems. Oral presentation at Canadian Cartographic Association Conference, May 2022, Online. [**Pre-Recorded Presentation**](https://drive.google.com/file/d/1DECGOtfzUCyaSrtsDGUxXjXPVS3JcYSJ/view?usp=sharing)
+**Li, M.**; McGrath, H.; Stefanakis, E. Analytical operations for terrain data modeled in Discrete Global Grid Systems. Oral presentation at Canadian Cartographic Association Conference, May 2022, Online. [**Recorded Presentation**](https://drive.google.com/file/d/1DECGOtfzUCyaSrtsDGUxXjXPVS3JcYSJ/view?usp=sharing)
   
 ### 2021
-**Li, M.**; McGrath, H.; Stefanakis, E. Integration of multi-source terrain data on Discrete Global Grids in Canada. Oral presentation at Canadian Cartographic Association Conference, May 2021, Online. [**Pre-Recorded Presentation**](https://drive.google.com/file/d/1I0YnzykCr2wq41E5z4sy4xFBjiChINmA/view?usp=sharing)
+**Li, M.**; McGrath, H.; Stefanakis, E. Integration of multi-source terrain data on Discrete Global Grids in Canada. Oral presentation at Canadian Cartographic Association Conference, May 2021, Online. [**Recorded Presentation**](https://drive.google.com/file/d/1I0YnzykCr2wq41E5z4sy4xFBjiChINmA/view?usp=sharing)
 
 ### 2020
-**Li, M.**; Stefanakis, E.; McGrath, H. National terrain data management on Discrete Global Grids in Canada. Oral presentation at AutoCarto 2020, Oct. 2020, Online. [**PDF**](https://cartogis.org/docs/autocarto/2020/docs/abstracts/3h%20National%20Terrain%20Data%20Management%20on%20Discrete%20Global%20Grids%20in%20Canada.pdf) / [**Pre-Recorded Presentation**](https://cartogis.org/docs/autocarto/2020/docs/presentations/3h%20National%20Terrain%20Data%20Management%20on%20Discrete%20Global%20Grids%20in%20Canada.mp4)
+**Li, M.**; Stefanakis, E.; McGrath, H. National terrain data management on Discrete Global Grids in Canada. Oral presentation at AutoCarto 2020, Oct. 2020, Online. [**PDF**](https://cartogis.org/docs/autocarto/2020/docs/abstracts/3h%20National%20Terrain%20Data%20Management%20on%20Discrete%20Global%20Grids%20in%20Canada.pdf) / [**Recorded Presentation**](https://cartogis.org/docs/autocarto/2020/docs/presentations/3h%20National%20Terrain%20Data%20Management%20on%20Discrete%20Global%20Grids%20in%20Canada.mp4)
 
 ### 2018
 **Li, M.**; MacLean, D.A.; Hennigar, C.R.; Ogilvie, J. Spatial-tempol patterns of spruce budworm defoliation within measured plots in Québec. Oral presentation at the 9th Bi-Annual Eastern Canada - USA Forest Science Conference, Oct. 2018, Fredericton, Canada.
@@ -110,6 +110,9 @@ We investigated the spatial-temporal patterns of spruce budworm (Choristoneura f
 **Li, M.**; MacLean, D.A. GIS analyses of factors influencing spruce budworm outbreak initiation in northern New Brunswick. Oral presentation at SERG International Workshop, Feb. 2018, Edmonton, Canada.
 
 ## Other Invited Talks
+### 2025
+Discrete Global Grid Systems (DGGS) and Their Role in Methane Emission Inventories. Presented at the Monthly Lunch and Learn at SensorUp Inc., May 2025, Online.
+
 ### 2024
 Mapping Methane: A Review of Bottom-up Gridded Inventories. Presented at the 130th OGC Member Meeting, Nov. 2024, Online.
 
