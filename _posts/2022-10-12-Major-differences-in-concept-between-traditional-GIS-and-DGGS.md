@@ -1,22 +1,37 @@
 ---
-title: "Major Differences, in Concept, between Traditional GIS and DGGS"
+title: "Key Conceptual Differences Between Traditional GIS and DGGS"
 layout: post
 ---
 ![grid](/assets/img/20221012/grid.jpg)
 
-## Thematic layers vs. Congruent geography
- 
-I like the saying "GIS slices the world into layers of information; DGGS brings that information together again.". In the field of GIS, 'layer' is one of the core concepts to model real-world phenomena, where each 'layer' represents one aspect of the geospatial information. This is practical when one is interested in only one type of geospatial information but not convenient when gathering multi-layer information at one certain geospatial location. Vector layers have various basic geometries like point, polyline, and polygon, which need additional operations when extracting information from multiple layers. Raster layers commonly have different resolutions, transformations, origins, etc., which requires pre-processing to standardize matrix shapes before further analysis. This is why datacube is increasingly prevalent in spatial data management. In contrast, DGGS have their cells registered at fixed locations at each resolution level, which is essentially a multi-resolution congruent geography. This benefits the continuous observation of one certain geo-location, and the extraction of all available information at one location becomes straightforward. 
- 
-## Single resolution vs. Multiple granularities
- 
-Analysis with traditional GIS is, although not all of them, almost at a single resolution. Even if a multi-scale study is carried out with traditional GIS, the definition of resolution or scale is vague because there is no quantitative, systematic measure of spatial scale. Additionally, people are used to observing the world at a single resolution due to the nature of the human visual system and so does our daily experience. Although scientists have recognized the advantages of multi-scale perspectives, the concept remains challenging to most people, especially those not in the geospatial science domain. DGGS have a hierarchical structure no matter the specific configuration. Each design of DGGS has a certain refinement ratio, and each level of partition exclusively defines a cell size, namely resolution. Such resolutions are systematic because the refinement ratio between levels is consistent. Hence, modeling, analysis, observation, and visualization of geospatial data in a DGGS is inherently multi-scale.
+**Traditional Geographic Information Systems (GIS) and Discrete Global Grid Systems (DGGS) offer distinct approaches to spatial data modeling. While both aim to represent and analyze geographic phenomena, they are built on fundamentally different concepts.**
 
-## Continuous vs. Discrete
- 
-The process of digitalization is essentially a process of discretization, think about digital music or photos. One of the key properties of a DGGS is discrete, meaning that a DGGS consists of a finite number of cells at a resolution level. Each cell is computationally independent of the others. A grid system can simplify the modeling process of the real-world phenomenon, and various geographic grid systems existed. DGGS is exceptional because it guarantees global coverage, no overlaps or gaps, uniform grid size, and thus uniform spatial resolution. This outperforms other existing grid systems like graticule and Google's S2. Traditional GIS commonly models geospatial objects in a continuous space where locations are represented by floating-point-based coordinates. This may suffer from problems like storing infinite float digits using finite memory bits, continuous observation of a point-based location, topological ambiguity in neighborhood definition, etc. 
- 
-## Flat model vs. 3D model
- 
-Vector or raster are flattened data models because they are frequently projected to a 2D Cartesian space and use floating-point-based coordinates to present spatial locations. Even Google Earth powered a 3D visual representation of the Earth, it remains a flattened technology because the underlying data model is flattened. DGGS is a fully three-dimensional representation of the entire planet which considers Earth's curvature during its construction. Furthermore, flat models always lead to inconsistent spatial resolutions especially across a large geospatial area because no such a projection can retain area, form, and distance unchanged globally. It means that 2D models have an inconsistent spatial resolution among latitudes because of the inherent flattening. On the contrary, 
-spatial resolution is always explicit and approximately constant at every level of the hierarchical structure in DGGS.
+## Thematic Layers vs. Congruent Geography
+
+A well-known analogy describes GIS as slicing the world into thematic layers, while DGGS brings that information back together into a unified spatial structure. In traditional GIS, layers are used to model different aspects of the real world, such as elevation, land use, or infrastructure. This is effective when analyzing a single theme, but less efficient when querying multiple layers at the same geographic location.
+
+Vector layers require geometry-specific operations to extract or intersect data. Raster layers often differ in resolution, alignment, and origin, requiring preprocessing before analysis. These inconsistencies make integrated spatial analysis more complex.
+
+DGGS, on the other hand, defines a set of fixed, equal-area cells at each resolution level. Each cell serves as a consistent spatial reference that supports straightforward data alignment. This structure forms a multi-resolution, congruent geography that simplifies integration and continuous monitoring at any location.
+
+## Single Resolution vs. Multiple Granularities
+
+Most traditional GIS analyses are performed at a single resolution, often without a clearly defined or consistent notion of spatial scale. While multi-scale studies exist, they often rely on manually created datasets or imprecise assumptions about resolution.
+
+DGGS is inherently multi-resolution. It features a hierarchical grid structure where each level corresponds to a specific, quantifiable resolution. Each cell can be subdivided into smaller units using a consistent refinement ratio. This systematic structure enables native support for multi-scale modeling, observation, and visualization. Analysts can zoom in or out across scales while maintaining spatial consistency and integrity.
+
+## Continuous Space vs. Discrete Grid
+
+Traditional GIS represents space as continuous, using floating-point coordinates to locate objects or features. This introduces issues related to numerical precision, ambiguous neighborhood definitions, and challenges in handling topological relationships.
+
+DGGS operates in a fully discrete space. The Earth is partitioned into a finite set of non-overlapping, gap-free cells at each resolution level. Each cell is computationally independent and serves as a standardized spatial unit. Unlike other grid systems such as latitude–longitude or Google’s S2, DGGS offers uniform spatial resolution, consistent global coverage, and scale-aware indexing that supports both local and global analysis.
+
+## Flattened Models vs. True 3D Representation
+
+Traditional GIS models are typically projected into a 2D Cartesian coordinate system, even when displayed in 3D visualization environments. This flattening leads to inconsistencies in area, shape, and distance across latitudes, resulting in spatial distortion.
+
+DGGS provides a more faithful three-dimensional representation of Earth. It accounts for Earth’s curvature in its design, ensuring that spatial resolution remains consistent across latitudes. The hierarchical structure maintains approximately equal-area cells across all regions of the globe, making DGGS well suited for global-scale modeling, particularly in domains where spatial accuracy and comparability are critical.
+
+---
+
+_While traditional GIS tools remain essential for many applications, DGGS introduces a more consistent, scalable, and globally integrated approach to spatial data modeling. Understanding these conceptual differences is key to unlocking the potential of DGGS in next-generation geospatial science._
