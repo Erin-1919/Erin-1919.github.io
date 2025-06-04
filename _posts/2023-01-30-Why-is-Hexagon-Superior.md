@@ -1,19 +1,27 @@
 ---
-title: "Why is Hexagon Superior"
+title: "Why Is the Hexagon Superior"
 layout: post
 ---
 ![hex](/assets/img/20230130/hex.jpg)
 
-**The main advantage is their high compactness and uniform adjacency, which is not true for square or triangular grids. This can lead to quite a few concrete merits in statistics, modeling, and analysis.**
+**Hexagonal grids offer significant advantages over square or triangular grids due to their compact shape and uniform adjacency. These properties make them especially useful in spatial statistics, modeling, and geospatial analysis.**
 
 ## Compactness
-One of the most important and straightforward uses of DGGS is to do aggregation statistics because of its consistent cell size and fixed cell locations. From this perspective, hexagons can benefit because distances between every two cells are constantly at a certain level, and cell orientation does not alter within a certain area. Think about a use case of point-binning using grid meshes. Hexagons, as the most compact regular polygon that tiles the plane, can minimize the distance between represented points and requires 13% fewer cells in comparison to squares at the same resolution. With the Superior angular resolution, It can solve more different angular relationships between the data points. 
 
-## Uniform adjacency
-The first-order neighbors have all same distance from the central cell, and the outer neighborhoods are more circular compared to square or triangular meshes. This leads to the fact that hexagonal grid distance can better approximate the Cartesian distance, which makes it a good surrogate. 
+One of the key uses of Discrete Global Grid Systems (DGGS) is spatial aggregation, made effective by consistent cell size and fixed cell locations. Hexagons offer a clear benefit in this context. The distance between adjacent cells remains stable, and orientation does not shift within a local region. When applying point binning to a grid mesh, hexagons minimize the average distance between points and their representative cells. Compared to square grids at the same resolution, they can reduce the number of required cells by approximately 13 percent. Their superior angular resolution also enables better representation of angular relationships among data points.
 
-## Thus...
-From the perspective of spatial operations, hexagonal cells migrate the vagueness of neighborhood definition, so that operations that require consideration of neighboring cells can be distinct and no further consideration of weighing scheme is needed. In hydrological modeling, it can remove the island effect and can better represent the flow width. For image processing algorithms that are radially symmetric, operations on hexagonal grids can be 25-50% more efficient than the square version of those algorithms. 
+## Uniform Adjacency
 
-## By the way...
-The Foveal retina, which is the center part of our eyes, is with a hexagonal pattern. When evolution set out to design a high-resolution sampling system for the world, we tiled our eyes with hexagons. Doing this with the Earth is a good idea if we want to do the same kind of sampling ourselves. Our brain was also designed to do mapping based on hexagons with different nestings.
+In a hexagonal grid, all first-order neighbors are equidistant from the central cell. The resulting neighborhood pattern is more circular than those of square or triangular grids. This layout provides a closer approximation to Cartesian distances, making hexagonal distances a reliable surrogate for Euclidean calculations.
+
+## Practical Implications for Spatial Operations
+
+Hexagonal grids simplify neighborhood-based operations by removing ambiguity in defining adjacent cells. There is no need for complex weighting schemes or custom adjacency rules. In hydrological modeling, hexagons reduce artificial barriers like the island effect and provide a better approximation of flow width. In image processing tasks that involve radial symmetry, hexagonal grids have been shown to improve computational efficiency by 25 to 50 percent compared to square grids.
+
+## A Natural Design Pattern
+
+Interestingly, the foveal region of the human eye uses a hexagonal pattern for high-resolution visual sampling. This biological example illustrates the efficiency of hexagonal tiling in representing space. Similarly, applying hexagons to Earth’s surface provides a more consistent and accurate sampling framework. Research has also shown that the human brain forms internal maps using hexagonal lattice structures across different spatial scales. Emulating this pattern in geospatial applications brings both biological inspiration and analytical advantages.
+
+---
+
+_Hexagonal grids are more than just aesthetically pleasing. Their compactness, symmetry, and consistency make them a practical and powerful foundation for spatial analysis._
