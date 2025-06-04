@@ -4,45 +4,60 @@ layout: post
 ---
 ![kuba](/assets/img/20210814/kuba.jpg)
 
-Virtual globe has been found useful in all communities of researchers, educators, and citizens or non-scientists. The roles Digital Earth played have been summarized as five broad categories: mapping and visualization tool, analytical and modeling tool, the underlying basis for other derivative applications, data storage structure, and platform for Volunteered Geographic Information (VGI; [1]). 
+**The concept of Digital Earth plays multiple roles across research, education, and public engagement. These roles have been broadly categorized into five types: mapping and visualization tool, analytical and modeling tool, underlying basis for derivative applications, data storage structure, and platform for Volunteered Geographic Information (VGI) [1].**
 
 ## Mapping and Visualization Tool
-### Environmental monitoring
-The most obvious function of Digital Earth lies in visualization, especially the dynamic, real-time, or multi-scale monitoring of the environmental phenomena and process on the Earth’s surface. Over the decades, governmental departments and organizations have carried out projects based on Digital Earth aimed to enable researchers and citizens better understand environmental issues, relating to sea ice extent in Arctic region [2], oil spill imaging [3], parasitic diseases spreading [4], species habitat distributions [5], etc.
 
-### Interactive visualization
-The interactive visualization can be realized by Digital Earth, giving users an opportunity to access, explore and participate the environmental conservation. The example projects include Common Ground [6], Arctic Research Mapping Application [7], Crusta [8], etc.
+### Environmental Monitoring
 
-### Decision-making support
-The visualization by Digital Earth not only can deliver the information but also can support decision making in various fields, typically done by overlay the other information layers on the satellite imagery base maps so that area of interests can be identified, upon which necessary decisions can be made. It is particularly useful for natural disaster strategies [9], epidemic management [10], energy utilization [11], and meta-analysis research [12].
+One of the most prominent uses of Digital Earth is dynamic, real-time, and multi-scale visualization of environmental phenomena. It has been adopted by government organizations and scientific institutions to enhance understanding of environmental challenges, such as monitoring sea ice in the Arctic [2], oil spill imaging [3], disease spread [4], and species habitat distribution [5].
 
-### Dissemination of research results
-For scientists, visualization by Digital Earth offers a platform to share and communicate their research findings and to attract or educate the public. For example, Yuan et al. [13] developed a new approach to simulate rupture fault displacement during a tsunamigenic earthquake event and integrated their results into Google Earth to supply with the geological context. What is more, the hazards of the tsunami in the Indian Ocean was evaluated and simulated and integrated into the Google Earth context [14]; the latitudinal distributions of species richness for different grass lineages were investigated and mapped by interpolating their model fits onto an equal-area hexagonal grid of the world [15]. 
+### Interactive Visualization
+
+Digital Earth enables users to explore spatial data interactively, enhancing public participation and environmental awareness. Examples of such applications include Common Ground [6], the Arctic Research Mapping Application [7], and Crusta [8].
+
+### Decision-Making Support
+
+By layering contextual information over satellite imagery or base maps, Digital Earth supports decision-making in areas like disaster response [9], epidemic management [10], energy infrastructure [11], and global meta-analyses [12].
+
+### Dissemination of Research Results
+
+Scientists can use Digital Earth as a platform to communicate findings and educate the public. Yuan et al. [13] simulated fault displacement from a tsunamigenic earthquake and visualized the results in Google Earth. Other studies visualized tsunami hazard zones in the Indian Ocean [14] and interpolated grass lineage richness on a global hexagonal grid [15].
 
 ## Analytical and Modeling Tool
-### Basic areal unit
-In the biological or ecological fields such as ornithology, agriculture, entomology, and wildlife biology, the DGGS cells, hexagons particularly, have been used as the basic spatial analytical unit because of their equal-area, equal-shape, and seamless coverage properties. For example, in a series of studies on global bird migration, each bird species’ breeding or winter range map polygons were converted to equal-area hexagonal cells for estimating regional assemblages (e.g., [16]), to summarize species richness (e.g., [17]) or to present presences and absences of bird species on a global icosahedron (e.g., [18]). Various studies were then carried out upon this basis to understand seasonal associations between novel climates and bird migratory populations [19], to explain the differences in migratory destinations among bird species [18], and to forecast transatlantic birds’ migration under the global warming context [20]. Except these, hexagonal cells also acted as transitional, analytical units to bridge components of a study (e.g., [21]).
 
-### Data integration
-Data integration especially benefits from DGGS, because the information from different sources automatically lined up in DGGS cells which are fixed in area and location. A typical example is that to systematically analyze over 1000 chondrichthyan fishes-sharks, rays, and chimaeras over the global marine area, all species distribution maps were merged into one single shapefile using hexagonal grids as a unified reference frame [22]. 
+### Basic Areal Unit
 
-### Model basis
-Global shallow-water models were created on either twisted icosahedron [23, 24] or hexahedron [25-27] based globe, on which many of the problems of stream function-velocity potential form of the shallow water equations associated with the fluid flow on a rotating sphere can be overcome [23, 24]. Other examples included an atmospheric dynamical core model [28] and an ultra-high resolution atmospheric global circulation model [29] built on icosahedron-based spherical geodesic grids, and a vector tile model based on a pole-oriented the quaternary quadrangle mesh DGGS [30, 31]. Peterson also suggested that predictive modeling techniques (e.g., finite element, agent-based, and cellular automaton) can be applied to DGGS because of their cell structure, operations, and data integration characteristics [32].
+In ecological fields such as ornithology, agriculture, and wildlife biology, DGGS cells—especially hexagons—serve as equal-area, seamless analytical units. These have been used in bird migration studies to estimate species assemblages [16], summarize species richness [17], map presence or absence globally [18], analyze climate-migration associations [19], explore migration destinations [18], and predict future transatlantic routes under climate change [20]. In some cases, DGGS cells have also functioned as transitional analytical layers within study pipelines [21].
 
-### Sampling design approach
-The equal-area characteristic of DGGS provides the equality of possibility that points within a cell can be chosen as the representatives for the cell [33]. It helps to make a systematical sampling strategy, particularly at a large scale. Gong et al. [34] generated sample points based on a globally systematic unaligned sampling strategy over the Earth’s surface to test the accuracy of their global land-cover maps. Samples were collected by partitioning the entire globe with a hexagonal scheme then randomly assigning samples in each hexagon [34]. The generated random sample points were also used in other studies (e.g., [35, 36]). 
+### Data Integration
 
-### Common reference frame
-DGGS have served as a common reference frame to test and compare results from different studies. To validate the accuracy of the existing global urban maps, the urban area in each tested map was assessed by the DGGS framework which is independent of political boundaries and without the issue of ununiform raster pixel sizes due to geographic projections [37, 38]. To perform a cross-comparison between different datasets for validating coarse-scale remote sensing soil moisture products, those datasets were re-projected to a common, equal-area Icosahedron Snyder Equal Area (ISEA) 4H9 grids as the reference projection [39, 40]. The same grid system has been used as a referenced grid system for the Soil Moisture and Ocean Salinity Mission (SMOS; [41]).
+DGGS greatly facilitates integration of data from various sources by aligning everything within a uniform spatial framework. For example, hexagonal grids were used to combine distribution data for over 1000 chondrichthyan species across global marine environments [22].
+
+### Model Basis
+
+Various geophysical models have been constructed on DGGS grids. These include global shallow-water models on twisted icosahedrons [23, 24] and hexahedrons [25–27], atmospheric models on spherical grids [28, 29], and a vector tile model on pole-oriented quadrangle meshes [30, 31]. Peterson further noted that DGGS is compatible with modeling techniques such as finite element, agent-based, and cellular automata due to its structured cell architecture [32].
+
+### Sampling Design Approach
+
+The equal-area nature of DGGS allows for statistically sound sampling across global domains. Gong et al. [34] partitioned Earth using hexagons and then randomly assigned samples within each cell to test land cover map accuracy. This sampling design was reused in multiple validation studies [35, 36].
+
+### Common Reference Frame
+
+DGGS provides a neutral, consistent frame of reference to compare results across datasets and studies. For instance, urban extent validation has been conducted using DGGS instead of administrative boundaries [37, 38]. Soil moisture datasets were also compared using ISEA 4H9 grids to enable cross-validation for remote sensing products [39, 40], including those from the Soil Moisture and Ocean Salinity (SMOS) Mission [41].
 
 ## Underlying Basis for Other Derivative Applications
-HEALPix, one of the common DGGSs, has been used as a foundation to create other software or models in the field of astronomy, typically cosmology [42]. The derived software has been used to simulate polarized cosmic microwave background maps and infrared or submm sky, to compute the theoretical spectra of cosmic microwave background anisotropy, and to calculate photon fluxes from dark matter annihilation or decay in galaxy haloes [42].
+
+HEALPix, a widely used DGGS, has served as the basis for numerous cosmological software applications. These include simulations of polarized cosmic microwave background radiation, sky mapping in infrared and submillimeter wavelengths, and calculations of photon flux from dark matter annihilation or decay [42].
 
 ## Data Storage Structure
-SMOS products were provided in the format of ISEA4H9 grids, which has been proved as the best-suited global grid to be used in mapping SMOS imagery among grid systems of Latitude-longitude Universal Transverse Mercator (UTM), Quaternary Triangular Mesh (QTM), ISEA projection, and Equal Area Scalable Earth (EASE; [41]). SMOS products have been used in several studies of biology, ecology, and oceanography (e.g., [43-45]).
+
+SMOS products are delivered using ISEA 4H9 grids, which have been identified as the most suitable option among several global grid systems including Latitude–Longitude, UTM, QTM, and EASE grids [41]. These gridded data have supported research in biology, ecology, and oceanography [43–45].
 
 ## Platform for Volunteered Geographic Information
-Volunteered Geographic Information (VGI) has been discussed by Goodchild [1], which includes citizens as sensors in a traditional GIS, potentially enhance people’s understanding of the surface of the Earth with timely, low-cost, and public-accessible sources. Different from the terms “citizen science” or “geo-crowdsourcing”, VGI emphasizes the active mode of human beings who are contributing to the data [46]. These citizen-collected data can help improve, for example, environmental models in terms of validation or predictions, and those VGI platforms can be treated as a part of the Digital Earth infrastructure [46]. De-Longueville et al. [47] proposed an approach to integrate VGI to their designed Digital Earth by Sensor Web Enablement so that citizens played the role of sensors to form the nervous system of the Digital Earth. This concept was applied in the context of a forest fire scenario, where citizens were able to help with up-to-date information collection and eventually decision making. Additionally, citizen-participated urban planning can be realized by Digital Earth using Web Services and Service-Oriented Architecture [48]. In their framework, users can select and compare different urban planning alternatives or solutions in a virtual-globe-based 3D visualization environment [48]. 
+
+VGI, introduced by Goodchild [1], describes citizen-contributed geospatial data. It emphasizes active human involvement and complements professional datasets by providing real-time, low-cost observations. De Longueville et al. [47] proposed integrating VGI with Sensor Web Enablement, allowing citizens to act as virtual sensors. In a forest fire scenario, this model enabled timely data reporting for crisis response. Another example demonstrated how Digital Earth supports participatory urban planning using Web Services and Service-Oriented Architecture, allowing users to compare development plans within a 3D globe environment [48].
+
 
 ## Citation 
 
@@ -94,4 +109,8 @@ Volunteered Geographic Information (VGI) has been discussed by Goodchild [1], wh
 46.	Brovelli, M.A., et al., Citizen Science in Support of Digital Earth, in Manual of Digital Earth. 2020. p. 593-622.
 47.	De-Longueville, B., et al., Digital earth's nervous system for crisis events: real-time sensor web enablement of volunteered geographic information. International Journal of Digital Earth, 2010. 3(3): p. 242-259.
 48.	Wu, H., Z. He, and J. Gong, A virtual globe-based 3D visualization and interactive framework for public participation in urban planning processes. Computers, Environment and Urban Systems, 2010. 34(4): p. 291-298.
+
+---
+
+_Digital Earth continues to serve as a versatile, scalable, and integrative platform that supports everything from scientific research and education to public participation and global policy-making._
 
