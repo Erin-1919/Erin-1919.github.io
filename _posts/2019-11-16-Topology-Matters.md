@@ -2,13 +2,26 @@
 title: "Topology Matters"
 layout: post
 ---
-
 ![Topology](https://images.unsplash.com/photo-1545987796-200677ee1011?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80)
 
-This reflection is inspired by the paper *Topology matters: network topology affects outcomes from community ecology neutral models* by [White and Kiester (2008)](https://doi.org/10.1016/j.compenvurbsys.2007.11.002). In this context, network topology refers to the structure or arrangement of systematically sampled points, or more intuitively, how those points are connected and what counts as a neighbor. The paper explored whether the spatial structure of ecological communities affects dispersal patterns, using three different topological frameworks: hexagonal tessellations, square tessellations with von Neumann neighborhoods (which consider only the four cardinal directions), and square tessellations with Moore neighborhoods (which include diagonal connections as well).
+**Topology in spatial sampling and modeling is often overlooked, yet it can have significant effects on outcomes. A 2008 study by White and Kiester shows how the arrangement of cells in a spatial network, such as hexagonal versus square grids, can influence ecological model results. This invites deeper reflection on the frameworks we adopt in geospatial analysis.**
 
-By running neutral community models across these different structures, the study showed that topology significantly affects ecological outcomes. Specifically, topologies with higher degrees of adjacency led to larger and more evenly distributed populations as dispersal increased. As the probability of dispersal rose, the differences in model outcomes among the different topologies became more pronounced. Hexagonal tessellations, which offer more uniform adjacency relations, often performed better than square tessellations, which suffer from inconsistencies in neighbor definitions due to corner cases and edge effects.
+## Topology and Its Role in Spatial Models
 
-Despite these findings, the influence of spatial topology in ecological models remains underexplored. In one of my Master’s projects, I applied simultaneous autoregressive models based on a square tessellation created through systematic sampling at 2-kilometer intervals. The model used adjacency based on a lattice structure, which at the time seemed standard and straightforward. I had not considered using hexagonal tessellations, likely because they are rarely adopted in ecological sampling and analysis. Yet, this paper made me reflect on how foundational concepts in geostatistics—such as definitions of first-order and second-order neighbors—might need reconsideration if we use alternative tessellations.
+In this context, topology refers to the structure of spatial samples and how they are connected to each other. In ecology, this arrangement can influence patterns such as species dispersal and the stability of modeled populations. White and Kiester (2008) compared three types of spatial configurations: hexagonal grids, square grids with von Neumann neighborhoods which consider only adjacent sides, and square grids with Moore neighborhoods which include diagonal connections. Their study used neutral ecology models to assess whether these arrangements affect model behavior. As the probability of dispersal increased, the differences between topologies also became more apparent. More connected configurations led to broader and more uniform species distributions.
 
-The mathematical forms of commonly used spatial statistics like Moran’s I and Getis-Ord G* do not change, but the definition of spatial relationships, the spatial structure, and the weighting matrix would need to be revised. The same applies to spatial models such as autoregressive or auto-covariate regressions, which rely heavily on how spatial dependencies are structured. This would not only require updates to the theoretical formulations but also to the computational routines used in model fitting. Whether switching to a hexagonal structure would lead to substantially different results is an empirical question and likely varies depending on the application. However, these potential differences deserve more attention and should be explored, quantified, and openly discussed in future research.
+## Why Hexagons Perform Differently
+
+Hexagonal tessellations often outperform square grids because each cell is connected to six equally distant neighbors. This balanced structure supports more isotropic relationships and avoids geometric biases that occur in square grids. The study found that hexagons can support larger, more evenly spread populations. This suggests that the choice of tessellation is not just a background technical detail but a key factor in how spatial models perform.
+
+## Reflection on My Own Work
+
+This study reminded me of my Master’s project where I used square sampling at 2 km intervals for a spatial autoregressive model. I chose that setup without questioning its limitations. It simply followed conventional practice. Yet, this paper made me think: what if I had used a hexagonal sampling grid instead? That change might have altered how spatial relationships were modeled, possibly leading to different outcomes. It also makes me wonder how established geostatistical tools like Moran’s I or Getis-Ord G* would behave if they were applied on hexagonal structures.
+
+## Revisiting Our Tools and Assumptions
+
+If spatial relationships are sensitive to topology, then it may be time to update how spatial statistics and spatial regression models are built. Many models rely on adjacency matrices and neighborhood definitions. These often assume square grids and Cartesian logic. By introducing hexagonal sampling as an option, we could improve spatial continuity and reduce edge effects. This could be particularly helpful in modeling natural phenomena where uniform neighborhood relationships are important.
+
+---
+
+**This paper is a powerful reminder that core design choices, like grid structure, can meaningfully shape analytical results. Revisiting our spatial assumptions could lead to more consistent and realistic models across geospatial disciplines.**
