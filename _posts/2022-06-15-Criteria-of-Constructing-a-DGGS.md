@@ -1,29 +1,48 @@
 ---
-title: "Criteria of Constructing a DGGS"
+title: "Criteria for Constructing a DGGS"
 layout: post
 ---
 ![monstera](/assets/img/20220615/monstera.jpg)
 
-Goodchild proposed 14 criteria for comparing DGGS alternatives in 1994, which were rebuilt by Kimerling et al. in 1999. Given that it is mathematically impossible to completely fulfill all the ’Goodchild Criteria’, the newest DGGS standards, released by OGC in 2017, identified the key criteria that can be simultaneously satisfied by different DGGS designs. The first requirement demonstrated by the OGC Abstract Specification states that “A DGGS specification SHALL include a DGGS Reference Frame and the associated Functional Algorithms as defined by the DGGS Core Conceptual Data Model”. The left 12 requirements regarding DGGS reference frame elements are summarized and explained below. 
+**In 1994, Michael Goodchild proposed 14 criteria for evaluating DGGS designs. These were refined by Kimerling et al. in 1999. Recognizing that no DGGS can satisfy all criteria perfectly, the Open Geospatial Consortium (OGC) released a formal DGGS standard in 2017 that identifies key design requirements considered achievable and essential. These are summarized below, based on the DGGS Core Conceptual Data Model and Abstract Specification.**
 
-## Global domain and area preservation 
-A compliant DGGS should cover the complete Earth’s surface with position uniqueness, i.e., without any overlapping or underlapping cells. Lack of cell uniqueness can result in addressing vagueness and further analytical issues. Also, such a global domain and uniqueness should be preserved throughout the range of hierarchical tessellations, which ensures the preservation of total surface area among all the resolutions. This combines Requirements 2, 3, and 5 listed by the OGC Abstract Specification. 
+## Global Domain and Area Preservation
 
-## Multi-resolution with cell refinement 
-Those computational grids with a single resolution level are not sufficient to constitute DGGS. DGGS are systems because of their hierarchical tessellations, where parent cells are partitioned into child cells consistently and progressively. Aperture, or refinement, is the characteristic of the number of child cells partitioning a parent cell. Congruent DGGS are each of their parent cells consisting of a union of child cells and aligned DGGSarethat their parent cells have the same center point (or vertex) as their child cells. This includes Requirements 4 and 10 in the OGC Abstract Specification. 
+A DGGS must fully and uniquely cover the Earth's surface without overlaps or gaps. This guarantees position uniqueness, which is critical for accurate addressing and reliable analytics. This global coverage and uniqueness must be preserved across all resolution levels. Together, these ensure consistent surface area representation, supporting valid spatial aggregation and analysis. This combines Requirements 2, 3, and 5 from the OGC specification.
 
-## Initial polyhedral tessellation
-The Platonic solids (tetrahedron, hexahedron, octahedron, dodecahedron, and icosahedron)are the only polyhedral solids able to partition a sphere’s surface by regular cells with equal area. Icosahedron with the smallest face area and the smallest interior angles has been most commonly adopted by DGGS designs, followed by hexahedron, octahedron, and dodecahedron. Based on this, initial tessellation should be defined by mapping a base unit polyhedron to the Earth’s surface and connecting all vertices located on the surface with the shortest paths. Furthermore, the orientation of the polyhedron relative to the Earth’s surface can then be defined depending on the potential applications. For a hexahedron, face centers were usually placed at the poles. For an octahedron, the faces were normally aligned with the equator-prime-meridian-octants. For an icosahedron, the vertices can be put at the poles, fell in the ocean, or orientated as equator-symmetry. Nonetheless, as stated in the OGCAbstract Specification, the initial tessellation, orientation, cell shapes, and refinement methods can be different among DGGS alternatives. This is Requirement 9 in the OGC Abstract Specification.
+## Multi-Resolution with Cell Refinement
 
-## Simple-geometry, equal-area cells
-Cell shapes used to construct DGGS should have their edges only meeting at the vertices, have exactly two edges meeting at one vertex, have the same number of edges and vertices, and enclose a measurable area. Triangles, quadrilaterals, and hexagons, as three of all kinds of simple geometries, were commonly used to create multiple-resolution discrete grids. Quadrilaterals are most acceptable for hexahedron-based DGGS, having advantages of uniform cell orientation, existing hardware, and display devices, and existing quad-tree-based algorithms. Triangles are essentially suitable for triangle-faced polyhedrons, although they have shortages including ununiform adjacency, ununiform cell orientation, unavailable triangle-pixel-display devices, etc. Hexagonal grids have been increasingly accepted by researchers, because of their greatest angular resolution, the least average error when tiling the plane, uniform adjacency, and better approximation to Cartesian distance when generating the discrete distance metric. Because of these special geometric attributes of hexagon, it is superior in structuring rasters than square pixels. In addition, the OGC Abstract Specification allows DGGS to validly comprise more than one cell geometry considering the potential alternatives based on truncated polyhedral like cuboctahedrons and truncated icosahedrons. 
+DGGS are defined by hierarchical tessellations. Each resolution level is produced by subdividing parent cells into child cells. This refinement is described by the system’s aperture. A congruent DGGS ensures that child cells form a complete union of the parent, while an aligned DGGS preserves center alignment between levels. These features enable consistent data aggregation, downsampling, and analysis across scales. This satisfies Requirements 4 and 10.
 
-Grid cells should have an equal area at a specific precision level. The characteristic of the equal area ensures that the spatial units at multiple resolution levels have the same probability to make contributions to analyses. Also, equal-area cells can minimize the influence of area variations in spatial analyses when taking Earth’s curved surface as a fundamental reference frame. With equal-area cells, spatial analyses can be repeated consistently, regardless of resolution levels and specific locations on the Earth’s surface. Hence, although there were various ways to directly partition the spherical surface or to project the planar partition to the corresponding spherical surface as summarized by Kimerling et al., two classes of them met the OGC Abstract Specification: the equal-area projection for a base polyhedron and small-circle-based direct surface tessellations. Specifically, the Snyder Equal Area projection was recommended by White et al. after comparing the area and shape distortion resulting from different transformation choices. However, it should be noted that equal area does not mean a consistent value of the cells’ area. Such uncertainties within slightly various cell areas may due to the rate of convergence, the number of iterations in calculating convergence, the precision of critical real values (e.g., π), etc. Therefore, the OGC Abstract Specification indicates that DGGS specifications should also represent the acceptable precision, the maximum allowed ratio of cell area uncertainty to the cell area. Requirements 6, 7, and 8 in the OGC Abstract Specification are comprised in this section.
+## Initial Polyhedral Tessellation
 
-## Cell addressing
-Cells within DGGS should be uniquely identified by a unique index among the complete global domain at each resolution level. This requirement sets the stage for data integration, information queries, and largely determines the efficiency of the DGGS. Although the OGC Abstract Specification did not specify how would this be achieved, the most commonly used indexing approaches can be classified as hierarchy-based, space-filling curve-based, coordinate-based, and encoded address schemas, four general mechanisms. This concludes Requirements 11, and 12 in the OGC Abstract Specification.
+DGGS are typically based on tessellations of regular polyhedra—such as the icosahedron, octahedron, hexahedron, dodecahedron, or tetrahedron—mapped to the Earth’s surface. The icosahedron is the most common due to its small face area and near-uniform geometry. Orientation of the polyhedron can vary based on use case, such as placing vertices in oceans or aligning face centers with the poles. The tessellation defines the framework for cell subdivision. This corresponds to Requirement 9.
 
-## Spatial referencing with centroids as reference points
-Every DGGS cell must be referenced at its centroid. A centroid is the geodesic center of the surface area of a DGGS cell, which does not change along with cell shapes or cell orientation throughout the DGGS domain. Thus, having the centroid as the reference point for each cell is the only choice contributing to systematic and consistent reference points. This is Requirement 13 in the OGC Abstract Specification.
+## Simple Geometry and Equal-Area Cells
 
-The goal of the OGC Abstract Specification was to define the common qualities of DGGS designs with flexible choices, rather than to determine one DGGS design optimized under any circumstances. It should be noted that it is hard to have a single DGGS design with all advisable characteristics such as center alignment, congruence, and lower aperture, and practical for all applications. Thus, some trade-offs have to be considered when designing a DGGS depending on the specific scenarios.
+Cells must be simple in shape, have well-defined edges and vertices, and enclose a measurable area. Common geometries include triangles, quadrilaterals, and hexagons:
+
+- **Quadrilaterals** are common for hexahedron-based DGGS and work well with existing quadtree algorithms and display systems.
+- **Triangles** suit triangle-faced polyhedra but may lead to irregular adjacency and orientation.
+- **Hexagons** offer uniform adjacency, high angular resolution, better distance approximation, and minimal tiling error, making them attractive for raster-style analysis.
+
+DGGS must also provide approximately equal-area cells at each resolution level. Equal-area properties ensure fair representation of spatial data and reduce distortion in analyses. While exact equality is mathematically unachievable, acceptable precision must be specified, along with the maximum allowable area variation. Projections such as the Snyder Equal Area projection are often used for area preservation. These characteristics fulfill Requirements 6, 7, and 8.
+
+## Cell Addressing
+
+Each DGGS cell must be uniquely and consistently identified. Indexing supports data integration, query efficiency, and spatial analysis. The OGC does not mandate a specific method, but common approaches include:
+
+- Hierarchical indexing  
+- Space-filling curves (e.g., Hilbert, Peano)  
+- Coordinate-based systems  
+- Encoded address schemes  
+
+This supports Requirements 11 and 12.
+
+## Centroid-Based Spatial Referencing
+
+Each cell must be referenced by its centroid, which represents the geodesic center of its area. Centroids provide a consistent, geometry-independent method for spatial referencing across the entire DGGS domain. This is Requirement 13.
+
+---
+
+**In summary**, the OGC DGGS Abstract Specification does not prescribe a one-size-fits-all system. Instead, it outlines core requirements that allow flexibility in implementation. Trade-offs are often necessary based on application needs. No single DGGS will simultaneously optimize for congruence, alignment, low aperture, and equal-area precision, so design choices must balance practical goals with technical constraints.
