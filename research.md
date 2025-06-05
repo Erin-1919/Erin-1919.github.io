@@ -90,7 +90,7 @@ We investigated the spatial-temporal patterns of spruce budworm (Choristoneura f
 
 ## Conference Presentations
 ### 2025
-**Li, M.**; Liang, S. Beyond the Graticule: Spatially Explicit Methane Inventories Using Discrete Global Grids. Oral and poster presentation at CanCH4 Symposium, May 2025, Ottawa, Canada. [**Poster**](https://Erin-1919.github.io/assets/pdf/CanCH4_Poster_May_2025_EL.pdf)
+**Li, M.**; Liang, S. Beyond the Graticule: Spatially Explicit Methane Inventories Using Discrete Global Grids. Oral and poster presentation at CanCH4 Symposium, May 2025, Ottawa, Canada. [**Poster**](https://Erin-1919.github.io/assets/pdf/CanCH4_Poster_May_2025_EL.pdf) / [**Recorded Presentation**](https://youtu.be/_FMQk5I4agQ) / [**Panel Discussion**](https://youtu.be/r7FaFNzNV-o)
 
 ### 2023
 **Li, M.** Flood susceptibility analysis on hexagonal grid meshes: a case study in southern New Brunswick, Canada. Poster presentation at GIS in Education and Research Conference, Mar. 2023, Toronto, Canada. [**Poster**](https://Erin-1919.github.io/assets/pdf/ESRI_poster_Li_2022.pdf)
