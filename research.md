@@ -90,10 +90,13 @@ We investigated the spatial-temporal patterns of spruce budworm (Choristoneura f
 
 ## Conference Presentations
 ### 2025
-**Li, M.**; Liang, S. Beyond the Graticule: Spatially Explicit Methane Inventories Using Discrete Global Grids. Oral and poster presentation at CanCH4 Symposium, May 2025, Ottawa, Canada. [**Poster**](https://Erin-1919.github.io/assets/pdf/CanCH4_Poster_May_2025_EL.pdf) / [**Recorded Presentation**](https://youtu.be/_FMQk5I4agQ) / [**Panel Discussion**](https://youtu.be/r7FaFNzNV-o)
+**Li, M.E.**; Liang, H.L.S. Beyond the Graticule: Spatially Explicit Methane Inventories Using Discrete Global Grids. Oral and poster presentation at CanCH4 Symposium, May 2025, Ottawa, Canada. [**Poster**](https://Erin-1919.github.io/assets/pdf/CanCH4_Poster_May_2025_EL.pdf) / [**Recorded Presentation**](https://youtu.be/_FMQk5I4agQ) / [**Panel Discussion**](https://youtu.be/r7FaFNzNV-o)
+
+### 2024
+**Li, M.E.**; Liang, H.L.S. Mapping Methane: A Review of Bottom-up Gridded Inventories. Oral presentation at the 130th OGC Member Meeting - EmissionML DWG ad-hoc, Nov. 2024, Online.
 
 ### 2023
-**Li, M.** Flood susceptibility analysis on hexagonal grid meshes: a case study in southern New Brunswick, Canada. Poster presentation at GIS in Education and Research Conference, Mar. 2023, Toronto, Canada. [**Poster**](https://Erin-1919.github.io/assets/pdf/ESRI_poster_Li_2022.pdf)
+**Li, M.**; McGrath, H.; Stefanakis, E. Flood susceptibility analysis on hexagonal grid meshes: a case study in southern New Brunswick, Canada. Poster presentation at GIS in Education and Research Conference, Mar. 2023, Toronto, Canada. [**Poster**](https://Erin-1919.github.io/assets/pdf/ESRI_poster_Li_2022.pdf)
 
 ### 2022
 **Li, M.**; McGrath, H.; Stefanakis, E. Analytical operations for terrain data modeled in Discrete Global Grid Systems. Oral presentation at Canadian Cartographic Association Conference, May 2022, Online. [**Recorded Presentation**](https://drive.google.com/file/d/1DECGOtfzUCyaSrtsDGUxXjXPVS3JcYSJ/view?usp=sharing)
@@ -112,9 +115,6 @@ We investigated the spatial-temporal patterns of spruce budworm (Choristoneura f
 ## Other Invited Talks
 ### 2025
 Discrete Global Grid Systems (DGGS) and Their Role in Methane Emission Inventories. Presented at the Monthly Lunch and Learn at SensorUp Inc., May 2025, Online.
-
-### 2024
-Mapping Methane: A Review of Bottom-up Gridded Inventories. Presented at the 130th OGC Member Meeting, Nov. 2024, Online.
 
 ### 2022
 Flood Susceptibility Modeling in Discrete Global Grids under Climate Change Scenarios. Presented at the Natural Resources Canada, Oct. 2022, Online.
