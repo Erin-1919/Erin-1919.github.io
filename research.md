@@ -90,6 +90,11 @@ We investigated the spatial-temporal patterns of spruce budworm (Choristoneura f
 
 ## Conference Presentations
 ### 2025
+
+**Li, M.E.**; Liang, S.H.L. Standardizing Spatial Intelligence for Gridded Methane Inventories: DGGS Meets EmissionML. Oral presentation at the 132nd OGC Member Meeting - EmissionML DWG, Jun. 2025, Online.
+
+**Li, M.E.**; Liang, S.H.L. Beyond the Graticule: Spatially Explicit Methane Inventories Using Discrete Global Grids. Oral presentation at the 132nd OGC Member Meeting - Discrete Global Grid Systems DWG, Jun. 2025, Online.
+
 **Li, M.E.**; Liang, H.L.S. Beyond the Graticule: Spatially Explicit Methane Inventories Using Discrete Global Grids. Oral and poster presentation at CanCH4 Symposium, May 2025, Ottawa, Canada. [**Poster**](https://Erin-1919.github.io/assets/pdf/CanCH4_Poster_May_2025_EL.pdf) / [**Recorded Presentation**](https://youtu.be/_FMQk5I4agQ) / [**Panel Discussion**](https://youtu.be/r7FaFNzNV-o)
 
 ### 2024
