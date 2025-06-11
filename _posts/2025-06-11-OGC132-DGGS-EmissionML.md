@@ -3,7 +3,7 @@ title: "Presenting at the 132nd OGC Member Meeting"
 layout: post
 ---
 
-![ogc132-sessions](/assets/img/20250611/ogc132_sessions.png)
+![ogc132-sessions](/assets/img/20250611/ogc132_sessions.jpg)
 
 **At the 132nd OGC Member Meeting in June 2025, I had the opportunity to present our recent research on methane emissions at two sessions, highlighting how Discrete Global Grid Systems (DGGS) can enhance the spatial consistency and analytical capabilities of gridded methane inventories, and how this approach can be integrated into the emerging EmissionML and OGC DGGS API standards.**
 
