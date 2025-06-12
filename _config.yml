@@ -9,31 +9,35 @@ date_format: "%B %d, %Y"
 # Layout
 
 show_social: true
-show_excerpts: false       # show article excerpts on the home page
-show_frame: true           # adds a gray frame to the site
-show_sidebar: false        # show a sidebar instead of the usual header
-minimal: true             # use a dark header
+show_excerpts: false
+show_frame: true
+show_sidebar: false
+minimal: true
 
 # Menu
 
-navigation:                # accepts {file, title, url, icon, sidebaricon}
+navigation:
   - {file: "index.html", title: "About me"}
   - {file: "blog.md", title: "Blog"}
   - {file: "research.md", title: "Research"}
- # - {file: "gallery.md", title: "Gallery"}
+  - {file: "gallery.md", title: "Gallery"}
  # - {file: "cv.html", title: "CV"}
   
-external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
+external:
   - {title: Mail, icon: envelope, url: "mailto:mingke.li@ucalgary.ca"}
   - {title: GitHub, icon: github, url: "https://github.com/Erin-1919"}
   - {title: ResearchGate, icon: researchgate, url: "https://www.researchgate.net/profile/Mingke-Li"}
   - {title: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/in/mingke-erin-li"}
 
 comments:
-#  disqus_shortname: ""    # see https://disqus.com/
-#  isso_domain: ""         # see https://posativ.org/isso/
+#  disqus_shortname: ""
+#  isso_domain: ""
 
 plugins:
- - jekyll-feed
- - jemoji
- - jekyll-seo-tag
+  - jekyll-feed
+  - jemoji
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+paginate: 10
+paginate_path: "/blog/page:num/"

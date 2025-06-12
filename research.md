@@ -4,6 +4,39 @@ permalink: "/Research/"
 layout: page
 ---
 
+<style>
+.tab-buttons {
+  margin-bottom: 20px;
+}
+.tab-buttons button {
+  padding: 10px 20px;
+  margin-right: 5px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+.tab-buttons button.active {
+  background-color: #007bff;
+  color: white;
+}
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+</style>
+
+<div class="tab-buttons">
+  <button class="tab-button active" onclick="showTab('publications')">Publications</button>
+  <button class="tab-button" onclick="showTab('presentations')">Presentations</button>
+  <button class="tab-button" onclick="showTab('talks')">Invited Talks</button>
+  <button class="tab-button" onclick="showTab('thesis')">Thesis</button>
+</div>
+
+<div id="publications" class="tab-content active">
+{% capture publications_content %}
+
 ## Peer-reviewed Publications
 ### 2025
 Liao, C.; Engwirda, D.; Cooper, M.; **Li, M.**; Fang, Y. Discrete Global Grid System-based flow routing datasets in the Amazon and Yukon basins. Earth System Science Data. 17(5), 2035–2062. [**DOI**](https://doi.org/10.5194/essd-17-2035-2025)
@@ -85,8 +118,14 @@ We determined effects of local spruce budworm (Choristoneura fumiferana Clem.; S
 
 <details>
   <summary>Abstract</summary>
-We investigated the spatial-temporal patterns of spruce budworm (Choristoneura fumiferana (Clem.); SBW) defoliation within 57 plots over 5 years during the current SBW outbreak in Québec. Although spatial-temporal variability of SBW defoliation has been studied at several scales, the spatial dependence between individual defoliated trees within a plot has not been quantified, and effects of defoliation level of neighboring trees have not been addressed. We used spatial autocorrelation analyses to determine patterns of defoliation of trees (clustered, dispersed, or random) for plots and for individual trees. From 28% to 47% of plots had significantly clustered defoliation during the 5 years. Plots with clustered defoliation generally had higher mean defoliation per plot and higher deviation of defoliation. At the individual-tree-level, we determined ‘hot spot trees’ (highly defoliated trees surrounded by other highly defoliated trees) and ‘cold spot trees’ (lightly defoliated trees surrounded by other lightly defoliated trees) within each plot using local Getis-Ord Gi* analysis. Results revealed that 11 to 27 plots had hot spot trees and 27% to 64% of them had mean defoliation <25%, while plots with 75% to 100% defoliation had either cold spot trees or non-significant spots, which suggested that whether defoliation was high or low enough to be a hot or cold spot depended on the defoliation level of the entire plot. We fitted individual-tree balsam fir defoliation regression models as a function of plot and surrounding tree characteristics (using search radii of 3–5 m). The best model contained plot average balsam fir defoliation and subject tree basal area, and these two variables explained 80% of the variance, which was 2% to 5% higher than the variability explained by the neighboring tree defoliation, over the 3–5 m search radii tested. We concluded that plot-level defoliation and basal area were adequate for modeling individual tree defoliation, and although clustering of defoliation was evident, larger plots were needed to determine the optimum neighborhood radius for predicting defoliation on an individual. Spatial autocorrelation analysis can serve as an objective way to quantify such ecological patterns.
+We investigated the spatial-temporal patterns of spruce budworm (Choristoneura fumiferana (Clem.); SBW) defoliation within 57 plots over 5 years during the current SBW outbreak in Québec. Although spatial-temporal variability of SBW defoliation has been studied at several scales, the spatial dependence between individual defoliated trees within a plot has not been quantified, and effects of defoliation level of neighboring trees have not been addressed. We used spatial autocorrelation analyses to determine patterns of defoliation of trees (clustered, dispersed, or random) for plots and for individual trees. From 28% to 47% of plots had significantly clustered defoliation during the 5 years. Plots with clustered defoliation generally had higher mean defoliation per plot and higher deviation of defoliation. At the individual-tree-level, we determined ‘hot spot trees’ (highly defoliated trees surrounded by other highly defoliated trees) and ‘cold spot trees’ (lightly defoliated trees surrounded by other lightly defoliated trees) within each plot using local Getis-Ord Gi* analysis. Results revealed that 11 to 27 plots had hot spot trees and 27% to 64% of them had mean defoliation 25%, while plots with 75% to 100% defoliation had either cold spot trees or non-significant spots, which suggested that whether defoliation was high or low enough to be a hot or cold spot depended on the defoliation level of the entire plot. We fitted individual-tree balsam fir defoliation regression models as a function of plot and surrounding tree characteristics (using search radii of 3–5 m). The best model contained plot average balsam fir defoliation and subject tree basal area, and these two variables explained 80% of the variance, which was 2% to 5% higher than the variability explained by the neighboring tree defoliation, over the 3–5 m search radii tested. We concluded that plot-level defoliation and basal area were adequate for modeling individual tree defoliation, and although clustering of defoliation was evident, larger plots were needed to determine the optimum neighborhood radius for predicting defoliation on an individual. Spatial autocorrelation analysis can serve as an objective way to quantify such ecological patterns.
 </details>
+{% endcapture %}
+{{ publications_content | markdownify }}
+</div>
+
+<div id="presentations" class="tab-content">
+{% capture presentations_content %}
 
 ## Conference Presentations
 ### 2025
@@ -116,6 +155,12 @@ We investigated the spatial-temporal patterns of spruce budworm (Choristoneura f
 **Li, M.**; MacLean, D.A.; Hennigar, C.R.; Ogilvie, J. Spatial-tempol patterns of spruce budworm defoliation within measured plots in Québec. Oral presentation at the 9th Bi-Annual Eastern Canada - USA Forest Science Conference, Oct. 2018, Fredericton, Canada.
 
 **Li, M.**; MacLean, D.A. GIS analyses of factors influencing spruce budworm outbreak initiation in northern New Brunswick. Oral presentation at SERG International Workshop, Feb. 2018, Edmonton, Canada.
+{% endcapture %}
+{{ presentations_content | markdownify }}
+</div>
+
+<div id="talks" class="tab-content">
+{% capture talks_content %}
 
 ## Other Invited Talks
 ### 2025
@@ -130,6 +175,12 @@ Quantization, Analysis, and Application of Terrain Data Modeled in Discrete Glob
 
 ### 2021
 Integration Platform for Canadian Terrain Data: A DGGS Perspective. Presented at the Natural Resources Canada, Apr. 2021, Online.
+{% endcapture %}
+{{ talks_content | markdownify }}
+</div>
+
+<div id="thesis" class="tab-content">
+{% capture thesis_content %}
 
 ## Thesis
 ### 2023 
@@ -149,3 +200,29 @@ Spatial patterns and factors influencing spruce budworm infestation in Eastern C
   <summary>Abstract</summary>
 A spruce budworm (Choristoneura fumiferana Clem.; SBW) outbreak in Québec spread southward into New Brunswick in 2014. This thesis used spatial analyses of 5 years of SBW population data in northern New Brunswick and tree defoliation data in Québec to examine spatial patterns and factors influencing SBW infestation. Local previous-year SBW population level, proximity to outbreak hot-spots, and April degree-days were important in predicting SBW population levels in New Brunswick, although relationships were inconsistent across years. Models incorporating spatial stuctures [sic] explained 68–79% of the annual variance, and performed better than non-spatial models. A combined-year model with R [squared] = 0.53 consistently underestimated upcoming-year populations. Defoliation patterns quantified in 57 plots in Québec were clustered in 28-47% of cases, which had higher plot-level defoliation and higher deviations. Plot-level defoliation and basal area explained 80% of the variance in individual-tree-defoliation. The thesis contributed to efficient sampling allocation and insecticide treatment targeting infestation.
 </details>
+{% endcapture %}
+{{ thesis_content | markdownify }}
+</div>
+
+<script>
+function showTab(tabId) {
+  // Hide all content sections
+  document.querySelectorAll('.tab-content').forEach(content => {
+    content.style.display = 'none';
+  });
+  
+  // Remove active class from all buttons
+  document.querySelectorAll('.tab-button').forEach(button => {
+    button.classList.remove('active');
+  });
+  
+  // Show selected content and activate button
+  document.getElementById(tabId).style.display = 'block';
+  document.querySelector(`button[onclick="showTab('${tabId}')"]`).classList.add('active');
+}
+
+// Initialize tab display to show publications by default
+document.addEventListener('DOMContentLoaded', function() {
+  showTab('publications');
+});
+</script>
