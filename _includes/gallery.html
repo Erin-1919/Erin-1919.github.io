@@ -27,6 +27,13 @@ html { overflow-y: scroll; }
   text-decoration: none;
 }
 
+.grid.highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
 @media (max-width: 600px) {
   .grid-item {
     width: 100%; /* Full width on small screens */
@@ -34,23 +41,27 @@ html { overflow-y: scroll; }
   .poster-link {
     width: 100%;
   }
+  .grid.highlights {
+    grid-template-columns: 1fr;  /* Stack on mobile */
+  }
 }
 </style>
 
-<div id='masonry' class="grid">
-<div class="grid-sizer"></div>
-<div class="gutter-sizer"></div>
-{% for image in site.static_files %}
-  {% if image.path contains include.gallery_path %}
-    {% unless image.path contains '.md' %}
-      {% assign img_basename = image.path | split: '/' | last | split: '.' | first %}
-      <a href="{{ site.poster_pdfs[img_basename] | default: '#' }}" class="poster-link" target="_blank">
-        <img src="{{ image.path | relative_url }}" alt="" class="grid-item">
-      </a>
-    {% endunless %}  
+<div class="grid {% if include.gallery_path contains 'highlights' %}highlights{% endif %}">
+{% for file in site.static_files %}
+  {% if file.path contains include.gallery_path %}
+    <div class="grid-item">
+      {% if include.disable_links %}
+        <img src="{{ file.path | relative_url }}" alt="Image {{ forloop.index }}">
+      {% else %}
+        <a href="{{ file.path | relative_url }}">
+          <img src="{{ file.path | relative_url }}" alt="Image {{ forloop.index }}">
+        </a>
+      {% endif %}
+    </div>
   {% endif %}
 {% endfor %}
-</div> 
+</div>
 
 <script src="{{ '/assets/js/vendor/imagesloaded.min.js' | relative_url }}" type="text/javascript"></script>
 <script src="{{ '/assets/js/vendor/masonry.pkgd.min.js' | relative_url }}" type="text/javascript"></script>
