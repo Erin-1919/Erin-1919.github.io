@@ -1,71 +1,82 @@
 <style>
-/* force scrollbar */
-html { overflow-y: scroll; }
-    
-/* To overwrite page's padding, to get bigger images */
-/* article {padding:2%;} */
-
-.grid {
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.grid-item {
-  width: 90%; /* Double the previous width (was 45%) */
-  margin-bottom: 20px;
-  transition: transform 0.3s ease;
-}
-
-.grid-item:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
-}
-
-.poster-link {
-  display: inline-block;
-  width: 90%; /* Double the previous width (was 45%) */
-  margin: 10px;
-  text-decoration: none;
-}
-
-.grid.highlights {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 20px;
-}
-
-@media (max-width: 600px) {
+  /* force scrollbar */
+  html { overflow-y: scroll; }
+  
+  .grid {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
   .grid-item {
-    width: 100%; /* Full width on small screens */
+    width: 90%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
   }
+  
+  .grid-item:hover {
+    transform: scale(1.05);
+  }
+  
   .poster-link {
-    width: 100%;
+    display: inline-block;
+    width: 90%;
+    margin: 10px;
+    text-decoration: none;
   }
+  
   .grid.highlights {
-    grid-template-columns: 1fr;  /* Stack on mobile */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
   }
-}
-</style>
-
-<div class="grid {% if include.gallery_path contains 'highlights' %}highlights{% endif %}">
-{% if include.gallery_path contains 'highlights' %}
-  {% assign sorted_files = site.static_files | where_exp: "file", "file.path contains include.gallery_path" | sort: "path" | reverse %}
-{% else %}
-  {% assign sorted_files = site.static_files | where_exp: "file", "file.path contains include.gallery_path" %}
-{% endif %}
-
-{% for file in sorted_files %}
-  <div class="grid-item">
-    {% if include.disable_links %}
-      <img src="{{ file.path | relative_url }}" alt="Image {{ forloop.index }}">
+  
+  /* Standardize 4:3 thumbnails only for highlights section */
+  .grid.highlights .highlight-thumb {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+  }
+  
+  @media (max-width: 600px) {
+    .grid-item {
+      width: 100%;
+    }
+    .poster-link {
+      width: 100%;
+    }
+    .grid.highlights {
+      grid-template-columns: 1fr;
+    }
+  }
+  </style>
+  
+  <div class="grid {% if include.gallery_path contains 'highlights' %}highlights{% endif %}">
+    {% if include.gallery_path contains 'highlights' %}
+      {% assign sorted_files = site.static_files | where_exp: "file", "file.path contains include.gallery_path" | sort: "path" | reverse %}
     {% else %}
-      <a href="{{ file.path | relative_url }}">
-        <img src="{{ file.path | relative_url }}" alt="Image {{ forloop.index }}">
-      </a>
+      {% assign sorted_files = site.static_files | where_exp: "file", "file.path contains include.gallery_path" %}
     {% endif %}
+  
+    {% for file in sorted_files %}
+      <div class="grid-item">
+        {% if include.gallery_path contains 'highlights' %}
+          <a href="{{ file.path | relative_url }}" target="_blank">
+            <img class="highlight-thumb" src="{{ file.path | relative_url }}" alt="Image {{ forloop.index }}">
+          </a>
+        {% elsif include.disable_links %}
+          <img src="{{ file.path | relative_url }}" alt="Image {{ forloop.index }}">
+        {% else %}
+          <a href="{{ file.path | relative_url }}">
+            <img src="{{ file.path | relative_url }}" alt="Image {{ forloop.index }}">
+          </a>
+        {% endif %}
+      </div>
+    {% endfor %}
   </div>
-{% endfor %}
-</div>
-
-<script src="{{ '/assets/js/vendor/imagesloaded.min.js' | relative_url }}" type="text/javascript"></script>
-<script src="{{ '/assets/js/vendor/masonry.pkgd.min.js' | relative_url }}" type="text/javascript"></script>
+  
+  <script src="{{ '/assets/js/vendor/imagesloaded.min.js' | relative_url }}" type="text/javascript"></script>
+  <script src="{{ '/assets/js/vendor/masonry.pkgd.min.js' | relative_url }}" type="text/javascript"></script>
+  

@@ -68,7 +68,7 @@ poster_pdfs:
 </div>
 
 <div id="highlights" class="tab-content">
-{% include gallery.html gallery_path="assets/img/academic/highlights" disable_links=true %}
+{% include gallery.html gallery_path="assets/img/academic/highlights" disable_links=false %}
 </div>
 
 <script>
