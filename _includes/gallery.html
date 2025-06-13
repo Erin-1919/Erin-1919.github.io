@@ -48,18 +48,22 @@ html { overflow-y: scroll; }
 </style>
 
 <div class="grid {% if include.gallery_path contains 'highlights' %}highlights{% endif %}">
-{% for file in site.static_files %}
-  {% if file.path contains include.gallery_path %}
-    <div class="grid-item">
-      {% if include.disable_links %}
+{% if include.gallery_path contains 'highlights' %}
+  {% assign sorted_files = site.static_files | where_exp: "file", "file.path contains include.gallery_path" | sort: "path" | reverse %}
+{% else %}
+  {% assign sorted_files = site.static_files | where_exp: "file", "file.path contains include.gallery_path" %}
+{% endif %}
+
+{% for file in sorted_files %}
+  <div class="grid-item">
+    {% if include.disable_links %}
+      <img src="{{ file.path | relative_url }}" alt="Image {{ forloop.index }}">
+    {% else %}
+      <a href="{{ file.path | relative_url }}">
         <img src="{{ file.path | relative_url }}" alt="Image {{ forloop.index }}">
-      {% else %}
-        <a href="{{ file.path | relative_url }}">
-          <img src="{{ file.path | relative_url }}" alt="Image {{ forloop.index }}">
-        </a>
-      {% endif %}
-    </div>
-  {% endif %}
+      </a>
+    {% endif %}
+  </div>
 {% endfor %}
 </div>
 
