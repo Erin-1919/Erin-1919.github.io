@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Academic Gallery
+title: Gallery
 gallery_path: "assets/img/academic"
 poster_pdfs:
   "poster1": "assets/pdf/CanCH4_Poster_May_2025_EL.pdf"
@@ -55,7 +55,16 @@ poster_pdfs:
 </div>
 
 <div id="posters" class="tab-content active">
-{% include gallery.html gallery_path="assets/img/academic/posters" %}
+{% assign poster_files = site.static_files | where_exp: "file", "file.path contains 'posters'" %}
+{% for file in poster_files %}
+  {% assign poster_index = forloop.index | prepend: 'poster' %}
+  <div class="grid-item">
+    <img src="{{ file.path | relative_url }}" 
+         alt="Poster {{ forloop.index }}" 
+         data-pdf="{{ page.poster_pdfs[poster_index] | relative_url }}" 
+         onclick="openPosterPDF(this)">
+  </div>
+{% endfor %}
 </div>
 
 <div id="highlights" class="tab-content">
@@ -75,6 +84,12 @@ function showTab(tabId) {
   document.getElementById(tabId).style.display = 'block';
   document.querySelector(`button[onclick="showTab('${tabId}')"]`).classList.add('active');
 }
-</script>
+
+function openPosterPDF(imgElement) {
+  const pdfUrl = imgElement.getAttribute('data-pdf');
+  if (pdfUrl) {
+    window.open(pdfUrl, '_blank');
+  }
+}
 
 
