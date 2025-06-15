@@ -5,6 +5,7 @@ gallery_path: "assets/img/academic"
 poster_pdfs:
   "poster1": "assets/pdf/CanCH4_Poster_May_2025_EL.pdf"
   "poster2": "assets/pdf/ESRI_poster_Li_2022.pdf"
+  "poster3": "assets/pdf/ESRI_poster_Li_2019.pdf"
   # Add more poster PDF links as needed
 ---
 
