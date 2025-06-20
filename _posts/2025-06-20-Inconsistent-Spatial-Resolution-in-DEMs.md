@@ -3,7 +3,7 @@ title: "Inconsistent Spatial Resolution in Global DEMs: Why It Matters and How D
 layout: post
 ---
 
-![DEM](/assets/img/20250630/DEM.jpg)
+![DEM](/assets/img/20250620/DEM.jpg)
 
 **Many global Digital Elevation Models (DEMs), including Copernicus DEM, MERIT DEM, and FABDEM, are delivered in geographic coordinates with fixed angular spacing (for example, 1 arcsecond or 3 arcseconds). While these are often labeled as 30 meter or 90 meter DEMs, the actual ground resolution varies with latitude. This leads to uneven sampling and potential errors in analysis. This post outlines the consequences of assuming constant spatial resolution and proposes the use of Discrete Global Grid Systems (DGGS) as a more accurate and uniform alternative.**
 
