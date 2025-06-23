@@ -74,6 +74,12 @@ Course link: [https://speech.ee.ntu.edu.tw/~hylee/genai/2024-spring.php](https:/
 
 - The next stage is the transformer block, which consists of an attention mechanism followed by a feedforward network. Attention updates each token’s embedding by considering the context — it calculates the relationships between the current token and all previous tokens (to the left, in decoder-only models like GPT), then performs a weighted combination of those embeddings. This creates a new, context-aware vector for each token. There are different ways to compute these relationships, such as using dot products of queries and keys. The feedforward layer then processes the output of attention to further refine the representation. Multiple transformer blocks are stacked to deepen the model’s understanding. Finally, the output of the last token from the final transformer block is used to generate a probability distribution over the possible next tokens.
 
+### Explainability of LLM
+
+- There are generally two main approaches to exploring the explainability of a large language model. The first is direct analysis of the neural network itself — such as examining embeddings, attention patterns, or neuron activations — which typically requires full access to an open-source model. The second is to ask the model to explain its own outputs in natural language. While this can be useful, it doesn't guarantee that the explanation reflects the actual internal reasoning process.
+
+- There are multiple techniques for directly analyzing the internal behavior of a neural language model. These include identifying key input tokens that significantly influence the output — often through attention weight analysis or in-context learning dynamics; tracing the training examples that most influenced a particular output (known as data attribution); and analyzing what types of information are encoded in embeddings or specific neurons.
+
 ---
 
 **I will continue to update this post as I take more notes throughout the course.**
