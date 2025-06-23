@@ -47,6 +47,15 @@ Course link: [https://speech.ee.ntu.edu.tw/~hylee/genai/2024-spring.php](https:/
 
 - In AlphaGo, reinforcement learning is straightforward because the game of Go has clear rules and a well-defined reward signal: winning or losing. In contrast, large language models operate in open-ended environments where there's no built-in scoring system. As a result, reinforcement learning for LLMs relies on human feedback, reward models, or other proxy signals to define what 'good' behavior looks like.
 
+- An AI agent based on a large language model (LLM) is an integrated system capable of making plans and taking multiple steps to achieve an external goal. It interacts with the environment by converting external inputs (such as images or system states) into text that the LLM can understand — for example, using image captioning. The LLM then analyzes the situation, makes decisions, and outputs actions, which can be translated into code to control software or even physical systems like robots. During this process, the agent can use memory (long-term knowledge or past experiences) and short-term planning, both of which can be updated dynamically to guide future actions.
+
+- The process by which a large language model converts input text into an output distribution is based on the transformer architecture. It begins with tokenization, then passes the tokens through a series of transformer blocks, each containing attention and feedforward layers. The final output layer produces a probability distribution over possible next tokens.
+
+- Tokenization converts text into tokens, and each token is then mapped to a fixed vector through a process called embedding. These token embeddings are context-independent — meaning that the word 'apple' has the same vector whether it refers to the fruit or the company. The list of tokens and their corresponding vectors is learned during pre-training and is part of the model’s parameters. In addition to token embeddings, the model also uses positional embeddings to encode the position of each token in the sequence. Early language models used hand-crafted positional encodings, but modern models typically learn positional embeddings directly from data during training, using trainable parameters.
+
+- The next stage is the transformer block, which consists of an attention mechanism followed by a feedforward network. Attention updates each token’s embedding by considering the context — it calculates the relationships between the current token and all previous tokens (to the left, in decoder-only models like GPT), then performs a weighted combination of those embeddings. This creates a new, context-aware vector for each token. There are different ways to compute these relationships, such as using dot products of queries and keys. The feedforward layer then processes the output of attention to further refine the representation. Multiple transformer blocks are stacked to deepen the model’s understanding. Finally, the output of the last token from the final transformer block is used to generate a probability distribution over the possible next tokens.
+
+
 
 ---
 
