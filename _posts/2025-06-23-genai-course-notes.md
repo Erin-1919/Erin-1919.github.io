@@ -5,7 +5,8 @@ layout: post
 
 ![genai](/assets/img/20250623/genai_course.jpg)
 
-**This post contains my personal notes from the course *Introduction to Generative AI* (Spring 2024), taught by Prof. Hung-yi Lee at National Taiwan University. The course provides a comprehensive overview of how generative models work across text, image, audio, and multimodal domains.**  
+**This post contains my personal notes from the course *Introduction to Generative AI* (Spring 2024), taught by Prof. Hung-yi Lee at National Taiwan University. The course provides a comprehensive overview of of generative models.**  
+
 Course link: [https://speech.ee.ntu.edu.tw/~hylee/genai/2024-spring.php](https://speech.ee.ntu.edu.tw/~hylee/genai/2024-spring.php)
 
 ## Course Notes
