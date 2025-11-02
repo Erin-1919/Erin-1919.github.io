@@ -130,6 +130,10 @@ We investigated the spatial-temporal patterns of spruce budworm (Choristoneura f
 ## Conference Presentations
 ### 2025
 
+**Li, M.E.**; Liang, S.H.L. Talking to the Planet: Natural Language x Digital Earth for Disasters​. Oral presentation at the 133rd OGC Member Meeting - Innovation Summit, Oct. 2025, Boulder, U.S.
+
+**Li, M.E.**; Liang, S.H.L. Ask, Retrieve, Analyze: A Multi-Agent DGGS Framework for GenAI Driven Methane Data. Oral presentation at the 133rd OGC Member Meeting - Discrete Global Grid Systems DWG, Oct. 2025, Boulder, U.S.
+
 **Li, M.E.**; Liang, S.H.L. Standardizing Spatial Intelligence for Gridded Methane Inventories: DGGS Meets EmissionML. Oral presentation at the 132nd OGC Member Meeting - EmissionML DWG, Jun. 2025, Online.
 
 **Li, M.E.**; Liang, S.H.L. Beyond the Graticule: Spatially Explicit Methane Inventories Using Discrete Global Grids. Oral presentation at the 132nd OGC Member Meeting - Discrete Global Grid Systems DWG, Jun. 2025, Online.
