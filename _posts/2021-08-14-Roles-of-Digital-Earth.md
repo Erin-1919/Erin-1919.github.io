@@ -2,7 +2,6 @@
 title: "Roles of Digital Earth"
 layout: post
 ---
-![kuba](/assets/img/20210814/kuba.jpg)
 
 **The concept of Digital Earth plays multiple roles across research, education, and public engagement. These roles have been broadly categorized into five types: mapping and visualization tool, analytical and modeling tool, underlying basis for derivative applications, data storage structure, and platform for Volunteered Geographic Information (VGI) [1].**
 

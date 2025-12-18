@@ -2,7 +2,6 @@
 title: "Basic DGGS Operations Required by OGC"
 layout: post
 ---
-![DE](/assets/img/20221213/DE.jpg)
 
 **The Open Geospatial Consortium (OGC) defines a set of core operations that a Discrete Global Grid System (DGGS) must support. These include quantization, spatial relations, and interoperability. Together, they form the foundation for integrating DGGS into spatial data infrastructures and enabling robust geospatial analysis.**
 

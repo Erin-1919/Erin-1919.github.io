@@ -2,7 +2,6 @@
 title: "Advanced Topics on DGGS"
 layout: post
 ---
-![gui](/assets/img/20211009/gui.jpg)
 
 **Discrete Global Grid Systems (DGGS) are expanding in both theory and application. This post explores advanced topics in DGGS development, including datacubes, big data integration, sensor networks, and point cloud management.**
 

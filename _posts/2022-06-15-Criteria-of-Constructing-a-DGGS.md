@@ -2,7 +2,6 @@
 title: "Criteria for Constructing a DGGS"
 layout: post
 ---
-![monstera](/assets/img/20220615/monstera.jpg)
 
 **In 1994, Michael Goodchild proposed 14 criteria for evaluating DGGS designs. These were refined by Kimerling et al. in 1999. Recognizing that no DGGS can satisfy all criteria perfectly, the Open Geospatial Consortium (OGC) released a formal DGGS standard in 2017 that identifies key design requirements considered achievable and essential. These are summarized below, based on the DGGS Core Conceptual Data Model and Abstract Specification.**
 
