@@ -113,6 +113,13 @@ As the foundation of the next-generation Digital Earth, Discrete Global Grid Sys
 The Open Geospatial Consortium has officially adopted discrete global grid systems (DGGS) as a new option for Earth reference standards. Many state-of-the-art DGGS implementations have been developed, revealing the potential for DGGS applications. Before the wide application of DGGS in solving real-world problems, however, the potential uncertainties of modeling on DGGS should be investigated and documented. This study focused on the uncertainties of geo-feature modeling on DGGS, quantitatively measured the point position displacement and line and polygon features’ geometry distortion, and evaluated the validity of topological relationships. Specifically, traffic cameras (points), main streets (lines), and land-cover classes (polygons) of downtown Calgary (AB, Canada) were modeled in various DGGS configurations at multiple resolutions. Results showed that the point displacement and polygon distortion generally reduced when being modeled at a higher resolution. The tessellations with the monotonical convergence characteristic are recommended if cell indices are expected to represent levels of model precision. Line features’ fidelity was affected by grid tessellations, resolution levels, grid orientation relative to the Earth, and the rotated line directions. The degree of the line distortion was not straightforward to forecast. Maintaining the topological validity between spatial objects with various granularities was challenging and needed further algorithm development for DGGS implementations. The study outcomes can serve as useful guidelines in the selection among grid types, refinement ratios, and resolution levels when applying DGGS implementations to urban environments. This paper also pinpoints several research directions that can benefit the quantization and analysis of vector features on DGGS.
 </details>
 
+**Li, M.**; Stefanakis, E.; McGrath, H. National Terrain Data Management on Discrete Global Grids in Canada. AutoCarto2020. [**PDF**](https://cartogis.org/docs/autocarto/2020/docs/abstracts/3h%20National%20Terrain%20Data%20Management%20on%20Discrete%20Global%20Grids%20in%20Canada.pdf)
+
+<details>
+  <summary>Abstract</summary>
+Terrain data can be acquired by various technologies with different data formats, spatial resolutions, datum, projections, and update cycles. In Canada, terrain datasets released by Natural Resources Canada (NRCan) mainly include the Canadian Digital Elevation Model (CDEM) and the High Resolution Digital Elevation Model (HRDEM). Because of their different coverage, datum, resolution, and accuracy, users who work with these two data collections may suffer from time-consuming pre-processing and inconsistent results due to different pre-processing methods. To achieve more effective utilization of multi-source terrain data, an integration solution is highly in need to merge and qualitycontrol the terrain data on a standardized framework (Schumann and Bates, 2018). Discrete Global Grid Systems (DGGS) is a new option for Earth reference standards. A DGGS is a system of hierarchical Discrete Global Grids (DGG) where the DGG at each resolution tessellates the entire Earth’s surface by nearly equal-area cells without any overlaps and assigns a single identifier to each cell (OGC, 2017). DGGS can benefit the heterogeneous data integration, multi-scale analysis, consistent observation at a certain location, accurate analysis taking account of Earth’s curvature, and efficient parallel computation given its discrete nature. For Canadian terrain data users, DGGS provide an opportunity to standardize the data acquisition process via data integration.
+</details>
+
 ### 2019
 **Li, M.**; MacLean, D.A.; Hennigar, C.R.; Ogilvie, J. Previous Year Outbreak Conditions and Spring Climate Predict Spruce Budworm Population Changes in the Following Year. Forest Ecology and Management. 458, 117737. [**DOI**](https://doi.org/10.1016/j.foreco.2019.117737) / [**PDF**](https://Erin-1919.github.io/assets/pdf/2019b%20Li%20et%20al.pdf)
 
@@ -174,18 +181,21 @@ We investigated the spatial-temporal patterns of spruce budworm (Choristoneura f
 {% capture talks_content %}
 
 ## Other Invited Talks
+### 2026
+Introduction to Discrete Global Grid Systems (DGGS). Guest lecture at ENGO 551 Advanced Spatial Topics. University of Calgary. Jan 2026.
+
 ### 2025
-Discrete Global Grid Systems (DGGS) and Their Role in Methane Emission Inventories. Presented at the Monthly Lunch and Learn at SensorUp Inc., May 2025, Online.
+Discrete Global Grid Systems (DGGS) and Their Role in Methane Emission Inventories. Presented at the Monthly Lunch and Learn at SensorUp Inc., May 2025.
 
 ### 2022
-Flood Susceptibility Modeling in Discrete Global Grids under Climate Change Scenarios. Presented at the Natural Resources Canada, Oct. 2022, Online.
+Flood Susceptibility Modeling in Discrete Global Grids under Climate Change Scenarios. Presented at the Natural Resources Canada, Oct. 2022.
 
-Geospatial Data Analysis in Discrete Global Grid Systems – Progress and Perspectives. Presented at the China Agricultural University, May 2022, Online.  
+Geospatial Data Analysis in Discrete Global Grid Systems – Progress and Perspectives. Presented at the China Agricultural University, May 2022.  
 
-Quantization, Analysis, and Application of Terrain Data Modeled in Discrete Global Grid Systems. Presented at the International Society for Photogrammetry and Remote Sensing Work Group IV/7 (Geo-Data Management) Webinar, Jan. 2022, Online. [**Recorded Presentation**](https://www.youtube.com/watch?v=FWGl4lSrIyA)
+Quantization, Analysis, and Application of Terrain Data Modeled in Discrete Global Grid Systems. Presented at the International Society for Photogrammetry and Remote Sensing Work Group IV/7 (Geo-Data Management) Webinar, Jan. 2022. [**Recorded Presentation**](https://www.youtube.com/watch?v=FWGl4lSrIyA)
 
 ### 2021
-Integration Platform for Canadian Terrain Data: A DGGS Perspective. Presented at the Natural Resources Canada, Apr. 2021, Online.
+Integration Platform for Canadian Terrain Data: A DGGS Perspective. Presented at the Natural Resources Canada, Apr. 2021.
 {% endcapture %}
 {{ talks_content | markdownify }}
 </div>
