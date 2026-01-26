@@ -88,8 +88,6 @@ The equal-area property is enforced by the chosen projection/mapping relationshi
 
 ## 4. Why Spherical Equal-Area is Not the Same as Ellipsoidal Equal-Area
 
-### 4.1 The WGS84 ellipsoid has latitude-dependent surface scaling
-
 The Earth is better approximated by an oblate spheroid (ellipsoid), and WGS84 is the standard reference ellipsoid used in most GIS systems.
 
 On an ellipsoid, the local surface area element depends on latitude differently than on a sphere. This means:
@@ -102,25 +100,6 @@ Therefore:
 Spherical equal-area grids are not strictly equal-area on the ellipsoid.
 
 This is not a flaw; it is simply a consequence of using different reference surfaces.
-
-### 4.2 Expected area variation magnitude (order-of-magnitude)
-
-If a DGGS is perfectly equal-area on a sphere, and you evaluate the cell areas on the WGS84 ellipsoid (“true” ellipsoidal area), a systematic variation appears due to flattening.
-
-A useful bound for WGS84 is:
-
-* maximum relative variation from equator to pole is about **1.35%**
-* equivalently, roughly **±0.67%** around an average reference level
-
-This provides a practical interpretation:
-
-* If a DGGS claims “equal-area” in spherical terms, then on WGS84 ellipsoid you might see on the order of **about 1%** area differences depending on latitude and location.
-
-The exact per-cell variation can also be affected by:
-
-* cell size and resolution,
-* the specific polyhedron-to-sphere mapping,
-* how cell boundaries are represented and how area is computed on the ellipsoid.
 
 ## 5. Can a Platonic-Solid DGGS Be Made Truly Equal-Area on WGS84?
 
@@ -155,7 +134,5 @@ This is why most common DGGS libraries use spherical reference surfaces. It prov
 
 2. “Equal-area DGGS” typically means **equal-area on a spherical surface**, not the WGS84 ellipsoid.
 
-3. When evaluated on the ellipsoid, spherical equal-area DGGS may show up to **~1.35%** area variation from equator to pole.
-
-4. Ellipsoidal-equal-area DGGS is possible in theory but complex in practice. Most current libraries opt for the spherical simplification.
+3. Ellipsoidal-equal-area DGGS is possible in theory but complex in practice. Most current libraries opt for the spherical simplification.
 
