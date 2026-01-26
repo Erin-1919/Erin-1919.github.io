@@ -1,5 +1,5 @@
 ---
-title: "Report: Spherical vs Ellipsoidal 'Equal-Area' in Mainstream DGGS Libraries"
+title: "Spherical vs Ellipsoidal 'Equal-Area' in Mainstream DGGS Libraries"
 layout: post
 ---
 
