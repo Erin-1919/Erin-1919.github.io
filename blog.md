@@ -32,40 +32,89 @@ title: "Blog"
   margin-bottom: 20px;
 }
 h2 {
-  text-align: left; 
+  text-align: left;
 }
 </style>
 
+{% assign years = "" %}
+{% for post in site.posts %}
+  {% assign y = post.date | date: "%Y" %}
+  {% assign years = years | append: y | append: "," %}
+{% endfor %}
+
+{% assign years = years | split: "," | uniq | sort %}
+{% assign years_desc = years | reverse %}
+
+{% assign max_year = years_desc[0] | plus: 0 %}
+{% assign latest_start = max_year | divided_by: 5 | times: 5 %}
+
+{% assign groups = "" %}
+
+{% for y in years_desc %}
+  {% assign year_num = y | plus: 0 %}
+  {% assign start_year = year_num | divided_by: 5 | times: 5 %}
+  {% assign end_year = start_year | plus: 4 %}
+
+  {% if start_year == latest_start %}
+    {% assign label = start_year | append: "-Present" %}
+  {% else %}
+    {% assign label = start_year | append: "-" | append: end_year %}
+  {% endif %}
+
+  {% assign groups = groups | append: label | append: "," %}
+{% endfor %}
+
+{% assign groups = groups | split: "," | uniq %}
+{% assign default_group = groups[0] %}
+
 <div class="tab-buttons">
-  <button class="tab-button" onclick="showTab('blog-2021-2025')">2021-2025</button>
-  <button class="tab-button" onclick="showTab('blog-2016-2020')">2016-2020</button>
-</div>
-
-<div id="blog-2021-2025" class="tab-content">
-  <h2>2021–2025</h2>
-  {% for post in site.posts %}
-    {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-    {% if year >= '2021' and year <= '2025' %}
-      <article class="post">
-        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-        <time>{{ post.date | date: '%B %-d, %Y' }}</time>
-      </article>
-    {% endif %}
+  {% for g in groups %}
+    {% assign tab_id = "blog-" | append: g %}
+    <button class="tab-button" onclick="showTab('{{ tab_id }}')">{{ g }}</button>
   {% endfor %}
 </div>
 
-<div id="blog-2016-2020" class="tab-content">
-  <h2>2016–2020</h2>
-  {% for post in site.posts %}
-    {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-    {% if year >= '2016' and year <= '2020' %}
-      <article class="post">
-        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-        <time>{{ post.date | date: '%B %-d, %Y' }}</time>
-      </article>
-    {% endif %}
-  {% endfor %}
-</div>
+{% for g in groups %}
+  {% assign tab_id = "blog-" | append: g %}
+
+  {% if g contains "Present" %}
+    {% assign start_year_str = g | replace: "-Present", "" %}
+    {% assign start_year = start_year_str | plus: 0 %}
+
+    <div id="{{ tab_id }}" class="tab-content">
+      <h2>{{ start_year }}–Present</h2>
+
+      {% for post in site.posts %}
+        {% assign post_year = post.date | date: "%Y" | plus: 0 %}
+        {% if post_year >= start_year %}
+          <article class="post">
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <time>{{ post.date | date: "%B %-d, %Y" }}</time>
+          </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+  {% else %}
+    {% assign parts = g | split: "-" %}
+    {% assign start_year = parts[0] | plus: 0 %}
+    {% assign end_year = parts[1] | plus: 0 %}
+
+    <div id="{{ tab_id }}" class="tab-content">
+      <h2>{{ start_year }}–{{ end_year }}</h2>
+
+      {% for post in site.posts %}
+        {% assign post_year = post.date | date: "%Y" | plus: 0 %}
+        {% if post_year >= start_year and post_year <= end_year %}
+          <article class="post">
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <time>{{ post.date | date: "%B %-d, %Y" }}</time>
+          </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endfor %}
 
 <script>
 function showTab(tabId) {
@@ -82,6 +131,6 @@ function showTab(tabId) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  showTab('blog-2021-2025');
+  showTab("blog-{{ default_group }}");
 });
 </script>
