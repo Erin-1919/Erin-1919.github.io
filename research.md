@@ -45,6 +45,12 @@ layout: page
 We develop a spatially explicit methane inventory for Alberta’s upstream oil and gas sector using the rHEALPix Discrete Global Grid System. The objective is to demonstrate an equal-area, hierarchy-aware framework that assigns facility-reported emissions to native locations and supports multi-scale analysis and reporting. We compile monthly facility activity from Petrinex for 2020 to 2023, geolocate facilities using the Oil and Gas Infrastructure Mapping database, calculate methane emissions from venting, fuel use, and flaring using province-standard factors, and bin results to rHEALPix cells before exact aggregation to coarser levels. Our analysis revealed persistent high-emission hotspots, with 5% of grid cells accounting for 34% of total annual methane emissions. The equal-area lattice enables fair intensity comparisons across latitude, stable hotspot tracking over time, and mass-conserving aggregation that maintains consistent totals across resolutions. Practical implications include a standard spatial fabric that integrates facility reports, satellites, and ground sensors, provides persistent cell buckets for facility and asset management, enables accurate intensity comparisons across space and time with quantitative spatial resolution, preserves spatial integrity in visualization, supports consistent mass conserving aggregation at any scale with multiple granularities for analysis and reporting, allows precise hotspot tracking and trend monitoring, and informs targeted monitoring and survey design.
 </details>
 
+**Li, M.E.**; Liang, S.H.L. Natural Language to DGGS-Aware Methane Insights with a Multi-LLM-Agent Framework. Proceedings in Spatial Knowledge and Information Canada 2026. [**DOI**]() / [**PDF**]()
+<details>
+  <summary>Abstract</summary>
+Fragmented spatial data and inconsistent semantics hinder environmental analytics and confound large language models. We present a Discrete Global Grid System powered framework that harmonizes gridded methane inventories and enables explainable, traceable natural language analytics. Demonstrating the methane use case, we standardize spatial and semantic references using DGGS as a global index, then allow the interaction with a modular multi-agent system. Agents parse intent, resolve locations to DGGS cells, and generate validated SQL that powers summaries and maps with cell-level citations. The result is fast, reproducible methane analysis with clear provenance.
+</details>
+
 ### 2025
 Liao, C.; Engwirda, D.; Cooper, M.; **Li, M.**; Fang, Y. Discrete Global Grid System-based flow routing datasets in the Amazon and Yukon basins. Earth System Science Data. 17(5), 2035–2062. [**DOI**](https://doi.org/10.5194/essd-17-2035-2025)
 
@@ -142,6 +148,10 @@ We investigated the spatial-temporal patterns of spruce budworm (Choristoneura f
 {% capture presentations_content %}
 
 ## Conference Presentations
+### 2026
+
+**Li, M.E.**; Liang, S.H.L. Natural Language to DGGS-Aware Methane Insights with a Multi-LLM-Agent Framework​. Oral presentation at the  9th Conference on Spatial Knowledge and Information (SKI) Canada, Feb. 2026, Banff, Alberta, Canada. [**Short Paper**]()
+
 ### 2025
 
 **Li, M.E.**; Liang, S.H.L. Talking to the Planet: Natural Language x Digital Earth for Disasters​. Oral presentation at the 133rd OGC Member Meeting - Innovation Summit, Oct. 2025, Boulder, U.S.
