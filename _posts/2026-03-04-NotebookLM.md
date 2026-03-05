@@ -1,5 +1,5 @@
 ---
-title: "Playing around with NotebookLM"
+title: "NotebookLM-Generated Podcast about Me 🙄"
 layout: post
 ---
 
