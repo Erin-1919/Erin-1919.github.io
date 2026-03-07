@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 gem "jekyll", "~> 4.2.0"
+gem "csv"
 gem "jemoji"
 gem "webrick", "~> 1.7"
 

@@ -7,10 +7,12 @@ title: "Blog"
 .tab-buttons {
   margin-bottom: 20px;
   text-align: left;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 5px;
 }
 .tab-buttons button {
   padding: 10px 20px;
-  margin-right: 5px;
   border: none;
   background-color: #f0f0f0;
   cursor: pointer;
@@ -32,21 +34,43 @@ title: "Blog"
   margin-bottom: 20px;
 }
 h2 {
-  text-align: left; 
+  text-align: left;
 }
 </style>
 
+{% comment %}Collect unique years and counts from posts{% endcomment %}
+{% assign years = "" %}
+{% for post in site.posts %}
+  {% assign post_year = post.date | date: '%Y' %}
+  {% unless years contains post_year %}
+    {% if years == "" %}
+      {% assign years = post_year %}
+    {% else %}
+      {% assign years = years | append: "," | append: post_year %}
+    {% endif %}
+  {% endunless %}
+{% endfor %}
+{% assign year_list = years | split: "," %}
+
 <div class="tab-buttons">
-  <button class="tab-button" onclick="showTab('blog-2026-present')">2026-Present</button>
-  <button class="tab-button" onclick="showTab('blog-2021-2025')">2021-2025</button>
-  <button class="tab-button" onclick="showTab('blog-2016-2020')">2016-2020</button>
+  {% for year in year_list %}
+    {% assign count = 0 %}
+    {% for post in site.posts %}
+      {% assign post_year = post.date | date: '%Y' %}
+      {% if post_year == year %}
+        {% assign count = count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+    <button class="tab-button" onclick="showTab('blog-{{ year }}')">{{ year }} ({{ count }})</button>
+  {% endfor %}
 </div>
 
-<div id="blog-2026-present" class="tab-content">
-  <h2>2026–Present</h2>
+{% for year in year_list %}
+<div id="blog-{{ year }}" class="tab-content">
+  <h2>{{ year }}</h2>
   {% for post in site.posts %}
-    {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-    {% if year >= '2026' %}
+    {% assign post_year = post.date | date: '%Y' %}
+    {% if post_year == year %}
       <article class="post">
         <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
         <time>{{ post.date | date: '%B %-d, %Y' }}</time>
@@ -54,32 +78,7 @@ h2 {
     {% endif %}
   {% endfor %}
 </div>
-
-<div id="blog-2021-2025" class="tab-content">
-  <h2>2021–2025</h2>
-  {% for post in site.posts %}
-    {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-    {% if year >= '2021' and year <= '2025' %}
-      <article class="post">
-        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-        <time>{{ post.date | date: '%B %-d, %Y' }}</time>
-      </article>
-    {% endif %}
-  {% endfor %}
-</div>
-
-<div id="blog-2016-2020" class="tab-content">
-  <h2>2016–2020</h2>
-  {% for post in site.posts %}
-    {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-    {% if year >= '2016' and year <= '2020' %}
-      <article class="post">
-        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-        <time>{{ post.date | date: '%B %-d, %Y' }}</time>
-      </article>
-    {% endif %}
-  {% endfor %}
-</div>
+{% endfor %}
 
 <script>
 function showTab(tabId) {
@@ -96,6 +95,7 @@ function showTab(tabId) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  showTab('blog-2026-present');
+  var firstButton = document.querySelector('.tab-button');
+  if (firstButton) firstButton.click();
 });
 </script>
