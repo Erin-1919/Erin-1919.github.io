@@ -3,7 +3,7 @@ title: "Building a Book Summarizer with Vibe Coding: Zero Lines Written by Hand"
 layout: post
 ---
 
-![app](/assets/img/20260306/screenshot-app.jpg)
+![app](/assets/img/20260301/screenshot-app.jpg)
 
 **I recently built a fully functional web application without writing a single line of code myself. Using Claude Code as my AI programming partner, I went from idea to a working Book Page Summarizer in under an hour, entirely through conversation.**
 

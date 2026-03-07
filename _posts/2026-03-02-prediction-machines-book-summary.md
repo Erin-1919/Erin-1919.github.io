@@ -3,6 +3,8 @@ title: "Book Summary: Prediction Machines by Agrawal, Gans, and Goldfarb"
 layout: post
 ---
 
+![book](/assets/img/20260302/book.jpg)
+
 **This post contains my chapter-by-chapter summary of *Prediction Machines: The Simple Economics of Artificial Intelligence* by Ajay Agrawal, Joshua Gans, and Avi Goldfarb. The summaries were generated using my [Book Page Summarizer](https://github.com/Erin-1919/book-summarizer), which extracts text from book page photos and produces structured summaries via GPT-4o.**
 
 ## Introduction

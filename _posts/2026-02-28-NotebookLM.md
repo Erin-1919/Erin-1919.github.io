@@ -3,6 +3,8 @@ title: "NotebookLM-Generated Podcast about Me 🙄"
 layout: post
 ---
 
+![notebooklm](/assets/img/20260228/notebooklm.jpg)
+
 **I have been playing around with NotebookLM recently and tried a small experiment: what would happen if I gave it only a few documents about myself and asked it to generate a podcast?**
 
 I uploaded three documents as the source material:
