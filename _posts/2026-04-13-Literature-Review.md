@@ -127,7 +127,7 @@ The gaps identified above point to several directions that remain largely unexpl
 7. **Compact spatial reasoning models** tested on spatial pattern recognition, not just tool selection
 8. **Cross-pollination between geographic ABM theory and LLM-based GeoAI practice**
 
-These gaps are interconnected. Spatially grounded agents naturally communicate through spatial topology, which constrains communication overhead. Grid hierarchy enables multi-resolution reasoning that current benchmarks cannot evaluate. Compact spatial reasoners make spatially grounded architectures computationally feasible. And ABM theory provides the design principles that spatially grounded LLM agents currently lack.
+These gaps are interconnected. Spatially grounded agents naturally communicate through spatial topology, which constrains communication overhead. Grid hierarchy enables multi-resolution reasoning that current benchmarks cannot evaluate. Compact spatial reasoners make spatially grounded architectures computationally feasible. The ABM theory provides the design principles that spatially grounded LLM agents currently lack.
 
 ---
 
