@@ -175,4 +175,4 @@ layout: post
 
 ---
 
-***Where *Prediction Machines* explained why cheap prediction reshapes decisions, *Power and Prediction* argues the real payoff comes from redesigning entire systems around it, and that the slow, contested work of system change is what The Between Times is really about.***
+***Where *Prediction Machines* explained why cheap prediction reshapes decisions, *Power and Prediction* argues the real payoff comes from redesigning entire systems around it, and that the slow, contested work of system change is what The Between Times is really about.**
