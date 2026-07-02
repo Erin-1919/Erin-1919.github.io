@@ -26,7 +26,7 @@ Requires Ruby and Bundler. Jekyll version ~> 4.2.0.
 - **Blog**: `blog.md` uses a tabbed layout (JS-based tabs) grouping posts by year range. Posts are in `_posts/` following Jekyll's `YYYY-MM-DD-title.md` naming.
 - **Research page**: `research.md` is a large single markdown file with publications, presentations, and abstracts.
 - **Gallery**: `gallery.md` uses the `gallery` layout.
-- **CV**: Links to a PDF at `assets/pdf/Mingke_Li_CV_2026.pdf`.
+- **CV**: Links to a PDF at `assets/pdf/cv/Mingke_Li_CV_2026.pdf`. PDFs are organized into subfolders under `assets/pdf/`: `cv/`, `papers/`, `posters/`, `thesis/`, and `slides/` (presentation slides).
 - **Pagination**: `jekyll-paginate` with 10 posts per page, path `/blog/page:num/`.
 
 ## Adding a Blog Post

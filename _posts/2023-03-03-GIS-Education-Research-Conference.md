@@ -14,7 +14,7 @@ The event brought together a vibrant community of GIS practitioners, researchers
 
 Interactive workshops provided a chance to explore Esri’s latest tools and data services. These sessions emphasized practical applications of GIS technology in educational and research contexts, from ArcGIS Online and Field Maps to StoryMaps and 3D visualizations.
 
-## [**Poster Presentation**](https://Erin-1919.github.io/assets/pdf/ESRI_poster_Li_2022.pdf): Flood Susceptibility on Hexagonal Grids 
+## [**Poster Presentation**](https://Erin-1919.github.io/assets/pdf/posters/ESRI_poster_Li_2022.pdf): Flood Susceptibility on Hexagonal Grids 
 
 I was especially excited to see my poster on display during the event:
 

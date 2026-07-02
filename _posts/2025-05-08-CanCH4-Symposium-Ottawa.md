@@ -12,7 +12,7 @@ layout: post
 **Lightning Talk**: [Watch the video](https://youtu.be/_FMQk5I4agQ)
 
 **Poster Presentation**: Available throughout the event  
-[View Poster (PDF)](https://Erin-1919.github.io/assets/pdf/CanCH4_Poster_May_2025_EL.pdf)
+[View Poster (PDF)](https://Erin-1919.github.io/assets/pdf/posters/CanCH4_Poster_May_2025_EL.pdf)
 
 ## The Problem: Inadequate Spatial Grids Limit Action
 
