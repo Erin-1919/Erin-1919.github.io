@@ -67,7 +67,7 @@ Discrete global grid systems (DGGS) are emerging spatial data structures widely 
 While substantial efforts have been invested in the development of Discrete Global Grid Systems (DGGS) spatial operations and their potential applications in the geospatial domain, it has become evident that there is a demand for an efficient and scalable system to handle the visualization of large-scale DGGS data. This study demonstrated the potential of DGGS in conjunction with the serverless framework for dynamic visualization at various resolutions, which is based on data storage and effective querying using PostgreSQL integrated into Amazon Aurora Serverless. The use of Amazon Web Services (AWS) Lambda for on-the-fly generation of hexagon geometries significantly reduced the storage requirements and improved the speed of the visualization process. In addition, we implemented on-the-fly spatial operations including point binning, thresholding, aggregation, and neighborhood operations in the DGGS, highlighting the capabilities of DGGS in vector and raster processing. The proposed system has shown promising results in terms of efficiency, scalability, and adaptability, making it a viable solution for large-scale geospatial data processing and visualization. Case studies using flood risk data and terrain data further illustrate the system’s practical applicability in on-the-fly spatial operations and rapid visualization.
 </details>
 
-Liu, J.; Li, J.; Qiao, L.; **Li, M.**; Stefanakis, E.; Zhao, X.; Huang, Q.; Wang, H.; Zhang, C. QuadGridSIM: A quadrilateral grid-based method for high-performance and robust trajectory similarity analysis. Transactions in GIS. 00, 1–25. [**DOI**](https://doi.org/10.1111/tgis.13126) / [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2024%20Liu%20et%20al.pdf)
+Liu, J.; Li, J.; Qiao, L.; **Li, M.**; Stefanakis, E.; Zhao, X.; Huang, Q.; Wang, H.; Zhang, C. QuadGridSIM: A quadrilateral grid-based method for high-performance and robust trajectory similarity analysis. Transactions in GIS. 28(1), 83–107. [**DOI**](https://doi.org/10.1111/tgis.13126) / [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2024%20Liu%20et%20al.pdf)
 
 <details>
   <summary>Abstract</summary>
@@ -149,6 +149,8 @@ We investigated the spatial-temporal patterns of spruce budworm (Choristoneura f
 
 ## Conference Presentations
 ### 2026
+
+**Li, M.E.**; Liang, S.H.L. DGGS as a Spatial Harness for AI: Multi-Agent Querying and Grounded Spatial Reasoning. Oral presentation at the XXV ISPRS Congress - Forum9A: Exploring the Role of DGGS and AI in Addressing Challenges of National Mapping & Remote Sensing Agencies, Jul. 2026, Toronto, Canada. [**Slides**](https://Erin-1919.github.io/assets/pdf/slides/2026-07-ISPRS-Forum.pdf)
 
 **Li, M.E.**; Liang, S.H.L. Natural Language to DGGS-Aware Methane Insights with a Multi-LLM-Agent Framework​. Oral presentation at the  9th Conference on Spatial Knowledge and Information (SKI) Canada, Feb. 2026, Banff, Alberta, Canada. [**Slides**](https://Erin-1919.github.io/assets/pdf/slides/2026-02_SKI-Canada_Multi-LLM-Agent-Methane.pdf) / [**Short Paper**]()
 
