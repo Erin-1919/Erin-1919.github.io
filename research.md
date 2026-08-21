@@ -45,20 +45,20 @@ layout: page
 Spatial reasoning depends on relations such as adjacency, containment, and hierarchy, while LLMs infer these relations unreliably from coordinates, maps, or text. Existing agentic GeoAI systems often address this limitation by reconstructing spatial relations for each query, leaving no persistent spatial substrate for reasoning. We present GridMind, a Discrete Global Grid Systems (DGGS) grounded multi-agent system that makes spatial relations a stable part of the architecture. To our knowledge, GridMind is the first system to use DGGS topology as a standing multi-agent substrate for spatial reasoning. It indexes space with DGGS and models both grid cells and spatial features as agents. Adjacency, hierarchy, and containment are derived from cell identifiers rather than inferred by the language model, which provides natural-language explanations of grid-grounded behavior. In the demonstration, users interact with an oil-and-gas asset-management sandbox to place sensors, replay leak events, observe selective sensor activation, and ask agents why and how they acted. GridMind shows that grid-grounded spatial relations can make multi-agent spatial reasoning explainable, scalable, and transferable to other DGGS-indexed domains.
 </details>
 
-**Li, M.E.**; Liang, S.H.L. Enabling a Digital Earth for Methane Emissions Management with Equal-Area Discrete Global Grids. International Journal of Digital Earth. 19(1), 2607210. [**DOI**](https://doi.org/10.1080/17538947.2025.2607210) / [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2026%20Li%20and%20Liang.pdf)
+**Li, M.E.**; Liang, S.H.L. Enabling a Digital Earth for Methane Emissions Management with Equal-Area Discrete Global Grids. International Journal of Digital Earth. 19(1), 2607210. [**DOI**](https://doi.org/10.1080/17538947.2025.2607210) / [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2026_IJDigitalEarth_Li_MethaneDigitalEarth_published.pdf)
 <details>
   <summary>Abstract</summary>
 We develop a spatially explicit methane inventory for Alberta’s upstream oil and gas sector using the rHEALPix Discrete Global Grid System. The objective is to demonstrate an equal-area, hierarchy-aware framework that assigns facility-reported emissions to native locations and supports multi-scale analysis and reporting. We compile monthly facility activity from Petrinex for 2020 to 2023, geolocate facilities using the Oil and Gas Infrastructure Mapping database, calculate methane emissions from venting, fuel use, and flaring using province-standard factors, and bin results to rHEALPix cells before exact aggregation to coarser levels. Our analysis revealed persistent high-emission hotspots, with 5% of grid cells accounting for 34% of total annual methane emissions. The equal-area lattice enables fair intensity comparisons across latitude, stable hotspot tracking over time, and mass-conserving aggregation that maintains consistent totals across resolutions. Practical implications include a standard spatial fabric that integrates facility reports, satellites, and ground sensors, provides persistent cell buckets for facility and asset management, enables accurate intensity comparisons across space and time with quantitative spatial resolution, preserves spatial integrity in visualization, supports consistent mass conserving aggregation at any scale with multiple granularities for analysis and reporting, allows precise hotspot tracking and trend monitoring, and informs targeted monitoring and survey design.
 </details>
 
-**Li, M.E.**; Liang, S.H.L. Natural Language to DGGS-Aware Methane Insights with a Multi-LLM-Agent Framework. Proceedings in Spatial Knowledge and Information Canada 2026. [**DOI**](https://doi.org/10.5281/zenodo.20598496) / [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2026b%20Li%20and%20Liang.pdf)
+**Li, M.E.**; Liang, S.H.L. Natural Language to DGGS-Aware Methane Insights with a Multi-LLM-Agent Framework. Proceedings in Spatial Knowledge and Information Canada 2026. [**DOI**](https://doi.org/10.5281/zenodo.20598496) / [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2026_SKICanada_Li_NL2DGGSMethaneInsights_published.pdf)
 <details>
   <summary>Abstract</summary>
 Fragmented spatial data and inconsistent semantics hinder environmental analytics and confound large language models. We present a Discrete Global Grid System powered framework that harmonizes gridded methane inventories and enables explainable, traceable natural language analytics. Demonstrating the methane use case, we standardize spatial and semantic references using DGGS as a global index, then allow the interaction with a modular multi-agent system. Agents parse intent, resolve locations to DGGS cells, and generate validated SQL that powers summaries and maps with cell-level citations. The result is fast, reproducible methane analysis with clear provenance.
 </details>
 
 ### 2025
-Liao, C.; Engwirda, D.; Cooper, M.; **Li, M.**; Fang, Y. Discrete Global Grid System-based flow routing datasets in the Amazon and Yukon basins. Earth System Science Data. 17(5), 2035–2062. [**DOI**](https://doi.org/10.5194/essd-17-2035-2025)
+Liao, C.; Engwirda, D.; Cooper, M.; **Li, M.**; Fang, Y. Discrete Global Grid System-based flow routing datasets in the Amazon and Yukon basins. Earth System Science Data. 17(5), 2035–2062. [**DOI**](https://doi.org/10.5194/essd-17-2035-2025) / [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2025_ESSD_Liao_DGGSFlowRoutingDatasets_published.pdf)
 
 <details>
   <summary>Abstract</summary>
@@ -66,14 +66,14 @@ Discrete global grid systems (DGGS) are emerging spatial data structures widely 
 </details>
 
 ### 2024
-**Li, M.**; Tousignant, C.; Chaudhuri, C.; Chabbouh, A. Utilizing serverless framework for dynamic visualization and operations in geospatial applications. International Journal of Digital Earth. 17(1), 2392835. [**DOI**](https://doi.org/10.1080/17538947.2024.2392835) / [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2024%20Li%20et%20al.pdf)
+**Li, M.**; Tousignant, C.; Chaudhuri, C.; Chabbouh, A. Utilizing serverless framework for dynamic visualization and operations in geospatial applications. International Journal of Digital Earth. 17(1), 2392835. [**DOI**](https://doi.org/10.1080/17538947.2024.2392835) / [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2024_IJDigitalEarth_Li_ServerlessDGGSVisualization_published.pdf)
 
 <details>
   <summary>Abstract</summary>
 While substantial efforts have been invested in the development of Discrete Global Grid Systems (DGGS) spatial operations and their potential applications in the geospatial domain, it has become evident that there is a demand for an efficient and scalable system to handle the visualization of large-scale DGGS data. This study demonstrated the potential of DGGS in conjunction with the serverless framework for dynamic visualization at various resolutions, which is based on data storage and effective querying using PostgreSQL integrated into Amazon Aurora Serverless. The use of Amazon Web Services (AWS) Lambda for on-the-fly generation of hexagon geometries significantly reduced the storage requirements and improved the speed of the visualization process. In addition, we implemented on-the-fly spatial operations including point binning, thresholding, aggregation, and neighborhood operations in the DGGS, highlighting the capabilities of DGGS in vector and raster processing. The proposed system has shown promising results in terms of efficiency, scalability, and adaptability, making it a viable solution for large-scale geospatial data processing and visualization. Case studies using flood risk data and terrain data further illustrate the system’s practical applicability in on-the-fly spatial operations and rapid visualization.
 </details>
 
-Liu, J.; Li, J.; Qiao, L.; **Li, M.**; Stefanakis, E.; Zhao, X.; Huang, Q.; Wang, H.; Zhang, C. QuadGridSIM: A quadrilateral grid-based method for high-performance and robust trajectory similarity analysis. Transactions in GIS. 28(1), 83–107. [**DOI**](https://doi.org/10.1111/tgis.13126) / [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2024%20Liu%20et%20al.pdf)
+Liu, J.; Li, J.; Qiao, L.; **Li, M.**; Stefanakis, E.; Zhao, X.; Huang, Q.; Wang, H.; Zhang, C. QuadGridSIM: A quadrilateral grid-based method for high-performance and robust trajectory similarity analysis. Transactions in GIS. 28(1), 83–107. [**DOI**](https://doi.org/10.1111/tgis.13126) / [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2024_TransGIS_Liu_QuadGridSIM_published.pdf)
 
 <details>
   <summary>Abstract</summary>
@@ -81,21 +81,21 @@ Measuring trajectory similarity is a fundamental algorithm in trajectory data mi
 </details>
 
 ### 2022
-**Li, M.**; McGrath, H.; Stefanakis, E. Multi-scale Flood Mapping under Climate Change Scenarios in Hexagonal Discrete Global Grids. ISPRS International Journal of Geo-Information. 11(12), 627. [**DOI**](https://doi.org/10.3390/ijgi11120627) / [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2022d%20Li%20et%20al.pdf)
+**Li, M.**; McGrath, H.; Stefanakis, E. Multi-scale Flood Mapping under Climate Change Scenarios in Hexagonal Discrete Global Grids. ISPRS International Journal of Geo-Information. 11(12), 627. [**DOI**](https://doi.org/10.3390/ijgi11120627) / [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2022_ISPRS-IJGI_Li_MultiScaleFloodMapping_published.pdf)
 
 <details>
   <summary>Abstract</summary>
 Among the most prevalent natural hazards, flooding has been threatening human lives and properties. Robust flood simulation is required for effective response and prevention. Machine learning is widely used in flood modeling due to its high performance and scalability. Nonetheless, data pre-processing of heterogeneous sources can be cumbersome, and traditional data processing and modeling have been limited to a single resolution. This study employed an Icosahedral Snyder Equal Area Aperture 3 Hexagonal Discrete Global Grid System (ISEA3H DGGS) as a scalable, standard spatial framework for computation, integration, and analysis of multi-source geospatial data. We managed to incorporate external machine learning algorithms with a DGGS-based data framework, and project future flood risks under multiple climate change scenarios for southern New Brunswick, Canada. A total of 32 explanatory factors including topographical, hydrological, geomorphic, meteorological, and anthropogenic were investigated. Results showed that low elevation and proximity to permanent waterbodies were primary factors of flooding events, and rising spring temperatures can increase flood risk. Flooding extent was predicted to occupy 135–203% of the 2019 flood area, one of the most recent major flooding events, by the year 2100. Our results assisted in understanding the potential impact of climate change on flood risk, and indicated the feasibility of DGGS as the standard data fabric for heterogeneous data integration and incorporated in multi-scale data mining.
 </details>
 
-**Li, M.**; McGrath, H.; Stefanakis, E. Multi-resolution topographic analysis in hexagonal Discrete Global Grid Systems. International Journal of Applied Earth Observation and Geoinformation. 113, 102985. [**DOI**](https://doi.org/10.1016/j.jag.2022.102985) / [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2022c%20Li%20et%20al.pdf)
+**Li, M.**; McGrath, H.; Stefanakis, E. Multi-resolution topographic analysis in hexagonal Discrete Global Grid Systems. International Journal of Applied Earth Observation and Geoinformation. 113, 102985. [**DOI**](https://doi.org/10.1016/j.jag.2022.102985) / [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2022_IJAEOG_Li_MultiResolutionTopographicAnalysis_published.pdf)
 
 <details>
   <summary>Abstract</summary>
 Discrete Global Grid Systems (DGGS) have been increasingly adopted as a standard framework for multi-source geospatial data. Previous research largely studied the mathematical foundation of discrete global grids, developed open-source libraries, and explored their application as data integration platforms. This study investigated the multi-resolution terrain analysis in a pure hexagonal DGGS environment, including descriptive statistics, topographic parameters, and topographic indices. Experiments across multiple grid resolutions were carried out in three study areas with different terrain roughness in Alberta, Canada. Five algorithms were proposed to calculate both the slope gradient and terrain aspect. A cell-based pair-wise comparison showed a strong positive correlation between the gradient values as calculated from five algorithms. The grid resolutions as well as the terrain roughness had a clear effect on the computed slope gradient and topographic indices. This research aims to enhance the analytical functionality of hexagonal DGGS to better support decision-making in real world problems.
 </details>
 
-**Li, M.**; McGrath, H.; Stefanakis, E. Geovisualization of Hydrological Flow in Hexagonal Grid Systems. Geographies. 2(2), 227–244. [**DOI**](https://doi.org/10.3390/geographies2020016) / [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2022a%20Li%20et%20al.pdf)
+**Li, M.**; McGrath, H.; Stefanakis, E. Geovisualization of Hydrological Flow in Hexagonal Grid Systems. Geographies. 2(2), 227–244. [**DOI**](https://doi.org/10.3390/geographies2020016) / [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2022_Geographies_Li_HydrologicalFlowGeovisualization_published.pdf)
 
 <details>
   <summary>Abstract</summary>
@@ -103,7 +103,7 @@ Recent research has extended conventional hydrological algorithms into a hexagon
 </details>
 
 ### 2021
-**Li, M.**; McGrath, H.; Stefanakis, E. Integration of Heterogeneous Terrain Data into Discrete Global Grid Systems. Cartography and Geographic Information Science. 48(6), 546-564. [**DOI**](https://doi.org/10.1080/15230406.2021.1966648) / [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2021%20Li%20et%20al.pdf)
+**Li, M.**; McGrath, H.; Stefanakis, E. Integration of Heterogeneous Terrain Data into Discrete Global Grid Systems. Cartography and Geographic Information Science. 48(6), 546-564. [**DOI**](https://doi.org/10.1080/15230406.2021.1966648) / [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2021_CaGIS_Li_HeterogeneousTerrainIntegration_published.pdf)
 
 <details>
   <summary>Abstract</summary>
@@ -111,21 +111,21 @@ The Canadian Digital Elevation Model (CDEM) and the High-Resolution Digital Elev
 </details>
 
 ### 2020
-**Li, M.**; Stefanakis, E. Geospatial Operations of Discrete Global Grid Systems – A Comparison with Traditional GIS. Journal of Geovisualization and Spatial Analysis. 4(2), 26. [**DOI**](https://doi.org/10.1007/s41651-020-00066-3) / [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2020%20Li%20and%20Stefanakis.pdf)
+**Li, M.**; Stefanakis, E. Geospatial Operations of Discrete Global Grid Systems – A Comparison with Traditional GIS. Journal of Geovisualization and Spatial Analysis. 4(2), 26. [**DOI**](https://doi.org/10.1007/s41651-020-00066-3) / [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2020_JGSA_Li_DGGSGeospatialOperationsReview_published.pdf)
 
 <details>
   <summary>Abstract</summary>
 As the foundation of the next-generation Digital Earth, Discrete Global Grid Systems (DGGS) have demonstrated both theoretical and practical development, with a variety of state-of-the-art implementations proposed. These emerging DGGS platforms or libraries support preliminary operations such as quantization, cell-level navigation, and conversion between cell addresses and geographical coordinates, while leaving the other more complicated functions unexplored. This paper discusses the functional operations in a DGGS environment, including the essential operations defined by the Open Geospatial Consortium (OGC) Abstract Specification, and the extended operations potentially supported by DGGS. The extended operations are discussed in comparison to the traditional GIS, from the aspects of database techniques, data pre-processing and manipulation, spatial analysis and data interpretation, data computation, and data visualization. It was found that with the OGC-required operations and pre-processing operations as the baseline of development, some function algorithms can facilitate the algorithm development of other analytical functions. Several future research directions regarding the data modeling uncertainties, extended analytic algorithm development, and database and computation technologies are presented. This paper provides a comparison between DGGS and traditional GIS operations and can serve as a reference for future DGGS operation development.
 </details>
 
-**Li, M.**; Stefanakis, E. Geo-feature Modeling Uncertainties in Discrete Global Grids: A Case Study of Downtown Calgary, Canada. Geomatica. 74, 175-195.  [**DOI**](https://doi.org/10.1139/geomat-2020-0011) / [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2020b%20Li%20and%20Stefanakis.pdf)
+**Li, M.**; Stefanakis, E. Geo-feature Modeling Uncertainties in Discrete Global Grids: A Case Study of Downtown Calgary, Canada. Geomatica. 74, 175-195.  [**DOI**](https://doi.org/10.1139/geomat-2020-0011) / [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2020_Geomatica_Li_GeoFeatureModelingUncertainties_published.pdf)
 
 <details>
   <summary>Abstract</summary>
 The Open Geospatial Consortium has officially adopted discrete global grid systems (DGGS) as a new option for Earth reference standards. Many state-of-the-art DGGS implementations have been developed, revealing the potential for DGGS applications. Before the wide application of DGGS in solving real-world problems, however, the potential uncertainties of modeling on DGGS should be investigated and documented. This study focused on the uncertainties of geo-feature modeling on DGGS, quantitatively measured the point position displacement and line and polygon features’ geometry distortion, and evaluated the validity of topological relationships. Specifically, traffic cameras (points), main streets (lines), and land-cover classes (polygons) of downtown Calgary (AB, Canada) were modeled in various DGGS configurations at multiple resolutions. Results showed that the point displacement and polygon distortion generally reduced when being modeled at a higher resolution. The tessellations with the monotonical convergence characteristic are recommended if cell indices are expected to represent levels of model precision. Line features’ fidelity was affected by grid tessellations, resolution levels, grid orientation relative to the Earth, and the rotated line directions. The degree of the line distortion was not straightforward to forecast. Maintaining the topological validity between spatial objects with various granularities was challenging and needed further algorithm development for DGGS implementations. The study outcomes can serve as useful guidelines in the selection among grid types, refinement ratios, and resolution levels when applying DGGS implementations to urban environments. This paper also pinpoints several research directions that can benefit the quantization and analysis of vector features on DGGS.
 </details>
 
-**Li, M.**; Stefanakis, E.; McGrath, H. National Terrain Data Management on Discrete Global Grids in Canada. AutoCarto2020. [**PDF**](https://cartogis.org/docs/autocarto/2020/docs/abstracts/3h%20National%20Terrain%20Data%20Management%20on%20Discrete%20Global%20Grids%20in%20Canada.pdf)
+**Li, M.**; Stefanakis, E.; McGrath, H. National Terrain Data Management on Discrete Global Grids in Canada. AutoCarto2020. [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2020_AutoCarto_Li_NationalTerrainOnDGGS_published.pdf)
 
 <details>
   <summary>Abstract</summary>
@@ -133,14 +133,14 @@ Terrain data can be acquired by various technologies with different data formats
 </details>
 
 ### 2019
-**Li, M.**; MacLean, D.A.; Hennigar, C.R.; Ogilvie, J. Previous Year Outbreak Conditions and Spring Climate Predict Spruce Budworm Population Changes in the Following Year. Forest Ecology and Management. 458, 117737. [**DOI**](https://doi.org/10.1016/j.foreco.2019.117737) / [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2019b%20Li%20et%20al.pdf)
+**Li, M.**; MacLean, D.A.; Hennigar, C.R.; Ogilvie, J. Previous Year Outbreak Conditions and Spring Climate Predict Spruce Budworm Population Changes in the Following Year. Forest Ecology and Management. 458, 117737. [**DOI**](https://doi.org/10.1016/j.foreco.2019.117737) / [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2020_ForEcolManage_Li_SpruceBudwormPopulationPrediction_published.pdf)
 
 <details>
   <summary>Abstract</summary>
 We determined effects of local spruce budworm (Choristoneura fumiferana Clem.; SBW) population level, proximity to sites with high SBW populations, insecticide spray, and environmental variables on SBW populations from 2014 to 2018, the outbreak initiation period in northern New Brunswick, Canada. SBW second instar larvae (L2) per branch data collected at 1100–2000 sample points per year were used to create annual interpolated population rasters. Fishnet sample points extracted from these rasters were overlaid with georeferenced layers of 46 possible predictor variables including forest composition, climate, topography, site quality, and insecticide treatment. Results showed that local SBW population in the previous year, proximity to sites with high SBW populations, and early spring climate were consistently the most important predictors over the 5 study years. Simultaneous autoregressive models were used to address spatial autocorrelation when forecasting the SBW L2 population, and a linear mixed effects model was fit to aggregate data for 2015–2018. The models reduced spatial dependence in the residuals, and explained 68–79% of variance in annual L2 levels and 53% of variance over the 4 years combined. Sensitivity analysis showed that locations with 5–10 more SBW L2 per branch than observed values, or 20–40 km closer to high population sites in the previous year could have up to 24 more L2 in the current year. Cumulative degree days in April helped to estimate the upper and lower bounds of the population. Expansion and retraction of SBW outbreak initiation were mathematically described. Understanding which variables influence SBW outbreak initiation and population level assists in design of small area target-specific insecticide spray applications and helps focus SBW L2 sampling on predicted outbreak hot spots.
 </details>
 
-**Li, M.**; MacLean, D.A.; Hennigar, C.R.; Ogilvie, J. Spatial-Temporal Patterns of Spruce Budworm Defoliation within Plots in Québec. Forests. 10, 232. [**DOI**](https://doi.org/10.3390/f10030232) / [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2019a%20Li%20et%20al.pdf)
+**Li, M.**; MacLean, D.A.; Hennigar, C.R.; Ogilvie, J. Spatial-Temporal Patterns of Spruce Budworm Defoliation within Plots in Québec. Forests. 10, 232. [**DOI**](https://doi.org/10.3390/f10030232) / [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2019_Forests_Li_SpruceBudwormDefoliationPatterns_published.pdf)
 
 <details>
   <summary>Abstract</summary>
