@@ -6,3 +6,5 @@ Gemfile.lock
 _site
 *.gem
 .claude/
+# CV source (Word) - only the exported PDF is published
+assets/pdf/cv/*.docx

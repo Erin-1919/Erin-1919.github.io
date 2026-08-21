@@ -39,6 +39,12 @@ layout: page
 
 ## Peer-reviewed Publications
 ### 2026
+**Li, M.E.**; Wang, J.; Liang, S.H.L. GridMind: A DGGS-Grounded Multi-Agent System for Spatial Reasoning. Proceedings of the 34th ACM International Conference on Advances in Geographic Information Systems (SIGSPATIAL '26). [**DOI**](https://doi.org/10.1145/3841645.3843111)
+<details>
+  <summary>Abstract</summary>
+Spatial reasoning depends on relations such as adjacency, containment, and hierarchy, while LLMs infer these relations unreliably from coordinates, maps, or text. Existing agentic GeoAI systems often address this limitation by reconstructing spatial relations for each query, leaving no persistent spatial substrate for reasoning. We present GridMind, a Discrete Global Grid Systems (DGGS) grounded multi-agent system that makes spatial relations a stable part of the architecture. To our knowledge, GridMind is the first system to use DGGS topology as a standing multi-agent substrate for spatial reasoning. It indexes space with DGGS and models both grid cells and spatial features as agents. Adjacency, hierarchy, and containment are derived from cell identifiers rather than inferred by the language model, which provides natural-language explanations of grid-grounded behavior. In the demonstration, users interact with an oil-and-gas asset-management sandbox to place sensors, replay leak events, observe selective sensor activation, and ask agents why and how they acted. GridMind shows that grid-grounded spatial relations can make multi-agent spatial reasoning explainable, scalable, and transferable to other DGGS-indexed domains.
+</details>
+
 **Li, M.E.**; Liang, S.H.L. Enabling a Digital Earth for Methane Emissions Management with Equal-Area Discrete Global Grids. International Journal of Digital Earth. 19(1), 2607210. [**DOI**](https://doi.org/10.1080/17538947.2025.2607210) / [**PDF**](https://Erin-1919.github.io/assets/pdf/papers/2026%20Li%20and%20Liang.pdf)
 <details>
   <summary>Abstract</summary>
