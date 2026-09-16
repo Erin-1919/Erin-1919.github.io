@@ -1367,7 +1367,7 @@ Runs after Task 6, before Task 7's audit. The home page currently shows a fixed 
 
 - [ ] **Step 1: Write the failing assertion**
 
-With today's content, four items fall inside a 12-month window (Guelph appointment, ISPRS Congress, OGC DGGS AI panel, Innovation Summit NL) and nothing from 2024 or earlier should appear on the home page:
+With today's content, three items fall inside a 12-month window (Guelph appointment, ISPRS Congress, Innovation Summit NL) and nothing from 2024 or earlier should appear on the home page. Note the Jan 2026 OGC DGGS AI panel entry was reclassified as a blog post and is no longer news, so it must not be used as an in-window example:
 
 ```bash
 cd /e/UCalgary_postdoc/Erin-1919.github.io && bundle exec jekyll build 2>&1 | tail -3 && grep -c "130th OGC\|CanCH4 Symposium" _site/index.html
