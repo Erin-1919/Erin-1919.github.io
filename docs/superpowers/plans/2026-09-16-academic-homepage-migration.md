@@ -641,7 +641,21 @@ Extends the theme so news items are real pages, then moves the event posts acros
 
 **Interfaces:**
 - Consumes: the `news` collection declared in Task 1.
-- Produces: `site.news` documents that render at `/news/<slug>/` with full bodies, each carrying `redirect_from` with its former permalink.
+- Produces: `site.news` documents. Those with a body render at `/news/<slug>/` and are linked; those without a body render as plain headline text and are never linked. Moved posts carry `redirect_from` with their former permalink.
+
+**Two shapes of news item.** Erin writes news both ways and both must work:
+
+1. **With a body** — the migrated conference and award posts, each 170–950 words plus a photo. These get a full page and their headline links to it.
+2. **Title only** — a one-line announcement with no body, the way the theme ships. These render as plain text with a date and are NOT clickable, because an empty page behind a link is a dead end.
+
+Every template that renders a news item must branch on this. The test for "has a body" is the rendered content stripped of HTML and whitespace:
+
+```liquid
+{%- assign body = item.content | strip_html | strip -%}
+{%- if body != "" -%} ... linked ... {%- else -%} ... plain ... {%- endif -%}
+```
+
+Use exactly this test everywhere, so the two templates never disagree about which items are clickable.
 
 - [ ] **Step 1: Write the failing assertion**
 
@@ -724,14 +738,21 @@ navbar_title: News
         <h2 class="pt-4" id="year-{{ year.name }}">{{ year.name }}</h2>
         <div class="my-0 p-0 bg-white shadow-sm rounded-xl">
             {% for item in year.items %}
+            {%- assign body = item.content | strip_html | strip -%}
             <div class="border-bottom border-gray p-3 {% if forloop.last %}border-0{% endif %}">
                 <h5 class="mb-2">
+                    {%- if body != "" -%}
                     <a href="{{ item.url | relative_url }}" class="text-dark text-decoration-none">{{ item.title }}</a>
+                    {%- else -%}
+                    {{ item.title }}
+                    {%- endif -%}
                 </h5>
                 <div class="text-muted small mb-2">
                     <i class="fas fa-calendar-alt"></i> {{ item.date | date: "%B %d, %Y" }}
                 </div>
-                <div class="text-muted small">{{ item.content | strip_html | truncate: 300 }}</div>
+                {%- if body != "" -%}
+                <div class="text-muted small">{{ body | truncate: 300 }}</div>
+                {%- endif -%}
             </div>
             {% endfor %}
         </div>
@@ -756,10 +777,17 @@ In `_includes/widgets/news_card.html`, replace this line:
                     <div>{{ item.title }}</div>
 ```
 
-with:
+with the branching version, so only items that have a body become links:
 
 ```html
-                    <div><a href="{{ item.url | relative_url }}" class="text-dark">{{ item.title }}</a></div>
+                    {%- assign body = item.content | strip_html | strip -%}
+                    <div>
+                        {%- if body != "" -%}
+                        <a href="{{ item.url | relative_url }}" class="text-dark">{{ item.title }}</a>
+                        {%- else -%}
+                        {{ item.title }}
+                        {%- endif -%}
+                    </div>
 ```
 
 Then add an "All news" link. Replace the closing of the widget's header line:
@@ -862,6 +890,31 @@ cd /e/UCalgary_postdoc/Erin-1919.github.io && test -f "_site/ISPRS-Webinar/index
 ```
 
 Expected: `REDIRECT OK`; a news page count equal to the number of moved files (the `/news` index is written to `_site/news.html`, not into this tree, so it is not counted here); and a non-zero image count proving bodies and photos survived.
+
+- [ ] **Step 10b: Verify both news shapes render correctly**
+
+Every migrated item has a body, so the title-only branch is untested by the migration alone. Create one real title-only item to exercise it — this is a genuine entry, not a placeholder:
+
+`_news/2026-09-16-guelph-appointment.md`
+
+```yaml
+---
+title: "Joined the University of Guelph as an Assistant Professor in the Department of Geography, Environment & Geomatics."
+date: 2026-09-16
+---
+```
+
+Then confirm the two shapes behave differently:
+
+```bash
+cd /e/UCalgary_postdoc/Erin-1919.github.io && bundle exec jekyll build 2>&1 | tail -3
+echo "--- title-only item must NOT be a link on the index ---"
+grep -A3 'Joined the University of Guelph' _site/news.html | grep -c '<a href' 
+echo "--- an item WITH a body must be a link ---"
+grep -B2 -A3 'ISPRS' _site/news.html | grep -c '<a href'
+```
+
+Expected: `0` for the title-only item and a non-zero count for the item with a body. If the title-only item renders as a link, the `body != ""` branch is wrong and would produce a link to an empty page.
 
 - [ ] **Step 11: Commit**
 

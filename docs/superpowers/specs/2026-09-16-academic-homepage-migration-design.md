@@ -26,6 +26,7 @@ re-framed around Erin Li's new position: Assistant Professor, University of Guel
 |---|---|
 | Migration scope | Adopt the theme's model fully, not a visual refresh |
 | Event posts | Move to `_news/`; extend the theme so news items have bodies |
+| News item shapes | Two: items WITH a body get a page and a linked headline; title-only items render as plain unlinked text |
 | Publications page | Keep the four-tab interface (Publications / Presentations / Talks / Thesis) |
 | Publication covers | Selected papers only; the rest use the no-cover variant |
 | Gallery | Showcase collection + lightbox; posters only, highlights unpublished |
