@@ -162,3 +162,21 @@ div.lazy {
     margin: 1.25rem auto;
     border-radius: 0.25rem;
 }
+
+/* Raise the base type scale. The theme's .small (Bootstrap 0.8em) was being
+   used for authors, venues, news entries and the education/experience lists,
+   which rendered them at 12.8px. */
+html {
+    font-size: 17px;
+}
+
+.small,
+small {
+    font-size: 0.875em;
+}
+
+/* Keep the monospaced email on one line inside the narrow profile card
+   now that the base type scale is larger. */
+.email-text {
+    font-size: 0.88em;
+}
