@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Personal academic website for Mingke (Erin) Li — Postdoctoral Associate at the University of Calgary and incoming Assistant Professor at the University of Guelph (from December 2026). Built with Jekyll, hosted on GitHub Pages at `Erin-1919.github.io`.
+Personal academic website for Mingke Erin Li — Postdoctoral Associate at the University of Calgary and incoming Assistant Professor at the University of Guelph (from December 2026). Built with Jekyll, hosted on GitHub Pages at `Erin-1919.github.io`.
 
 **Pushing to `master` publishes immediately.** There is no staging environment. Work on `prototype` and merge when verified.
 
@@ -90,7 +90,7 @@ Jekyll derives dates from filenames for `_posts/` only. A `_news/` file without 
 
 ### Author bolding
 
-Never bold names inline in `_publications/` front matter. `_data/authors.yml` bolds `Li, M.`, `Li, M.E.`, and `Mingke (Erin) Li`. Use whichever citation form the publication uses and do not normalise them.
+Never bold names inline in `_publications/` front matter. `_data/authors.yml` bolds `Li, M.`, `Li, M.E.`, and `Mingke Erin Li`. Use whichever citation form the publication uses and do not normalise them.
 
 ### Links and paths
 
