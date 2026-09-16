@@ -1456,3 +1456,123 @@ Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>
 EOF
 )"
 ```
+
+---
+
+### Task 9: News curation and the incoming-appointment correction
+
+Runs after Task 6, before Task 8. Applies the site owner's review of the news list, and corrects a factual overstatement about her current position.
+
+**Files:**
+- Modify: `_data/profile.yml`
+- Modify: `_news/2026-09-16-guelph-appointment.md` (renamed)
+- Move: 4 files from `_news/` to `_posts/`
+
+**Interfaces:**
+- Consumes: the news collection from Task 4 and the profile from Task 2.
+- Produces: `_news/` containing only 2020-and-later items; a profile that states the appointment accurately.
+
+**The correction that matters most.** Erin signed her Guelph offer on 2026-07-23 but does not start until December 2026. The site currently asserts she IS an Assistant Professor there, which is not true yet. Her decision: use the standard academic convention, **"Incoming Assistant Professor"**, and keep her current UCalgary role visible.
+
+- [ ] **Step 1: Write the failing assertion**
+
+```bash
+cd /e/UCalgary_postdoc/Erin-1919.github.io && bundle exec jekyll build 2>&1 | tail -3
+echo "--- profile must say Incoming ---"; grep -c "Incoming Assistant Professor" _site/index.html
+echo "--- no news before 2020 ---"; grep -c "Master Thesis\|A Poster on Master\|Doggone" _site/news/index.html
+```
+
+- [ ] **Step 2: Run it to verify it fails**
+
+Expected: `0` for the Incoming check and a non-zero count for the pre-2020 items.
+
+- [ ] **Step 3: Correct the position in `_data/profile.yml`**
+
+Replace the `positions:` block with:
+
+```yaml
+positions:
+- name: Incoming Assistant Professor
+- name: Department of Geography, Environment & Geomatics
+- name: University of Guelph (from December 2026)
+```
+
+The `experience:` block already lists `Postdoctoral Associate, University of Calgary, 2024 - 2026`, so her current role stays visible. Leave `education:` and `experience:` untouched.
+
+- [ ] **Step 4: Correct the bio's opening sentence**
+
+In the same file, the `short_bio` currently opens by asserting the Guelph role in the present tense. Replace only that opening clause so it reads:
+
+```html
+    I am a postdoctoral associate at the University of Calgary and an incoming Assistant Professor in the
+    Department of Geography, Environment &amp; Geomatics at the
+    <a href="https://www.uoguelph.ca/" target="_blank">University of Guelph</a>, starting December 2026.
+    My work sits at the intersection of geospatial data science, GeoAI, and Digital Earth, centred on
+    Discrete Global Grid Systems (DGGS) as a spatial framework for integrating and analysing heterogeneous
+    Earth observation data across scales.
+```
+
+Leave the bio's second paragraph exactly as it is.
+
+- [ ] **Step 5: Re-date and reword the appointment news item**
+
+The entry is dated 2026-09-16 and worded as though she has joined. The real date is the offer signing, 2026-07-23.
+
+```bash
+cd /e/UCalgary_postdoc/Erin-1919.github.io && git mv _news/2026-09-16-guelph-appointment.md _news/2026-07-23-guelph-appointment.md
+```
+
+Its front matter becomes, with no body (it stays a title-only item):
+
+```yaml
+---
+title: "Signed an offer to join the University of Guelph as an Assistant Professor in the Department of Geography, Environment & Geomatics, starting December 2026."
+date: 2026-07-23
+---
+```
+
+- [ ] **Step 6: Move four items out of news, back to posts**
+
+Erin's ruling: **no news before 2020**, and the candidacy-exam post belongs in the blog. These four move back to `_posts/`:
+
+```
+_news/2019-02-28-Geoprocessing-Scripts-Using-Python-Esri-Course.md
+_news/2019-03-15-A-Poster-on-Master's-Projects.md
+_news/2019-08-26-Master-Thesis.md
+_news/2021-01-12-Doggone-Candidacy-Exam.md
+```
+
+Note the first was moved INTO news earlier in this migration; the "no news before 2020" ruling supersedes that. For each file, `git mv` it to `_posts/` and then **remove both the `redirect_from:` key and the `layout:` key**. Back in `_posts/` the file's own published URL is exactly what `redirect_from` pointed at, so leaving the key makes Jekyll emit a redirect stub at the same path as the post — the post would redirect to itself. The `_config.yml` defaults block supplies `layout: blog_post`, so no explicit layout is wanted. Keep `title:` and `date:`.
+
+- [ ] **Step 7: Rebuild and run the assertions**
+
+```bash
+cd /e/UCalgary_postdoc/Erin-1919.github.io && rm -rf _site && bundle exec jekyll build 2>&1 | tail -3
+echo "--- Incoming present ---"; grep -c "Incoming Assistant Professor" _site/index.html
+echo "--- pre-2020 news gone ---"; grep -c "Master Thesis\|A Poster on Master\|Doggone" _site/news/index.html
+echo "--- the 4 are real posts, not redirect stubs ---"
+for s in Geoprocessing-Scripts-Using-Python-Esri-Course "A-Poster-on-Master's-Projects" Master-Thesis Doggone-Candidacy-Exam; do
+  if [ -f "_site/$s/index.html" ]; then
+    if grep -q refresh "_site/$s/index.html"; then echo "STUB (BAD) /$s"; else echo "OK /$s"; fi
+  else echo "MISSING /$s"; fi
+done
+echo "--- counts ---"; echo "_posts: $(ls _posts/*.md | wc -l)  _news: $(ls _news/*.md | wc -l)"
+echo "--- earliest news ---"; grep -h "^date:" _news/*.md | sort | head -1
+```
+
+Expected: `1` for Incoming; `0` for the pre-2020 items; four `OK` lines with no `STUB` or `MISSING`; `_posts` = 48 and `_news` = 15; and the earliest news date in 2020 or later.
+
+- [ ] **Step 8: Commit**
+
+```bash
+cd /e/UCalgary_postdoc/Erin-1919.github.io && git commit _data/profile.yml _news _posts -m "$(cat <<'EOF'
+Present the Guelph role as incoming and curate news to 2020 onward
+
+The appointment starts December 2026, so the profile no longer asserts
+it in the present tense. Four pre-2020 and personal-milestone entries
+move back to the blog.
+
+Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>
+EOF
+)"
+```
