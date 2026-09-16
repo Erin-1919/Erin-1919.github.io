@@ -3,6 +3,7 @@ title:          "Geovisualization of Hydrological Flow in Hexagonal Grid Systems
 date:           2022-01-01
 selected:       false
 category:       paper
+cover:          /assets/images/covers/paper_2022-li-geovisualization-hydrological.jpg
 pub:            "Geographies"
 pub_date:       "2022"
 pub_post:       ", 2(2), 227–244."

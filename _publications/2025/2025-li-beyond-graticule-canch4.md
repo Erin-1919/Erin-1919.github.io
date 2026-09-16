@@ -3,6 +3,7 @@ title:          "Beyond the Graticule: Spatially Explicit Methane Inventories Us
 date:           2025-01-01
 selected:       false
 category:       presentation
+cover:          /assets/images/covers/slide_2025-li-beyond-graticule-canch4.jpg
 pub:            "Oral and poster presentation at CanCH4 Symposium"
 pub_date:       "May 2025"
 pub_post:       ", Ottawa, Canada."

@@ -3,6 +3,7 @@ title:          "Multi-scale Flood Mapping under Climate Change Scenarios in Hex
 date:           2022-01-01
 selected:       false
 category:       paper
+cover:          /assets/images/covers/paper_2022-li-multiscale-flood.jpg
 pub:            "ISPRS International Journal of Geo-Information"
 pub_date:       "2022"
 pub_post:       ", 11(12), 627."

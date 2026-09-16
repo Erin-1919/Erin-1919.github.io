@@ -3,6 +3,7 @@ title:          "Integration of Heterogeneous Terrain Data into Discrete Global 
 date:           2021-01-01
 selected:       false
 category:       paper
+cover:          /assets/images/covers/paper_2021-li-heterogeneous-terrain.jpg
 pub:            "Cartography and Geographic Information Science"
 pub_date:       "2021"
 pub_post:       ", 48(6), 546-564."

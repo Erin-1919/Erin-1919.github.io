@@ -3,6 +3,7 @@ title:          "Spatial-Temporal Patterns of Spruce Budworm Defoliation within 
 date:           2019-01-01
 selected:       false
 category:       paper
+cover:          /assets/images/covers/paper_2019-li-sbw-defoliation-patterns.jpg
 pub:            "Forests"
 pub_date:       "2019"
 pub_post:       ", 10, 232."

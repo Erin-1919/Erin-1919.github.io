@@ -3,6 +3,7 @@ title:          "Geo-feature Modeling Uncertainties in Discrete Global Grids: A 
 date:           2020-01-01
 selected:       false
 category:       paper
+cover:          /assets/images/covers/paper_2020-li-geo-feature-modeling-uncertainties.jpg
 pub:            "Geomatica"
 pub_date:       "2020"
 pub_post:       ", 74, 175-195."

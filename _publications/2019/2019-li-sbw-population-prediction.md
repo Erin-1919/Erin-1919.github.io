@@ -3,6 +3,7 @@ title:          "Previous Year Outbreak Conditions and Spring Climate Predict Sp
 date:           2019-01-01
 selected:       false
 category:       paper
+cover:          /assets/images/covers/paper_2019-li-sbw-population-prediction.jpg
 pub:            "Forest Ecology and Management"
 pub_date:       "2019"
 pub_post:       ", 458, 117737."

@@ -3,6 +3,7 @@ title:          "Discrete Global Grid System-based flow routing datasets in the 
 date:           2025-01-01
 selected:       false
 category:       paper
+cover:          /assets/images/covers/paper_2025-liao-dggs-flow-routing.jpg
 pub:            "Earth System Science Data"
 pub_date:       "2025"
 pub_post:       ", 17(5), 2035–2062."

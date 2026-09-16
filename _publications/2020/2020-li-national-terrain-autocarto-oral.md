@@ -3,6 +3,7 @@ title:          "National terrain data management on Discrete Global Grids in Ca
 date:           2020-01-01
 selected:       false
 category:       presentation
+cover:          /assets/images/covers/slide_2020-li-national-terrain-autocarto-oral.jpg
 pub:            "Oral presentation at AutoCarto 2020"
 pub_date:       "Oct. 2020"
 pub_post:       ", Online."

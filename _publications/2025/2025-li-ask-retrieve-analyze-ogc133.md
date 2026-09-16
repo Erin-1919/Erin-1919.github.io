@@ -3,6 +3,7 @@ title:          "Ask, Retrieve, Analyze: A Multi-Agent DGGS Framework for GenAI 
 date:           2025-01-01
 selected:       false
 category:       presentation
+cover:          /assets/images/covers/slide_2025-li-ask-retrieve-analyze-ogc133.jpg
 pub:            "Oral presentation at the 133rd OGC Member Meeting - Discrete Global Grid Systems DWG"
 pub_date:       "Oct. 2025"
 pub_post:       ", Boulder, U.S."

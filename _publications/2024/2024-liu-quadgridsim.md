@@ -3,6 +3,7 @@ title:          "QuadGridSIM: A quadrilateral grid-based method for high-perform
 date:           2024-01-01
 selected:       false
 category:       paper
+cover:          /assets/images/covers/paper_2024-liu-quadgridsim.jpg
 pub:            "Transactions in GIS"
 pub_date:       "2024"
 pub_post:       ", 28(1), 83–107."
