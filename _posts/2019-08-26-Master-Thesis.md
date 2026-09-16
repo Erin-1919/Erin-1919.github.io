@@ -1,6 +1,6 @@
 ---
 title: "Master Thesis"
-layout: post
+date: 2019-08-26
 ---
 
 <img src="/assets/img/20190826/thesis2.jpg" width="500">

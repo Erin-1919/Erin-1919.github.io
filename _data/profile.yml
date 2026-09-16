@@ -1,0 +1,68 @@
+primary_name: "Mingke (Erin) Li"
+secondary_name: ""
+navbar_name: "Mingke (Erin) Li"
+
+positions:
+- name: Incoming Assistant Professor
+- name: Department of Geography, Environment & Geomatics
+- name: University of Guelph (from December 2026)
+
+email: "mli.erin1919@gmail.com"
+cv_link: /assets/pdf/cv/Mingke_Li_CV_2026.pdf
+gscholar: F3F4-2sAAAAJ
+github: Erin-1919
+linkedin: mingke-erin-li
+researchgate: Mingke-Li
+
+short_bio_text_justify: false
+short_bio: >-
+  <p>
+    I am a Postdoctoral Associate at the University of Calgary, where I completed my Ph.D. in Geomatics
+    Engineering. In December 2026, I join the <a href="https://www.uoguelph.ca/" target="_blank">University
+    of Guelph</a> as an Assistant Professor in the Department of Geography, Environment &amp; Geomatics.
+  </p>
+  <p>
+    My research develops agentic GeoAI, in which large language model (LLM) agents plan, reason, and act
+    over geospatial data grounded in Discrete Global Grid Systems (DGGS). A DGGS gives spatial operations
+    a consistent frame across resolutions, which supports an operational Digital Earth. I build geospatial
+    intelligence frameworks that integrate multi-source spatial data with machine learning and AI agents,
+    and I apply them to environmental and climate modelling, including methane emissions monitoring, flood
+    risk assessment, and environmental resilience. My research interests also include geospatial data
+    science, spatial data infrastructure, and geospatial decision-support systems.
+  </p>
+
+portrait_url: /assets/img/Erin_Li_34.jpg
+
+education:
+- name: University of Calgary
+  position: >-
+    Department of Geomatics Engineering <br/>
+    Ph.D. in Geomatics Engineering
+  date: 2023
+- name: University of New Brunswick
+  position: M.Sc. in Forestry
+  date: 2019
+- name: Nanjing Forestry University
+  position: B.Sc. in Geographic Information Science
+  date: 2017
+
+experience:
+- name: University of Calgary
+  position: Postdoctoral Associate
+  date: 2024 - present
+- name: Geosapiens Inc.
+  position: Geospatial Scientist
+  date: 2023 - 2024
+- name: University of Calgary
+  position: >-
+    Department of Geomatics Engineering <br/>
+    Sessional Instructor
+  date: 2020 - 2023
+
+# Awards are omitted from the homepage while the site is framed around the
+# faculty position. Restore by setting show_awards: true in _data/display.yml.
+# awards:
+# - name: Esri Young Scholar Award, First Runner-Up
+#   date: 2022
+# - name: Esri ECCE App Challenge, First Runner-Up
+#   date: 2021

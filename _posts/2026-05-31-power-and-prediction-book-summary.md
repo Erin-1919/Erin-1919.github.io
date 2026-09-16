@@ -1,6 +1,5 @@
 ---
 title: "Book Summary: Power and Prediction by Agrawal, Gans, and Goldfarb"
-layout: post
 ---
 
 ![book](/assets/img/20260531/book.jpg)

@@ -1,6 +1,5 @@
 ---
 title: "Grid Problems in GHG Inventories"
-layout: post
 ---
 ![hex](/assets/img/20250501/gas.jpg)
 

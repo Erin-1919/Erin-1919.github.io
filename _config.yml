@@ -1,43 +1,49 @@
 title: "Mingke Erin Li"
 author: "Mingke Erin Li"
 description: "Bring Your Own Bottle & Do Your Own Research."
-permalink: /:title/
 lang: "en"
-excerpt_separator: "\n\n\n"
-date_format: "%B %d, %Y"
+baseurl: ""
+url: "https://Erin-1919.github.io"
+permalink: /:title/
 
-# Layout
-
-show_social: true
-show_excerpts: false
-show_frame: true
-show_sidebar: false
-minimal: true
-
-# Menu
-
-navigation:
-  - {file: "index.html", title: "About me"}
-  - {file: "blog.md", title: "Blog"}
-  - {file: "research.md", title: "Research"}
-  - {file: "gallery.md", title: "Gallery"}
- # - {file: "cv.html", title: "CV"}
-  
-external:
-  - {title: Mail, icon: envelope, url: "mailto:mingke.li@ucalgary.ca"}
-  - {title: GitHub, icon: github, url: "https://github.com/Erin-1919"}
-  - {title: ResearchGate, icon: researchgate, url: "https://www.researchgate.net/profile/Mingke-Li"}
-  - {title: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/in/mingke-erin-li"}
-
-comments:
-#  disqus_shortname: ""
-#  isso_domain: ""
+markdown: kramdown
+kramdown:
+  input: GFM
 
 plugins:
-  - jekyll-feed
-  - jemoji
-  - jekyll-seo-tag
+  - jekyll-email-protect
+  - jekyll-redirect-from
   - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
 
-paginate: 10
-paginate_path: "/blog/page:num/"
+collections:
+  publications:
+    output: false
+  news:
+    output: true
+    permalink: /news/:path/
+  showcase:
+    output: false
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "blog_post"
+  - scope:
+      path: ""
+      type: "news"
+    values:
+      layout: "news"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - docs/
+  - CLAUDE.md
+  - UNLICENSE.txt

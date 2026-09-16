@@ -1,6 +1,6 @@
 ---
 title: "A Poster on Master's Projects"
-layout: post
+date: 2019-03-15
 ---
 
 ![poster](/assets/img/20190315/PosterNew.jpg)

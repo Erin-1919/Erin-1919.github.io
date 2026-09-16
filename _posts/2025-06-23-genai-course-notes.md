@@ -1,6 +1,5 @@
 ---
 title: "Notes from Introduction to Generative AI (Spring 2024)"
-layout: post
 ---
 
 **This post contains my personal notes from the course *Introduction to Generative AI* (Spring 2024), taught by Prof. Hung-yi Lee at National Taiwan University. The course provides a comprehensive overview of generative models.**  

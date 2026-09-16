@@ -1,6 +1,5 @@
 ---
 title: "GIS Basics: Database Management Systems "
-layout: post
 ---
 
 >> Good to begin well, better to end well.

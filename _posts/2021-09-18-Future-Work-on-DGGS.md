@@ -1,6 +1,5 @@
 ---
 title: "Future Work on DGGS"
-layout: post
 ---
 
 **As Discrete Global Grid Systems (DGGS) continue to evolve, new research opportunities are emerging across analytics, platform development, higher-dimensional modeling, and integration with cutting-edge technologies.**

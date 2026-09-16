@@ -1,6 +1,5 @@
 ---
 title: "GIS Basics: Geospatial Data"
-layout: post
 ---
 
 >> Good to begin well, better to end well.

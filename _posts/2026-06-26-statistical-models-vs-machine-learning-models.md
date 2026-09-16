@@ -1,6 +1,5 @@
 ---
 title: "Statistical Models and Machine Learning Models: What Really Separates Them"
-layout: post
 mathjax: true
 ---
 

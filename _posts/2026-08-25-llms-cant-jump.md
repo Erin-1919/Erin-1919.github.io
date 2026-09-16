@@ -1,6 +1,5 @@
 ---
 title: "LLMs Can't Jump: What Is a Researcher For When Research Is Automated?"
-layout: post
 mathjax: true
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "Unlocking GHG Insights with DGGS"
-layout: post
 ---
 ![hex](/assets/img/20250504/clean.jpg)
 

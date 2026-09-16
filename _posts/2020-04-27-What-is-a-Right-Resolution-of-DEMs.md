@@ -1,6 +1,5 @@
 ---
 title: "What is a Right Resolution of DEMs?"
-layout: post
 ---
 
 ![terrain](https://images.unsplash.com/photo-1472101126021-3910d43690a9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1191&q=80)

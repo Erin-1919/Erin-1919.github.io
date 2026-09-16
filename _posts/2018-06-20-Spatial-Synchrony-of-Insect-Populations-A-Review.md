@@ -1,6 +1,5 @@
 ---
 title: "Spatial Synchrony of Insect Populations: A Review"
-layout: post
 ---
 
 ![Forest](https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1051&q=80)

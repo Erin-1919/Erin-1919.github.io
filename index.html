@@ -1,28 +1,35 @@
 ---
-layout: page
-title: "About Me"
-permalink: /
+layout: default
+title : Homepage
+navbar_title: Home
 ---
 
+<div class="row">
+    <div class="col-lg-3 col-md-4">
+        {% include widgets/profile_card_mini.html %}
+    </div>
+    <div class="col-lg-9 col-md-8">
 
-<center><img src="assets/img/CanCH4_EL_1.jpg" alt="Erin Li" width="560" height="396"></center>
+        {% include widgets/profile_card_bio_only.html %}
 
-<div style="text-align:center;">
-    <span>
-        <ul style="list-style-type:none;">
-            <li> &#127380 Preferred name: Erin Li </li>
-            <li> &#129490 Pronouns: She/her </li>
-            <li> &#127758 Location: Calgary, Canada </li>
-            <li> &#127569 Language: Mandarin, English </li>
-            <li> &#127970 Affiliation: University of Calgary </li>
-            <li> &#127891 Position: Postdoctoral scholar </li>
-            <li> &#128171 Research: Geospatial data science; GeoAI; Digital Earth; DGGS </li>
-            <li> &#128231 How to reach me: mli.erin1919@gmail.com </li>
-            <!-- <li> -------------------------------------- </li> -->
-        </ul>
-    </span>
+        {% if site.data.display.homepage.show_experience %}
+            {% include widgets/experience_card.html %}
+        {% endif %}
+
+        {% if site.data.display.homepage.show_news %}
+        {% assign count_news = site.news | size %}
+        {% if count_news > 0 %}
+        {% include widgets/news_card.html months=site.data.display.homepage.news_months min=site.data.display.homepage.min_news %}
+        {% endif %}
+        {% endif %}
+
+        {% if site.data.display.homepage.show_selected_publications %}
+        {% assign pubs = site.publications | sort: "date" | reverse | where: "selected", true %}
+        {%
+        include widgets/publication_card.html
+        publications=pubs
+        title='<i class="fas fa-star"></i> Selected Publications'
+        %}
+        {% endif %}
+    </div>
 </div>
-
-<p style="text-align:center">
-    <a href="https://Erin-1919.github.io/assets/pdf/cv/Mingke_Li_CV_2026.pdf">Curriculum Vitae</a>
-</p>

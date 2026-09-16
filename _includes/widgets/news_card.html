@@ -1,0 +1,40 @@
+{%- assign sorted = site.news | sort: "date" | reverse -%}
+{%- assign window_seconds = include.months | times: 2629746 -%}
+{%- assign cutoff = site.time | date: "%s" | plus: 0 | minus: window_seconds -%}
+{%- assign n = 0 -%}
+{%- for item in sorted -%}
+  {%- assign ts = item.date | date: "%s" | plus: 0 -%}
+  {%- if ts >= cutoff -%}{%- assign n = n | plus: 1 -%}{%- endif -%}
+{%- endfor -%}
+{%- if n < include.min -%}{%- assign n = include.min -%}{%- endif -%}
+{%- assign news_by_year = sorted | slice: 0, n | group_by_exp: "item", "item.date | date: '%Y'" -%}
+
+<div class="my-3 bg-white shadow-sm rounded-xl">
+    <h6 class="p-3 mb-0 border-bottom border-gray d-flex">
+        <span><i class="fas fa-rss"></i> News</span>
+        <a class="ml-auto small" href="{{ '/news' | relative_url }}">All news <i class="fas fa-angle-double-right"></i></a>
+    </h6>
+    <div class="px-3 pb-1 small">
+        {% for year in news_by_year %}
+        <div class="media py-1 {% if not_first -%}border-top border-gray{%- endif %}">
+            {% assign not_first = true %}
+            <div class="mr-3 text-muted my-1">{{ year.name }}</div>
+            <div class="media-body">
+                {% for item in year.items %}
+                <div class="my-1 d-flex">
+                    {%- assign body = item.content | strip_html | strip -%}
+                    <div>
+                        {%- if body != "" -%}
+                        <a href="{{ item.url | relative_url }}" class="text-dark">{{ item.title }}</a>
+                        {%- else -%}
+                        {{ item.title }}
+                        {%- endif -%}
+                    </div>
+                    <div class="ml-auto mt-auto text-muted no-break"><i>{{ item.date | date: "%b %d" }}</i></div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

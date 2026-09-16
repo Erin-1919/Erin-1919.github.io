@@ -1,0 +1,44 @@
+---
+layout: default
+title : Publications
+navbar_title: Publications
+redirect_from:
+  - /Research/
+---
+
+{% assign tabs = "paper,presentation,talk,thesis" | split: "," %}
+{% assign labels = "Publications,Conference Presentations,Invited Talks,Thesis" | split: "," %}
+
+<div class="row">
+    <div class="col-12">
+        <ul class="nav nav-pills pt-4 mb-3" id="pub-tabs" role="tablist">
+            {% for t in tabs %}
+            <li class="nav-item">
+                <a class="nav-link {% if forloop.first %}active{% endif %}" id="pill-{{ t }}"
+                   data-toggle="pill" href="#tab-{{ t }}" role="tab" aria-controls="tab-{{ t }}"
+                   aria-selected="{% if forloop.first %}true{% else %}false{% endif %}">
+                    {{ labels[forloop.index0] }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <div class="tab-content" id="pub-tab-content">
+            {% for t in tabs %}
+            <div class="tab-pane fade {% if forloop.first %}show active{% endif %}"
+                 id="tab-{{ t }}" role="tabpanel" aria-labelledby="pill-{{ t }}">
+                {% assign items = site.publications | where: "category", t | sort: "date" | reverse %}
+                {% assign by_year = items | group_by_exp: "item", "item.date | date: '%Y'" %}
+                {% for year in by_year %}
+                <h2 class="pt-3" id="{{ t }}-year-{{ year.name }}">{{ year.name }}</h2>
+                <div class="my-0 p-0 bg-white shadow-sm rounded-xl">
+                    {% for item in year.items %}
+                        {% include widgets/publication_item.html item=item hide_bottom_border=forloop.last first=forloop.first last=forloop.last %}
+                    {% endfor %}
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

@@ -4,6 +4,7 @@
 .sass-cache
 Gemfile.lock
 _site
+_site_*
 *.gem
 .claude/
 # CV source (Word) - only the exported PDF is published

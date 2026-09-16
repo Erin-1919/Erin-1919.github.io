@@ -1,6 +1,6 @@
 ---
 title: "Doggone Candidacy Exam"
-layout: post
+date: 2021-01-12
 ---
 ![mindmap](/assets/img/20210112/mind_map_part.png)
 

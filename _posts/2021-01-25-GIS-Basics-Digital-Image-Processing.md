@@ -1,6 +1,5 @@
 ---
 title: "GIS Basics: Digital Image Processing"
-layout: post
 ---
 
 >> Good to begin well, better to end well.

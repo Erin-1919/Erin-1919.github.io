@@ -1,6 +1,5 @@
 ---
 title: "Geospatial Reasoning, LLMs, and Multi-Agent Systems: A Brief Literature Review"
-layout: post
 ---
 
 **Scope.** This review covers ~25 papers published between 2023 and 2026 at the intersection of geospatial reasoning, large language models, and multi-agent systems. The focus is on GIS-domain journals (IJGIS, IJDE, JAG, TGIS, Annals of GIS, Big Earth Data, GeoInformatica), machine learning venues (ICLR, ICML, NeurIPS, ACM SIGSPATIAL), and relevant preprints. The goal is to map what the community is actively pursuing and, more importantly, to identify gaps that deserve attention.

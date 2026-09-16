@@ -1,6 +1,5 @@
 ---
 title: "RescueTime Annual Report 2020"
-layout: post
 ---
 ![rescuetime](/assets/img/20210101/rescuetime.jpg)
 
