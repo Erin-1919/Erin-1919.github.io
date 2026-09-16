@@ -1747,3 +1747,161 @@ cd /e/UCalgary_postdoc/Erin-1919.github.io && grep -c "agentic GeoAI" _site_t10/
 ```
 
 Expected: `1` then `0`.
+
+---
+
+### Task 11: Restore dropped plugins, old URLs, and the current-position date
+
+Fixes what the final whole-branch review found. Three of these trace to one mistake: Task 1's `_config.yml` was written from scratch rather than edited, silently dropping keys the old site depended on.
+
+**Files:**
+- Modify: `_config.yml`, `Gemfile`, `_data/profile.yml`, `publications.html`, `showcase.html`, `blog.html`, `.gitignore`
+- Create: `cv.html`
+
+**Interfaces:**
+- Consumes: the finished site from Tasks 1-10.
+- Produces: a working `/feed.xml`, SEO and social metadata on every page, redirects from four old page URLs, and an Experience block that matches the CV.
+
+- [ ] **Step 1: Write the failing assertions**
+
+```bash
+cd /e/UCalgary_postdoc/Erin-1919.github.io && bundle exec jekyll build -d _site_t11 2>&1 | tail -3
+echo "--- feed (expect missing now) ---"; test -f _site_t11/feed.xml && echo present || echo MISSING
+echo "--- seo meta (expect 0 now) ---"; grep -c 'name="description"' _site_t11/index.html
+echo "--- canonical (expect 0 now) ---"; grep -c 'rel="canonical"' _site_t11/index.html
+echo "--- favicon (expect 0 now) ---"; grep -ci "favicon" _site_t11/index.html
+echo "--- old page URLs (expect MISSING now) ---"
+for s in Research gallery cv archive; do test -f "_site_t11/$s/index.html" && echo "OK /$s" || echo "MISSING /$s"; done
+echo "--- experience date ---"; grep -A3 "^experience:" _data/profile.yml | grep "date:"
+```
+
+- [ ] **Step 2: Run them and record the actual output**
+
+- [ ] **Step 3: Correct the current-position date**
+
+`_data/profile.yml` shows the UCalgary postdoc as `date: 2024 - 2026`. The CV states "2024-present", and she does not leave until she starts at Guelph in December 2026. A closed range reads as a finished job.
+
+Change only that one entry's date to:
+
+```yaml
+  date: 2024 - present
+```
+
+Leave the other two experience entries, `education:`, `positions:`, and `short_bio` untouched — all are correct and reviewed.
+
+- [ ] **Step 4: Restore `jekyll-feed` and `jekyll-seo-tag`**
+
+Both were in the pre-migration `_config.yml` (`git show da1b6df:_config.yml`) and were dropped. Both are GitHub Pages whitelisted.
+
+Add to the `plugins:` list in `_config.yml`, keeping the existing three:
+
+```yaml
+plugins:
+  - jekyll-email-protect
+  - jekyll-redirect-from
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
+```
+
+And to the `jekyll_plugins` group in `Gemfile`:
+
+```ruby
+  gem "jekyll-feed"
+  gem "jekyll-seo-tag"
+```
+
+Run `bundle install` after editing the Gemfile.
+
+`jekyll-seo-tag` needs a `{% seo %}` tag in the page head to emit anything. Add it to `_layouts/default.html` and `_layouts/blog_post.html`, immediately before the closing `</head>`, together with the favicon link that the old site had and this one lost:
+
+```html
+    {% seo %}
+    <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/favicon.ico' | relative_url }}">
+```
+
+`assets/favicon.ico` already exists in the repo. Do not add a `title:` or `description:` to `_config.yml` — both are already present and `jekyll-seo-tag` reads them.
+
+- [ ] **Step 5: Redirect the four old page URLs**
+
+These four return 200 on the live site today and would 404 after merge. `/Research/` in particular is what gets pasted into Google Scholar profiles, ORCID records and CVs.
+
+Add `redirect_from` to the front matter of the pages that replaced them.
+
+`publications.html`:
+
+```yaml
+redirect_from:
+  - /Research/
+```
+
+`showcase.html`:
+
+```yaml
+redirect_from:
+  - /gallery/
+  - /Gallery/
+```
+
+`blog.html`:
+
+```yaml
+redirect_from:
+  - /archive/
+```
+
+The old `/cv/` page was an embedded PDF viewer that this migration removed in favour of a profile-card link. Recreate it as a one-line redirect page so the URL keeps working. Create `cv.html`:
+
+```html
+---
+title: "Curriculum Vitae"
+redirect_to: /assets/pdf/cv/Mingke_Li_CV_2026.pdf
+sitemap: false
+---
+```
+
+`jekyll-redirect-from` provides `redirect_to` for exactly this case.
+
+- [ ] **Step 6: Stop scratch build directories being committable**
+
+`.gitignore` lists only `_site`, so the `_site_*` directories used for verification are untracked but stageable by a careless `git add -A`. Replace the `_site` line with:
+
+```
+_site
+_site_*
+```
+
+Then delete any that exist: `rm -rf _site_final _site_final2 _site_t10 _site_t11`.
+
+- [ ] **Step 7: Rebuild and run the assertions**
+
+```bash
+cd /e/UCalgary_postdoc/Erin-1919.github.io && rm -rf _site_t11 && bundle exec jekyll build -d _site_t11 2>&1 | tail -3
+echo "--- feed ---"; test -f _site_t11/feed.xml && echo "OK feed.xml" || echo "MISSING feed.xml"
+echo "--- seo tags ---"; grep -c 'name="description"' _site_t11/index.html; grep -c 'rel="canonical"' _site_t11/index.html; grep -c 'property="og:' _site_t11/index.html
+echo "--- favicon ---"; grep -c "favicon.ico" _site_t11/index.html
+echo "--- old URLs now redirect ---"
+for s in Research gallery Gallery cv archive; do if [ -f "_site_t11/$s/index.html" ]; then grep -q refresh "_site_t11/$s/index.html" && echo "OK /$s" || echo "NOT A REDIRECT /$s"; else echo "MISSING /$s"; fi; done
+echo "--- nothing else broke ---"; grep -c "All publications" _site_t11/index.html; grep -c 'img src=""' _site_t11/index.html
+echo "--- experience date ---"; grep -A3 "^experience:" _data/profile.yml | grep "date:"
+rm -rf _site_t11
+```
+
+Expected: `OK feed.xml`; at least `1` each for description, canonical and `og:`; `1` favicon; five `OK` redirect lines; `1` All-publications link and `0` broken images; and the first experience date reading `2024 - present`.
+
+Confirm the build still reports zero warnings and zero errors.
+
+- [ ] **Step 8: Commit**
+
+```bash
+cd /e/UCalgary_postdoc/Erin-1919.github.io && git commit _config.yml Gemfile Gemfile.lock _data/profile.yml _layouts publications.html showcase.html blog.html cv.html .gitignore -m "$(cat <<'EOF'
+Restore the feed, SEO metadata, and four old page URLs
+
+Task 1 rewrote _config.yml from scratch and dropped jekyll-feed and
+jekyll-seo-tag. Redirect /Research/, /gallery/, /cv/ and /archive/, and
+show the Calgary postdoc as current.
+
+Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>
+EOF
+)"
+```
