@@ -409,7 +409,7 @@ Migrates the ~20 entries in the old `research.md` into `_publications/`, adds th
 - [ ] **Step 1: Write the failing assertion**
 
 ```bash
-cd /e/UCalgary_postdoc/Erin-1919.github.io && grep -q 'id="tab-presentation"' _site/publications/index.html && grep -q "QuadGridSIM" _site/publications/index.html && echo PASS || echo FAIL
+cd /e/UCalgary_postdoc/Erin-1919.github.io && grep -q 'id="tab-presentation"' _site/publications.html && grep -q "QuadGridSIM" _site/publications.html && echo PASS || echo FAIL
 ```
 
 - [ ] **Step 2: Run it to verify it fails**
@@ -549,7 +549,7 @@ This uses Bootstrap 4's pill-tab component, which the theme already bundles — 
 - [ ] **Step 8: Rebuild and run the assertion**
 
 ```bash
-cd /e/UCalgary_postdoc/Erin-1919.github.io && bundle exec jekyll build 2>&1 | tail -5 && grep -q 'id="tab-presentation"' _site/publications/index.html && grep -q "QuadGridSIM" _site/publications/index.html && echo PASS || echo FAIL
+cd /e/UCalgary_postdoc/Erin-1919.github.io && bundle exec jekyll build 2>&1 | tail -5 && grep -q 'id="tab-presentation"' _site/publications.html && grep -q "QuadGridSIM" _site/publications.html && echo PASS || echo FAIL
 ```
 
 Expected: `PASS`.
@@ -557,7 +557,7 @@ Expected: `PASS`.
 - [ ] **Step 9: Verify author bolding and PDF paths**
 
 ```bash
-cd /e/UCalgary_postdoc/Erin-1919.github.io && grep -c "font-weight-bold\|<strong>" _site/publications/index.html && grep -o 'href="/assets/pdf/papers/[^"]*"' _site/publications/index.html | wc -l && grep -c "Erin-1919.github.io/assets" _site/publications/index.html
+cd /e/UCalgary_postdoc/Erin-1919.github.io && grep -c "font-weight-bold\|<strong>" _site/publications.html && grep -o 'href="/assets/pdf/papers/[^"]*"' _site/publications.html | wc -l && grep -c "Erin-1919.github.io/assets" _site/publications.html
 ```
 
 Expected: a non-zero bold count, a PDF link count matching the entries that have PDFs, and `0` absolute `Erin-1919.github.io/assets` links remaining.
@@ -610,7 +610,7 @@ Extends the theme so news items are real pages, then moves the event posts acros
 - [ ] **Step 1: Write the failing assertion**
 
 ```bash
-cd /e/UCalgary_postdoc/Erin-1919.github.io && test -f _site/news/index.html && grep -q "ISPRS" _site/news/index.html && echo PASS || echo FAIL
+cd /e/UCalgary_postdoc/Erin-1919.github.io && test -f _site/news.html && grep -q "ISPRS" _site/news.html && echo PASS || echo FAIL
 ```
 
 - [ ] **Step 2: Run it to verify it fails**
@@ -799,12 +799,22 @@ redirect_from:
 ---
 ```
 
-The redirect path is the old post's title slug, which is the filename with the date prefix and `.md` stripped. Preserve each file's existing `title:` exactly; only add `date:`, `layout:`, and `redirect_from:`.
+The redirect path is the old post's title slug, which is the filename with the date prefix and `.md` stripped. Preserve each file's existing `title:` exactly.
+
+**Replace** the existing `layout: post` line — do not add a second `layout:` key. Every moved file already carries `layout: post` from the old theme, and a duplicate key is a hard YAML error that fails the build. Add `date:` and `redirect_from:` as new keys.
+
+Verify no file ended up with two layout keys before building:
+
+```bash
+cd /e/UCalgary_postdoc/Erin-1919.github.io && for f in _news/*.md; do n=$(awk '/^---$/{c++} c==1 && /^layout:/{print}' "$f" | wc -l); [ "$n" -gt 1 ] && echo "DUPLICATE $f"; done; echo "checked"
+```
+
+Expected: no `DUPLICATE` lines.
 
 - [ ] **Step 9: Rebuild and run the assertion**
 
 ```bash
-cd /e/UCalgary_postdoc/Erin-1919.github.io && bundle exec jekyll build 2>&1 | tail -5 && test -f _site/news/index.html && grep -q "ISPRS" _site/news/index.html && echo PASS || echo FAIL
+cd /e/UCalgary_postdoc/Erin-1919.github.io && bundle exec jekyll build 2>&1 | tail -5 && test -f _site/news.html && grep -q "ISPRS" _site/news.html && echo PASS || echo FAIL
 ```
 
 Expected: `PASS`.
@@ -815,7 +825,7 @@ Expected: `PASS`.
 cd /e/UCalgary_postdoc/Erin-1919.github.io && test -f "_site/ISPRS-Webinar/index.html" && grep -q "refresh" "_site/ISPRS-Webinar/index.html" && echo "REDIRECT OK" ; find _site/news -name index.html | wc -l ; grep -c "<img" _site/news/2022-01-10-ISPRS-Webinar/index.html
 ```
 
-Expected: `REDIRECT OK`; a news page count of moved-files-plus-one (the index); and a non-zero image count proving bodies and photos survived.
+Expected: `REDIRECT OK`; a news page count equal to the number of moved files (the `/news` index is written to `_site/news.html`, not into this tree, so it is not counted here); and a non-zero image count proving bodies and photos survived.
 
 - [ ] **Step 11: Commit**
 
@@ -870,7 +880,7 @@ Expected: `0`.
 - [ ] **Step 4: Rebuild and verify every post rendered**
 
 ```bash
-cd /e/UCalgary_postdoc/Erin-1919.github.io && bundle exec jekyll build 2>&1 | tail -5 && ls _posts/*.md | wc -l && grep -c "blog_card\|Read more" _site/blog/index.html
+cd /e/UCalgary_postdoc/Erin-1919.github.io && bundle exec jekyll build 2>&1 | tail -5 && ls _posts/*.md | wc -l && grep -c "blog_card\|Read more" _site/blog.html
 ```
 
 Expected: a clean build, and the blog index listing a "Read more" per remaining post.
@@ -927,7 +937,7 @@ Three poster cards with click-to-enlarge. The 13 highlight images stay on disk, 
 - [ ] **Step 1: Write the failing assertion**
 
 ```bash
-cd /e/UCalgary_postdoc/Erin-1919.github.io && grep -q "glightbox" _site/showcase/index.html && grep -c "CanCH4" _site/showcase/index.html && echo PASS || echo FAIL
+cd /e/UCalgary_postdoc/Erin-1919.github.io && grep -q "glightbox" _site/showcase.html && grep -c "CanCH4" _site/showcase.html && echo PASS || echo FAIL
 ```
 
 - [ ] **Step 2: Run it to verify it fails**
@@ -1032,7 +1042,7 @@ If Erin would rather not depend on a CDN at all, vendor both files into `assets/
 - [ ] **Step 5: Rebuild and run the assertion**
 
 ```bash
-cd /e/UCalgary_postdoc/Erin-1919.github.io && bundle exec jekyll build 2>&1 | tail -5 && grep -q "glightbox" _site/showcase/index.html && grep -q "CanCH4" _site/showcase/index.html && echo PASS || echo FAIL
+cd /e/UCalgary_postdoc/Erin-1919.github.io && bundle exec jekyll build 2>&1 | tail -5 && grep -q "glightbox" _site/showcase.html && grep -q "CanCH4" _site/showcase.html && echo PASS || echo FAIL
 ```
 
 Expected: `PASS`.
@@ -1040,7 +1050,7 @@ Expected: `PASS`.
 - [ ] **Step 6: Verify the poster images and PDFs resolve**
 
 ```bash
-cd /e/UCalgary_postdoc/Erin-1919.github.io && for p in $(grep -o '/assets/[^"]*\.\(jpg\|pdf\)' _site/showcase/index.html | sort -u); do test -f "_site$p" && echo "OK $p" || echo "MISSING $p"; done
+cd /e/UCalgary_postdoc/Erin-1919.github.io && for p in $(grep -o '/assets/[^"]*\.\(jpg\|pdf\)' _site/showcase.html | sort -u); do test -f "_site$p" && echo "OK $p" || echo "MISSING $p"; done
 ```
 
 Expected: every line reads `OK`. Any `MISSING` means a filename mismatch — fix before committing.
@@ -1077,7 +1087,7 @@ The step that catches what a page-by-page migration misses.
 Every internal link and asset reference in the built site must resolve to a file:
 
 ```bash
-cd /e/UCalgary_postdoc/Erin-1919.github.io && grep -rhoE '(href|src)="/[^"]*"' _site --include=*.html | sed -E 's/^(href|src)="//; s/"$//' | grep -v '^//' | sed 's/#.*//' | sort -u > /c/Users/mlier/AppData/Local/Temp/claude/E--UCalgary-postdoc-Erin-1919-github-io/ccb0259c-998b-4a87-90dd-09b3b4ac176a/scratchpad/links.txt && MISSING=0; while read -r p; do [ -z "$p" ] && continue; if [ ! -e "_site$p" ] && [ ! -e "_site$p/index.html" ]; then echo "MISSING $p"; MISSING=1; fi; done < /c/Users/mlier/AppData/Local/Temp/claude/E--UCalgary-postdoc-Erin-1919-github-io/ccb0259c-998b-4a87-90dd-09b3b4ac176a/scratchpad/links.txt; echo "exit=$MISSING"
+cd /e/UCalgary_postdoc/Erin-1919.github.io && grep -rhoE '(href|src)="/[^"]*"' _site --include=*.html | sed -E 's/^(href|src)="//; s/"$//' | grep -v '^//' | sed 's/#.*//' | sort -u > /c/Users/mlier/AppData/Local/Temp/claude/E--UCalgary-postdoc-Erin-1919-github-io/ccb0259c-998b-4a87-90dd-09b3b4ac176a/scratchpad/links.txt && MISSING=0; while read -r p; do [ -z "$p" ] && continue; if [ ! -e "_site$p" ] && [ ! -e "_site$p/index.html" ] && [ ! -e "_site${p%/}.html" ]; then echo "MISSING $p"; MISSING=1; fi; done < /c/Users/mlier/AppData/Local/Temp/claude/E--UCalgary-postdoc-Erin-1919-github-io/ccb0259c-998b-4a87-90dd-09b3b4ac176a/scratchpad/links.txt; echo "exit=$MISSING"
 ```
 
 - [ ] **Step 2: Run it and collect the failures**
@@ -1111,7 +1121,7 @@ Expected: no `MISSING` lines and `exit=0`.
 - [ ] **Step 6: Verify navigation reaches every section**
 
 ```bash
-cd /e/UCalgary_postdoc/Erin-1919.github.io && for p in / /publications /news /blog /showcase; do test -f "_site${p%/}/index.html" -o -f "_site/index.html" && echo "OK $p" || echo "MISSING $p"; done && grep -o 'href="[^"]*Mingke_Li_CV[^"]*"' _site/index.html | head -1
+cd /e/UCalgary_postdoc/Erin-1919.github.io && for n in index publications news blog showcase; do if [ -f "_site/$n.html" ] || [ -f "_site/$n/index.html" ]; then echo "OK /$n"; else echo "MISSING /$n"; fi; done && grep -o 'href="[^"]*Mingke_Li_CV[^"]*"' _site/index.html | head -1
 ```
 
 Expected: every nav target `OK`, and the CV PDF link present on the home page.
