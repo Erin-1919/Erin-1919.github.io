@@ -206,14 +206,9 @@ EOF
 
 Replaces the theme's placeholder cat-themed profile with Erin's real identity.
 
-**BLOCKED ON INPUT.** Before starting, collect from Erin in one message:
-1. Google Scholar ID (the string after `user=` in her Scholar profile URL)
-2. Public email address for the Guelph position
-3. Whether ResearchGate stays alongside LinkedIn, Scholar, and GitHub
-4. Undergraduate institution, degree, and dates
-5. Guelph department or school name, and start date
+All inputs have been collected — this task is no longer blocked. For the record: Scholar ID `F3F4-2sAAAAJ`; email `mli.erin1919@gmail.com`; ResearchGate kept as a fourth icon; education and work history taken from `assets/pdf/cv/Mingke_Li_CV_2026.pdf`; appointment is Assistant Professor, Department of Geography, Environment & Geomatics, College of Social and Applied Human Sciences, University of Guelph.
 
-Do not guess any of these. Do not start the task until all five are supplied.
+The appointment start date was not supplied and is not used — the theme's `positions:` block renders name lines without dates.
 
 **Files:**
 - Modify: `_data/profile.yml` (full rewrite)
@@ -238,7 +233,7 @@ Expected: `FAIL`. The home page still shows "Title or Position" and "Affiliation
 
 - [ ] **Step 3: Write `_data/profile.yml`**
 
-Substitute the five collected inputs where marked by angle brackets. Every other value below is final.
+Every value below is final — all inputs have been collected. Write the file exactly as given.
 
 ```yaml
 primary_name: "Mingke (Erin) Li"
@@ -247,11 +242,12 @@ navbar_name: "Mingke (Erin) Li"
 
 positions:
 - name: Assistant Professor
-- name: University of Guelph
+- name: Department of Geography, Environment & Geomatics
+- name: College of Social and Applied Human Sciences, University of Guelph
 
 email: "mli.erin1919@gmail.com"
 cv_link: /assets/pdf/cv/Mingke_Li_CV_2026.pdf
-gscholar: <collected Google Scholar ID>
+gscholar: F3F4-2sAAAAJ
 github: Erin-1919
 linkedin: mingke-erin-li
 researchgate: Mingke-Li
@@ -259,7 +255,7 @@ researchgate: Mingke-Li
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    I am an Assistant Professor at the <a href="https://www.uoguelph.ca/" target="_blank">University of Guelph</a>,
+    I am an Assistant Professor in the Department of Geography, Environment &amp; Geomatics at the <a href="https://www.uoguelph.ca/" target="_blank">University of Guelph</a>,
     working at the intersection of geospatial data science, GeoAI, and Digital Earth. My research centres on
     Discrete Global Grid Systems (DGGS) as a spatial framework for integrating and analysing heterogeneous
     Earth observation data across scales.
@@ -504,7 +500,28 @@ Rules that apply to every file:
 - Entries with no abstract in the source simply omit the `abstract` key.
 - `selected` is `false` on every file at this step; Step 10 flips ~5 of them.
 
-`research.md` is the authoritative source for this task. The CV PDF lists several 2026 items that `research.md` does not — four under review (IJGIS, Scientific Data, JOSS, Computers and Geosciences) and one published (International Journal of Digital Earth 19(1), 2607210). Do not add them here. Whether under-review work appears publicly is Erin's editorial call, and it is raised with her separately.
+`research.md` is the authoritative source for this task, with one addition.
+
+The CV PDF lists five 2026 items absent from `research.md`. Erin's ruling: **under-review work is not listed publicly.** So the four under-review items (IJGIS, Scientific Data, JOSS, Computers and Geosciences) are EXCLUDED — do not create files for them.
+
+The fifth is published and MUST be added as a `category: paper` entry:
+
+```yaml
+---
+title:          "Enabling a Digital Earth for Methane Emissions Management with Equal-Area Discrete Global Grids"
+date:           2026-01-01
+selected:       false
+category:       paper
+pub:            "International Journal of Digital Earth"
+pub_date:       "2026"
+pub_post:       ", 19(1), 2607210."
+authors:
+- Li, M.E.
+- Liang, S.H.L.
+---
+```
+
+Place it at `_publications/2026/2026-li-digital-earth-methane.md`. It has no abstract in either source, so omit the `abstract` key, and no PDF in `assets/pdf/papers/`, so omit `links` unless a DOI is found in the CV text.
 
 - [ ] **Step 5: Verify the file count and category spread**
 
@@ -923,24 +940,17 @@ Expected: a clean build, and the blog index listing a "Read more" per remaining 
 
 - [ ] **Step 5: Check for math-bearing posts**
 
-The old theme loaded KaTeX via `mathjax: true` front matter; the new theme has no such hook:
+The old theme loaded KaTeX from the local `assets/katex/` bundle, gated on `mathjax: true` front matter. **The new theme already loads KaTeX 0.16.11 from jsDelivr with SRI on every page**, in both `_layouts/default.html` and `_layouts/blog_post.html`. No hook is needed and none should be added — injecting a second copy would double-load the library.
+
+Verify math still renders on a post that uses it:
 
 ```bash
-cd /e/UCalgary_postdoc/Erin-1919.github.io && grep -rl "^mathjax: true" _posts | wc -l
+cd /e/UCalgary_postdoc/Erin-1919.github.io && grep -rl "^mathjax: true" _posts | head -3 && grep -c "katex" _site/blog.html
 ```
 
-If the count is non-zero, add this to `_layouts/blog_post.html` immediately before its closing content block, so the bundled KaTeX still loads for those posts:
+Expected: a non-zero `katex` count, confirming the theme's KaTeX tags reach rendered pages. If any post is listed, open it in the local server during Task 7 Step 7 and confirm its formulae render.
 
-```html
-{%- if page.mathjax -%}
-<link rel="stylesheet" href="{{ '/assets/katex/katex.min.css' | relative_url }}">
-<script defer src="{{ '/assets/katex/katex.min.js' | relative_url }}"></script>
-<script defer src="{{ '/assets/katex/contrib/auto-render.min.js' | relative_url }}"
-        onload="renderMathInElement(document.body);"></script>
-{%- endif -%}
-```
-
-If the count is zero, skip this step — do not add dead markup.
+Leave `assets/katex/` in place. It is now unreferenced, and it is triaged alongside the `_data/font-awesome/` orphan in Task 7 — not deleted here.
 
 - [ ] **Step 6: Commit**
 
