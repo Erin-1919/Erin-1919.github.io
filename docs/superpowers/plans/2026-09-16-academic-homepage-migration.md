@@ -998,10 +998,57 @@ Expected: a non-zero `katex` count, confirming the theme's KaTeX tags reach rend
 
 Leave `assets/katex/` in place. It is now unreferenced, and it is triaged alongside the `_data/font-awesome/` orphan in Task 7 — not deleted here.
 
+- [ ] **Step 5b: Move the one remaining post Erin ruled is news**
+
+Task 4 left four ambiguous posts in `_posts/` pending her decision. Her ruling: **only the Esri Python course post moves.** The two Esri ECCE blog posts and the flood-susceptibility post stay in the blog.
+
+Move it exactly as Task 4 moved the others — `git mv`, replace `layout: post` with `layout: news`, add `date:` and `redirect_from:`:
+
+```bash
+cd /e/UCalgary_postdoc/Erin-1919.github.io && git mv "_posts/2019-02-28-Geoprocessing-Scripts-Using-Python-Esri-Course.md" "_news/2019-02-28-Geoprocessing-Scripts-Using-Python-Esri-Course.md"
+```
+
+Its front matter becomes:
+
+```yaml
+---
+title: "<keep the file's existing title verbatim>"
+date: 2019-02-28
+redirect_from:
+  - /Geoprocessing-Scripts-Using-Python-Esri-Course/
+---
+```
+
+Verify the redirect resolves: `_site/Geoprocessing-Scripts-Using-Python-Esri-Course/index.html` must exist and contain a refresh redirect.
+
+- [ ] **Step 5c: Rename the two remaining filenames containing spaces**
+
+Two posts still carry a literal space in their filename. A space already broke one redirect in Task 4; remove the trap:
+
+```
+_posts/2018-07-01-Spatial-Patterns-of-Spruce-Budworm-Defoliation-and-Tree-Mortality-A Review.md
+_posts/2022-03-25-Flood-Susceptibility-Modeling-on-Hexagonal Grid Meshes.md
+```
+
+Rename each space to a hyphen with `git mv`. **This is URL-neutral and must stay that way:** Jekyll's `:title` permalink slugifies the space to a hyphen already, so the published URL is identical before and after. Task 4 proved this — the live site serves the hyphenated form for a file whose name contained a space.
+
+Prove the URLs did not move:
+
+```bash
+cd /e/UCalgary_postdoc/Erin-1919.github.io && bundle exec jekyll build 2>&1 | tail -3
+test -d "_site/Spatial-Patterns-of-Spruce-Budworm-Defoliation-and-Tree-Mortality-A-Review" && echo "OK sbw" || echo "URL MOVED - investigate"
+test -d "_site/Flood-Susceptibility-Modeling-on-Hexagonal-Grid-Meshes" && echo "OK flood" || echo "URL MOVED - investigate"
+find _site -name "* *" -not -path "_site/assets/img/*" | head
+```
+
+Expected: both `OK` lines, and the `find` returning nothing outside `assets/img/` (one pre-existing image there legitimately has a space in its name and is off-limits).
+
+If either prints `URL MOVED`, the rename changed the published URL — revert that file with `git mv` back and report it, because a silently moved post URL breaks inbound links.
+
 - [ ] **Step 6: Commit**
 
 ```bash
-cd /e/UCalgary_postdoc/Erin-1919.github.io && git add -A && git commit -m "$(cat <<'EOF'
+cd /e/UCalgary_postdoc/Erin-1919.github.io && git commit _posts _news _layouts -m "$(cat <<'EOF'
 Point remaining blog posts at the new layout
 
 Drop the per-post layout declaration now that the config default assigns
