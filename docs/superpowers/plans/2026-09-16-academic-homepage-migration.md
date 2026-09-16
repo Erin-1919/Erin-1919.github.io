@@ -1905,3 +1905,104 @@ Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>
 EOF
 )"
 ```
+
+---
+
+### Task 12: Math rendering and content image sizing
+
+Two defects the site owner found while reading the built site.
+
+**Files:**
+- Modify: `_layouts/blog_post.html`, `_layouts/default.html`
+- Modify: `assets/css/` (a stylesheet the layouts already load)
+
+**Interfaces:**
+- Consumes: the finished site.
+- Produces: rendered math on the two math-bearing posts, and content images constrained to a readable size.
+
+**Defect 1: math renders as raw LaTeX.** Posts write display math as `$$ ... $$`. Kramdown's default math engine rewrites that to `\[ ... \]` in the HTML. The theme calls `renderMathInElement` with only `$$` and `$` delimiters, so KaTeX never matches the output and the raw source shows on the page. Verified on `/llms-cant-jump/`, where `\[\text{experience } E \;\xrightarrow{...}` appears as literal text.
+
+**Defect 2: content images render full-bleed.** A portrait photo fills the screen on a news page. The images themselves have already been resized; this step constrains display size.
+
+- [ ] **Step 1: Write the failing assertions**
+
+```bash
+cd /e/UCalgary_postdoc/Erin-1919.github.io && bundle exec jekyll build -d _site_t12 2>&1 | tail -3
+echo "--- raw LaTeX leaking into output (expect >0 now) ---"
+grep -c 'xrightarrow' _site_t12/llms-cant-jump/index.html
+echo "--- katex delimiters configured for bracket math (expect 0 now) ---"
+grep -c "left: '\\\\\[" _layouts/blog_post.html
+```
+
+- [ ] **Step 2: Run them and record the counts**
+
+- [ ] **Step 3: Teach KaTeX the delimiters kramdown actually emits**
+
+In BOTH `_layouts/blog_post.html` and `_layouts/default.html`, find the `renderMathInElement` call and replace its `delimiters` array with:
+
+```js
+              delimiters: [
+                  {left: '$$', right: '$$', display: true},
+                  {left: '\[', right: '\]', display: true},
+                  {left: '\(', right: '\)', display: false},
+                  {left: '$', right: '$', display: false}
+              ],
+```
+
+Order matters: the two-character delimiters must precede the single `$` entry, or `$` will match first and swallow the opening of a `$$` block. Keep `throwOnError : false` and the `Prism.highlightAll()` call that follows.
+
+`default.html` carries the same block and is used by pages outside the blog, so both need it.
+
+- [ ] **Step 4: Constrain content images**
+
+The theme has no rule bounding images inside post and news bodies, so a tall photo renders at full column width and dominates the page. Add to the site's own stylesheet (use whichever file under `assets/css/` the layouts already load, and append at the end so it wins on order):
+
+```css
+/* Bound images inside rendered post and news bodies. */
+.news-content img,
+.blog-content img,
+article img,
+.post-content img {
+    display: block;
+    max-width: 100%;
+    max-height: 32rem;
+    width: auto;
+    height: auto;
+    margin: 1.25rem auto;
+    border-radius: 0.25rem;
+}
+```
+
+Inspect the built HTML first to confirm which wrapper class actually surrounds post and news body content, and include that class in the selector list. Do not guess. Report which class you found and which selectors you kept.
+
+This must NOT affect the publication covers, the profile portrait, the showcase poster grid, or the navbar, all of which set their own sizing. Verify each after the change.
+
+- [ ] **Step 5: Rebuild and run the assertions**
+
+```bash
+cd /e/UCalgary_postdoc/Erin-1919.github.io && rm -rf _site_t12 && bundle exec jekyll build -d _site_t12 2>&1 | tail -3
+echo "--- math now rendered by KaTeX, not raw ---"
+grep -c 'class="katex"' _site_t12/llms-cant-jump/index.html
+echo "--- both layouts carry the bracket delimiters ---"
+grep -c 'left:' _layouts/blog_post.html _layouts/default.html
+echo "--- nothing else broke ---"
+grep -c "All publications" _site_t12/index.html
+grep -c 'img src=""' _site_t12/index.html
+rm -rf _site_t12
+```
+
+Note: `class="katex"` appears only after the browser runs, so the grep on static HTML will still be `0`. Verify the fix by loading `http://127.0.0.1:4000/llms-cant-jump/` and `http://127.0.0.1:4000/statistical-models-vs-machine-learning-models/` in a browser, or by confirming the delimiter config is present and correct in the built page's inline script. State clearly in the report which method you used and what you observed.
+
+- [ ] **Step 6: Commit**
+
+```bash
+cd /e/UCalgary_postdoc/Erin-1919.github.io && git commit _layouts assets/css -m "$(cat <<'EOF'
+Render bracket-delimited math and bound content image size
+
+Kramdown emits \[ \] for display math, which the theme's KaTeX config did
+not match. Also cap images inside post and news bodies.
+
+Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>
+EOF
+)"
+```
