@@ -14,6 +14,8 @@ plugins:
   - jekyll-email-protect
   - jekyll-redirect-from
   - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
 
 collections:
   publications:
