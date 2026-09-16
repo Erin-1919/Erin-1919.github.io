@@ -1,6 +1,5 @@
 ---
 title: "Inconsistent Spatial Resolution in Global DEMs: Why It Matters and How DGGS Can Help"
-layout: post
 ---
 
 ![DEM](/assets/img/20250620/DEM.jpg)

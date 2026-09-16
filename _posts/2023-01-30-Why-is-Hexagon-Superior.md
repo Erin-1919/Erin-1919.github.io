@@ -1,6 +1,5 @@
 ---
 title: "Why Is the Hexagon Superior"
-layout: post
 ---
 ![hex](/assets/img/20230130/hex.jpg)
 

@@ -1,6 +1,5 @@
 ---
 title: "TIN vs DGGS in Terrain Modeling"
-layout: post
 ---
 ![TIN](/assets/img/20230129/TIN.png)
 

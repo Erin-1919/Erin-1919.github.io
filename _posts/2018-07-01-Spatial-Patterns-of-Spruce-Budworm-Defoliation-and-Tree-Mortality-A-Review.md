@@ -1,6 +1,5 @@
 ---
 title: "Spatial Patterns of Spruce Budworm Defoliation and Tree Mortality: A Review"
-layout: post
 ---
 
 ![Spruce Budworm](https://tidcf.nrcan.gc.ca/images_web/imfc/insectes/moyen/choristoneura_fumiferana_3.jpg)

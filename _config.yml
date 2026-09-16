@@ -4,6 +4,7 @@ description: "Bring Your Own Bottle & Do Your Own Research."
 lang: "en"
 baseurl: ""
 url: "https://Erin-1919.github.io"
+permalink: /:title/
 
 markdown: kramdown
 kramdown:

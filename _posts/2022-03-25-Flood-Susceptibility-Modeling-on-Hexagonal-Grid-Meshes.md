@@ -1,6 +1,5 @@
 ---
 title: "Flood Susceptibility Modeling on Hexagonal Grid Meshes"
-layout: post
 ---
 
 ![background](/assets/img/20220325/background.png)

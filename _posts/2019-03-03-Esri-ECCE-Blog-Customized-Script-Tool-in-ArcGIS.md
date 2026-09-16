@@ -1,6 +1,5 @@
 ---
 title: "Esri ECCE Blog: Customized Script Tool in ArcGIS"
-layout: post
 ---
 
 **I shared a blog post on the Esri Canada ECCE site detailing a Python script tool I developed for ArcGIS. The tool summarizes tree characteristics within a moving search window, making it easier to analyze spatial patterns in forest inventory data.**

@@ -1,6 +1,5 @@
 ---
 title: "Digital Earth Concept by Al Gore in 1990s"
-layout: post
 ---
 
 ![DigitalEarth](https://images.unsplash.com/photo-1584974292709-5c2f0619971b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80)

@@ -1,6 +1,5 @@
 ---
 title: "Terrain Data Management Systems"
-layout: post
 ---
 ![DEMsys](/assets/img/20230112/DEMsys.jpg)
 

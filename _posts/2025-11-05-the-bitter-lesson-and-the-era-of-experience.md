@@ -1,6 +1,5 @@
 ---
 title: "The Bitter Lesson and the Era of Experience"
-layout: post
 ---
 
 **Richard Sutton's essay *The Bitter Lesson* argued that general methods leveraging computation eventually outperform methods built on human knowledge. In his [recent interview with Dwarkesh Patel](https://www.dwarkesh.com/p/richard-sutton), Sutton extends this argument into a broader claim about intelligence itself: real intelligence is not about imitating human language, but about having goals, acting in the world, learning from experience, and continually improving through feedback.**

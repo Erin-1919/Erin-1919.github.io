@@ -1,10 +1,6 @@
 ---
 title: "Summary and Reflections on the OGC DGGS AI Pilot Project Panel Discussion"
-layout: news
 date: 2026-01-26
-redirect_from:
-  - /ogc-dggs-ai-panel/
-
 ---
 
 **This post summarizes the panel discussion held as part of the OGC DGGS × AI pilot project. The conversation brought together pilot contributors and geospatial AI researchers to reflect on the current state and future potential of combining Discrete Global Grid Systems (DGGS) with artificial intelligence.**

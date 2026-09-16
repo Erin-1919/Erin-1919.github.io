@@ -1,6 +1,5 @@
 ---
 title: "Spherical vs Ellipsoidal 'Equal-Area' in Mainstream DGGS Libraries"
-layout: post
 ---
 
 **This post summarizes how major DGGS libraries interpret and implement the “equal-area” property, focusing on the difference between spherical and ellipsoidal reference surfaces.**

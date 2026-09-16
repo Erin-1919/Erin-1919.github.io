@@ -1,6 +1,5 @@
 ---
 title: "GIS Basics: Data Manipulation"
-layout: post
 ---
 
 >> Good to begin well, better to end well.

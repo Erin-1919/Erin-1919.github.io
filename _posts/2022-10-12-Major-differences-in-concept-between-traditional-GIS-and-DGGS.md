@@ -1,6 +1,5 @@
 ---
 title: "Key Conceptual Differences Between Traditional GIS and DGGS"
-layout: post
 ---
 ![grid](/assets/img/20221012/grid.jpg)
 

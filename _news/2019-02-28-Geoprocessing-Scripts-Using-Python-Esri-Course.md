@@ -1,6 +1,9 @@
 ---
 title:  "Geoprocessing Scripts Using Python – Esri Course"
-layout: post
+layout: news
+date: 2019-02-28
+redirect_from:
+  - /Geoprocessing-Scripts-Using-Python-Esri-Course/
 ---
 
 ![certificatepython](/assets/img/20190228/python_certificate.png)

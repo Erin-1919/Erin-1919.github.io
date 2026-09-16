@@ -1,6 +1,5 @@
 ---
 title: "Understanding DGGS from Multiple Perspectives"
-layout: post
 ---
 
 **A Discrete Global Grid System (DGGS) can be understood through several complementary lenses. These perspectives highlight its versatility in organizing, analyzing, and sharing geospatial data across disciplines and applications.**

@@ -1,6 +1,5 @@
 ---
 title: "Addressing Spatial Autocorrelation in Ecological Problems"
-layout: post
 ---
 
 ![Ecological](https://images.unsplash.com/photo-1534709153997-d6659469f951?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80)

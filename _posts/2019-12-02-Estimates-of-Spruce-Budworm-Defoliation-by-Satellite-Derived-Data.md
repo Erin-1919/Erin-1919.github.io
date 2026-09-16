@@ -1,6 +1,5 @@
 ---
 title: "Estimates of Spruce Budworm Defoliation by Satellite-Derived Data"
-layout: post
 ---
 
 ## EXECUTIVE SUMMARY

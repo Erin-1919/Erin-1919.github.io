@@ -1,6 +1,5 @@
 ---
 title: "Book Summary: Prediction Machines by Agrawal, Gans, and Goldfarb"
-layout: post
 ---
 
 ![book](/assets/img/20260302/book.jpg)

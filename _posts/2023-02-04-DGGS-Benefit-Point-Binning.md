@@ -1,6 +1,5 @@
 ---
 title: "DGGS for Point Binning: Uniform, Scalable, and Statistically Robust"
-layout: post
 ---
 
 **One of the powerful applications of Discrete Global Grid Systems (DGGS) is spatial binning of point data using their equal-area cells as analysis units. This enables efficient aggregation, monitoring, and statistical analysis for a wide range of geospatial applications such as population census, natural disturbance tracking, and environmental mapping.**
