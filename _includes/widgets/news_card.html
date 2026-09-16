@@ -1,4 +1,13 @@
-{% assign news_by_year = site.news | sort: "date" | reverse | slice: 0, include.limit | group_by_exp: "item", "item.date | date: '%Y'" -%}
+{%- assign sorted = site.news | sort: "date" | reverse -%}
+{%- assign window_seconds = include.months | times: 2629746 -%}
+{%- assign cutoff = site.time | date: "%s" | plus: 0 | minus: window_seconds -%}
+{%- assign n = 0 -%}
+{%- for item in sorted -%}
+  {%- assign ts = item.date | date: "%s" | plus: 0 -%}
+  {%- if ts >= cutoff -%}{%- assign n = n | plus: 1 -%}{%- endif -%}
+{%- endfor -%}
+{%- if n < include.min -%}{%- assign n = include.min -%}{%- endif -%}
+{%- assign news_by_year = sorted | slice: 0, n | group_by_exp: "item", "item.date | date: '%Y'" -%}
 
 <div class="my-3 bg-white shadow-sm rounded-xl">
     <h6 class="p-3 mb-0 border-bottom border-gray d-flex">
