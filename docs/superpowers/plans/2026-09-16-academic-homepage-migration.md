@@ -1713,3 +1713,37 @@ Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>
 EOF
 )"
 ```
+
+- [ ] **Step 3b: Replace the About Me bio**
+
+The owner supplied new bio copy and asked for it to be merged with the existing text, written in the first person, and weighted toward her current interests: LLM AI agents, agentic GeoAI, Digital Earth, DGGS, and environmental modelling.
+
+In `_data/profile.yml`, replace the entire `short_bio` value with:
+
+```yaml
+short_bio: >-
+  <p>
+    I am a Postdoctoral Associate at the University of Calgary, where I completed my Ph.D. in Geomatics
+    Engineering, and an incoming Assistant Professor in the Department of Geography, Environment &amp;
+    Geomatics at the <a href="https://www.uoguelph.ca/" target="_blank">University of Guelph</a>, starting
+    December 2026.
+  </p>
+  <p>
+    My research centres on agentic GeoAI — LLM-driven agents that plan, reason, and act over geospatial
+    data — grounded in Discrete Global Grid Systems (DGGS) as the spatial framework for a working Digital
+    Earth. I build scalable geospatial intelligence frameworks that combine multi-source spatial data with
+    machine learning and AI agents, and apply them to environmental and climate modelling: methane
+    emissions monitoring, flood risk assessment, and environmental resilience. My wider interests span
+    spatial data infrastructure, large-scale spatial analytics, and geospatial decision-support systems.
+  </p>
+```
+
+Keep the surrounding keys (`short_bio_text_justify`, `portrait_url`) untouched. Do not alter `positions:`, `education:`, or `experience:` — the incoming-appointment framing there is already correct and was reviewed.
+
+Verify after building that the bio renders as two paragraphs and still contains no present-tense claim of the Guelph professorship:
+
+```bash
+cd /e/UCalgary_postdoc/Erin-1919.github.io && grep -c "agentic GeoAI" _site_t10/index.html && grep -ciE "is an assistant professor" _site_t10/index.html
+```
+
+Expected: `1` then `0`.
