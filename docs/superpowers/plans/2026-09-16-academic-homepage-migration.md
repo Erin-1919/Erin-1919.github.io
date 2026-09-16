@@ -1724,17 +1724,17 @@ In `_data/profile.yml`, replace the entire `short_bio` value with:
 short_bio: >-
   <p>
     I am a Postdoctoral Associate at the University of Calgary, where I completed my Ph.D. in Geomatics
-    Engineering, and an incoming Assistant Professor in the Department of Geography, Environment &amp;
-    Geomatics at the <a href="https://www.uoguelph.ca/" target="_blank">University of Guelph</a>, starting
-    December 2026.
+    Engineering. In December 2026, I join the <a href="https://www.uoguelph.ca/" target="_blank">University
+    of Guelph</a> as an Assistant Professor in the Department of Geography, Environment &amp; Geomatics.
   </p>
   <p>
-    My research centres on agentic GeoAI — LLM-driven agents that plan, reason, and act over geospatial
-    data — grounded in Discrete Global Grid Systems (DGGS) as the spatial framework for a working Digital
-    Earth. I build scalable geospatial intelligence frameworks that combine multi-source spatial data with
-    machine learning and AI agents, and apply them to environmental and climate modelling: methane
-    emissions monitoring, flood risk assessment, and environmental resilience. My wider interests span
-    spatial data infrastructure, large-scale spatial analytics, and geospatial decision-support systems.
+    My research develops agentic GeoAI, in which large language model (LLM) agents plan, reason, and act
+    over geospatial data grounded in Discrete Global Grid Systems (DGGS). A DGGS gives spatial operations
+    a consistent frame across resolutions, which supports an operational Digital Earth. I build geospatial
+    intelligence frameworks that integrate multi-source spatial data with machine learning and AI agents,
+    and I apply them to environmental and climate modelling, including methane emissions monitoring, flood
+    risk assessment, and environmental resilience. My wider interests include spatial data infrastructure,
+    large-scale spatial analytics, and geospatial decision-support systems.
   </p>
 ```
 
