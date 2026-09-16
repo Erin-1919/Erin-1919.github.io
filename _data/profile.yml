@@ -1,58 +1,66 @@
-primary_name: "Your Name"
+primary_name: "Mingke (Erin) Li"
 secondary_name: ""
-navbar_name: "Your Name"
+navbar_name: "Mingke (Erin) Li"
 
 positions:
-- name: Title or Position
-- name: Affiliation Name
-  logo: /assets/images/badges/MIT_Social_circle.png  # Logo is optional
+- name: Assistant Professor
+- name: Department of Geography, Environment & Geomatics
+- name: College of Social and Applied Human Sciences, University of Guelph
 
-
-email: "your@email.com"
-# cv_link: link-to-your-cv-file
-gscholar: xFmQpf4AAAAJ  # This is an example, replace it with your own Google Scholar ID
-github: your_github_id
-twitter: your_twitter_id  # Do not include the '@' symbol
-# linkedin: your-linked-in-id
-# orcid: 0000-0000-0000-0000
+email: "mli.erin1919@gmail.com"
+cv_link: /assets/pdf/cv/Mingke_Li_CV_2026.pdf
+gscholar: F3F4-2sAAAAJ
+github: Erin-1919
+linkedin: mingke-erin-li
+researchgate: Mingke-Li
 
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    A <a href="https://en.wikipedia.org/wiki/Bicolor_cat" target="_blank">bicolor cat</a> is a cat with white fur combined with fur of some other colour, for example solid black, tabby, or colourpointed.
+    I am an Assistant Professor in the Department of Geography, Environment &amp; Geomatics at the <a href="https://www.uoguelph.ca/" target="_blank">University of Guelph</a>,
+    working at the intersection of geospatial data science, GeoAI, and Digital Earth. My research centres on
+    Discrete Global Grid Systems (DGGS) as a spatial framework for integrating and analysing heterogeneous
+    Earth observation data across scales.
   </p>
   <p>
-    There are various patterns of a bicolour cat. These range from the Van-patterned (colour on the crown of the head 
-    and the tail only) to a solid colour with a throat locket or medallion. Bicolour coats are found in many cat breeds, 
-    as well as being common in domestic longhair and domestic shorthair cats.
+    My work spans multi-resolution terrain and hydrological modelling, methane and greenhouse gas inventories
+    on equal-area discrete global grids, and agentic multi-LLM systems for spatial reasoning. I contribute to
+    the Open Geospatial Consortium's DGGS and EmissionML working groups. I hold a Ph.D. in Geomatics
+    Engineering from the University of Calgary, where I was previously a postdoctoral associate.
   </p>
 
-portrait_url: /assets/images/photos/portrait.jpg
-portrait_caption: >-
-  Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
+portrait_url: /assets/img/Erin_Li_34.jpg
 
 education:
-- name: Massachusetts Institute of Technology
-  logo: /assets/images/badges/MIT_Social_circle.png
-  position: >- 
-    Department of Electrical Engineering and Computer Science <br/>
-    Ph.D. Student
-  date: Sep. 2024 - present
-- name: Peking University
-  logo: /assets/images/badges/PKU_red.png
-  position: B.S. in Computer Science
-  date: Sep. 2019 - Jul. 2021
+- name: University of Calgary
+  position: >-
+    Department of Geomatics Engineering <br/>
+    Ph.D. in Geomatics Engineering
+  date: 2023
+- name: University of New Brunswick
+  position: M.Sc. in Forestry
+  date: 2019
+- name: Nanjing Forestry University
+  position: B.Sc. in Geographic Information Science
+  date: 2017
 
-# experience:
-# - name: Peking University
-#   logo: /assets/images/badges/PKU_red.png
-#   position: Research Intern
-#   date: Sep. 2019 - Jul. 2021
+experience:
+- name: University of Calgary
+  position: Postdoctoral Associate
+  date: 2024 - 2026
+- name: Geosapiens Inc.
+  position: Geospatial Scientist
+  date: 2023 - 2024
+- name: University of Calgary
+  position: >-
+    Department of Geomatics Engineering <br/>
+    Sessional Instructor
+  date: 2020 - 2023
 
-awards:
-- name: Award Name 2
-  date: 2024
-- name: Award Name 1 
-  date: 2021
-- name: A quick brown fox jumps over the lazy dog and runs away award
-  date: 2021
+# Awards are omitted from the homepage while the site is framed around the
+# faculty position. Restore by setting show_awards: true in _data/display.yml.
+# awards:
+# - name: Esri Young Scholar Award, First Runner-Up
+#   date: 2022
+# - name: Esri ECCE App Challenge, First Runner-Up
+#   date: 2021

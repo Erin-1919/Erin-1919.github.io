@@ -500,28 +500,11 @@ Rules that apply to every file:
 - Entries with no abstract in the source simply omit the `abstract` key.
 - `selected` is `false` on every file at this step; Step 10 flips ~5 of them.
 
-`research.md` is the authoritative source for this task, with one addition.
+`research.md` is the complete and authoritative source for this task. Migrate exactly what is in it — add nothing, drop nothing.
 
-The CV PDF lists five 2026 items absent from `research.md`. Erin's ruling: **under-review work is not listed publicly.** So the four under-review items (IJGIS, Scientific Data, JOSS, Computers and Geosciences) are EXCLUDED — do not create files for them.
+This was verified rather than assumed: every publication title in `assets/pdf/cv/Mingke_Li_CV_2026.pdf` was diffed against `research.md`. The only CV entries absent from `research.md` are items still under review (IJGIS, Scientific Data, JOSS, Computers and Geosciences). Erin's ruling: **under-review work is not listed publicly**, so those are correctly excluded and no file is created for them.
 
-The fifth is published and MUST be added as a `category: paper` entry:
-
-```yaml
----
-title:          "Enabling a Digital Earth for Methane Emissions Management with Equal-Area Discrete Global Grids"
-date:           2026-01-01
-selected:       false
-category:       paper
-pub:            "International Journal of Digital Earth"
-pub_date:       "2026"
-pub_post:       ", 19(1), 2607210."
-authors:
-- Li, M.E.
-- Liang, S.H.L.
----
-```
-
-Place it at `_publications/2026/2026-li-digital-earth-methane.md`. It has no abstract in either source, so omit the `abstract` key, and no PDF in `assets/pdf/papers/`, so omit `links` unless a DOI is found in the CV text.
+Note for author lists: `research.md` uses two citation forms for Erin — the older `Li, M.` and the newer `Li, M.E.`. Both must appear in `_data/authors.yml` with `bold: true` (Task 2 writes that file) or the newer entries will not bold her name. Use whichever form the source entry uses; do not normalise them.
 
 - [ ] **Step 5: Verify the file count and category spread**
 
