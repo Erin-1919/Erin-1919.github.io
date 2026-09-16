@@ -150,3 +150,15 @@ div.lazy {
         transition: none;
     }
 }
+
+/* Bound images inside rendered post and news bodies. */
+.news-content img,
+.blog-content img {
+    display: block;
+    max-width: 100%;
+    max-height: 32rem;
+    width: auto;
+    height: auto;
+    margin: 1.25rem auto;
+    border-radius: 0.25rem;
+}
