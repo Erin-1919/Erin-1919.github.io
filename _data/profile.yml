@@ -17,18 +17,18 @@ researchgate: Mingke-Li
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    I am a postdoctoral associate at the University of Calgary and an incoming Assistant Professor in the
-    Department of Geography, Environment &amp; Geomatics at the
-    <a href="https://www.uoguelph.ca/" target="_blank">University of Guelph</a>, starting December 2026.
-    My work sits at the intersection of geospatial data science, GeoAI, and Digital Earth, centred on
-    Discrete Global Grid Systems (DGGS) as a spatial framework for integrating and analysing heterogeneous
-    Earth observation data across scales.
+    I am a Postdoctoral Associate at the University of Calgary, where I completed my Ph.D. in Geomatics
+    Engineering. In December 2026, I join the <a href="https://www.uoguelph.ca/" target="_blank">University
+    of Guelph</a> as an Assistant Professor in the Department of Geography, Environment &amp; Geomatics.
   </p>
   <p>
-    My work spans multi-resolution terrain and hydrological modelling, methane and greenhouse gas inventories
-    on equal-area discrete global grids, and agentic multi-LLM systems for spatial reasoning. I contribute to
-    the Open Geospatial Consortium's DGGS and EmissionML working groups. I hold a Ph.D. in Geomatics
-    Engineering from the University of Calgary, where I was previously a postdoctoral associate.
+    My research develops agentic GeoAI, in which large language model (LLM) agents plan, reason, and act
+    over geospatial data grounded in Discrete Global Grid Systems (DGGS). A DGGS gives spatial operations
+    a consistent frame across resolutions, which supports an operational Digital Earth. I build geospatial
+    intelligence frameworks that integrate multi-source spatial data with machine learning and AI agents,
+    and I apply them to environmental and climate modelling, including methane emissions monitoring, flood
+    risk assessment, and environmental resilience. My research interests also include geospatial data
+    science, spatial data infrastructure, and geospatial decision-support systems.
   </p>
 
 portrait_url: /assets/img/Erin_Li_34.jpg
