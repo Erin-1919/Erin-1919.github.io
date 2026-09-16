@@ -1218,6 +1218,58 @@ cd /e/UCalgary_postdoc/Erin-1919.github.io && for n in index publications news b
 
 Expected: every nav target `OK`, and the CV PDF link present on the home page.
 
+- [ ] **Step 6b: Sweep unused theme assets**
+
+The theme shipped sample content — cat photos, MIT/PKU badge logos, placeholder covers, README screenshots — plus the old theme left orphans behind. Remove what nothing references.
+
+**Scope, strictly.** Sweep ONLY these theme-provided paths:
+
+```
+assets/images/   assets/css/   assets/js/   assets/fonts/
+assets/fontawesome/   assets/katex/   _data/font-awesome/
+```
+
+**NEVER sweep `assets/img/` or `assets/pdf/`.** They hold Erin's own content. Some of it is deliberately unpublished — the 13 gallery highlight images are unreferenced on purpose, pending her decision — so "unreferenced" there does NOT mean "unused". Leave both trees completely alone.
+
+**`assets/images/empty_300x200.png` must be KEPT.** It is the lazy-load placeholder in `widgets/publication_item.html` and is referenced from a Liquid template, not from static HTML. Deleting it breaks every coverless publication entry.
+
+Build first, then compute what the rendered site actually references:
+
+```bash
+cd /e/UCalgary_postdoc/Erin-1919.github.io && bundle exec jekyll build 2>&1 | tail -3
+SP=/c/Users/mlier/AppData/Local/Temp/claude/E--UCalgary-postdoc-Erin-1919-github-io/ccb0259c-998b-4a87-90dd-09b3b4ac176a/scratchpad
+grep -rhoE '/assets/[A-Za-z0-9._/-]+' _site --include=*.html --include=*.css --include=*.js \
+  | sed 's|^/||' | sort -u > "$SP/referenced.txt"
+grep -rhoE '/assets/[A-Za-z0-9._/-]+' _layouts _includes *.html _data 2>/dev/null \
+  | sed 's|^/||' | sort -u >> "$SP/referenced.txt"
+sort -u "$SP/referenced.txt" -o "$SP/referenced.txt"
+for d in assets/images assets/css assets/js assets/fonts assets/fontawesome assets/katex; do
+  [ -d "$d" ] || continue
+  find "$d" -type f | while read -r f; do
+    grep -qxF "$f" "$SP/referenced.txt" || echo "UNREFERENCED $f"
+  done
+done
+```
+
+Review the `UNREFERENCED` list before deleting anything. Expected on it: `assets/images/etc/*` (cat photos, beaver, preview), `assets/images/photos/portrait.jpg` (the theme's placeholder portrait), `assets/images/badges/*` (MIT and PKU logos — Erin's education entries carry no `logo:` key), `assets/images/covers/cover1.jpg`, `cover2.jpg`, `cover3.jpg` (theme samples), `assets/images/variants/*` (README screenshots), and all of `assets/katex/` (the theme loads KaTeX from a CDN instead).
+
+If `empty_300x200.png` appears on the list, the second grep above failed to read the templates — stop and fix the command rather than deleting it.
+
+Delete with `git rm`, then prove the site is unharmed:
+
+```bash
+cd /e/UCalgary_postdoc/Erin-1919.github.io && git rm -r -q --ignore-unmatch \
+  assets/images/etc assets/images/photos assets/images/badges assets/images/variants \
+  assets/images/covers/cover1.jpg assets/images/covers/cover2.jpg assets/images/covers/cover3.jpg \
+  assets/katex _data/font-awesome
+bundle exec jekyll build 2>&1 | grep -E "Error|done in" | tail -3
+test -f assets/images/empty_300x200.png && echo "placeholder KEPT" || echo "PLACEHOLDER LOST - RESTORE IT"
+```
+
+Then re-run Step 1's link audit. It must still report no `MISSING` lines — that is the proof the sweep removed nothing load-bearing. If any appear, restore the named file with `git checkout HEAD -- <path>` and leave it in place.
+
+`assets/fonts/` and `assets/fontawesome/` are old-theme leftovers. Include them in the sweep only if the audit shows nothing references them; the theme bundles its own Font Awesome, so it likely does not.
+
 - [ ] **Step 7: Serve and review visually**
 
 ```bash
