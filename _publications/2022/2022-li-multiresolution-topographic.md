@@ -1,7 +1,8 @@
 ---
 title:          "Multi-resolution topographic analysis in hexagonal Discrete Global Grid Systems"
 date:           2022-01-01
-selected:       false
+selected:       true
+cover:          /assets/images/covers/cover_topographic.jpg
 category:       paper
 pub:            "International Journal of Applied Earth Observation and Geoinformation"
 pub_date:       "2022"

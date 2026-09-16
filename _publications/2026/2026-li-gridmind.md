@@ -1,7 +1,8 @@
 ---
 title:          "GridMind: A DGGS-Grounded Multi-Agent System for Spatial Reasoning"
 date:           2026-01-01
-selected:       false
+selected:       true
+cover:          /assets/images/covers/cover_gridmind.jpg
 category:       paper
 pub:            "Proceedings of the 34th ACM International Conference on Advances in Geographic Information Systems (SIGSPATIAL '26)"
 pub_date:       "2026"

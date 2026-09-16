@@ -1,7 +1,8 @@
 ---
 title:          "Geospatial Operations of Discrete Global Grid Systems – A Comparison with Traditional GIS"
 date:           2020-01-01
-selected:       false
+selected:       true
+cover:          /assets/images/covers/cover_operations.jpg
 category:       paper
 pub:            "Journal of Geovisualization and Spatial Analysis"
 pub_date:       "2020"

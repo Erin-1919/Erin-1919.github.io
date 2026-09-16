@@ -1,7 +1,8 @@
 ---
 title:          "Utilizing serverless framework for dynamic visualization and operations in geospatial applications"
 date:           2024-01-01
-selected:       false
+selected:       true
+cover:          /assets/images/covers/cover_serverless.jpg
 category:       paper
 pub:            "International Journal of Digital Earth"
 pub_date:       "2024"

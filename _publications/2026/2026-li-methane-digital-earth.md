@@ -1,7 +1,8 @@
 ---
 title:          "Enabling a Digital Earth for Methane Emissions Management with Equal-Area Discrete Global Grids"
 date:           2026-01-01
-selected:       false
+selected:       true
+cover:          /assets/images/covers/cover_methane.jpg
 category:       paper
 pub:            "International Journal of Digital Earth"
 pub_date:       "2026"
