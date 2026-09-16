@@ -1733,8 +1733,8 @@ short_bio: >-
     a consistent frame across resolutions, which supports an operational Digital Earth. I build geospatial
     intelligence frameworks that integrate multi-source spatial data with machine learning and AI agents,
     and I apply them to environmental and climate modelling, including methane emissions monitoring, flood
-    risk assessment, and environmental resilience. My wider interests include spatial data infrastructure,
-    large-scale spatial analytics, and geospatial decision-support systems.
+    risk assessment, and environmental resilience. My research interests also include geospatial data
+    science, spatial data infrastructure, and geospatial decision-support systems.
   </p>
 ```
 
