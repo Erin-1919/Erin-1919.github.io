@@ -8,7 +8,7 @@ redirect_from:
 ---
 ![Presenting at the 2026 ISPRS Congress Forum session in Toronto](/assets/img/20260709/isprs-forum.png)
 
-**At the XXV ISPRS Congress in Toronto, I gave a Forum talk on how Discrete Global Grid Systems can act as a spatial harness for AI agents. The core argument is simple: an AI agent is a language model plus a harness, and DGGS is the harness that gives spatial work the structure, scale, and traceability that language alone cannot provide.** [View the slides](https://Erin-1919.github.io/assets/pdf/slides/2026-07-ISPRS-Forum.pdf)
+**At the XXV ISPRS Congress in Toronto, I gave a Forum talk on how Discrete Global Grid Systems can act as a spatial harness for AI agents. The core argument is simple: an AI agent is a language model plus a harness, and DGGS is the harness that gives spatial work the structure, scale, and traceability that language alone cannot provide.** [View the slides](/assets/pdf/slides/2026-07-ISPRS-Forum.pdf)
 
 Large language models are strong at interaction, planning, and explanation. They are far less reliable when spatial relationships must be inferred from raw coordinates, map images, or free text. My talk walked through two projects that put DGGS underneath the model, so the agent explains behavior instead of inventing geography.
 
