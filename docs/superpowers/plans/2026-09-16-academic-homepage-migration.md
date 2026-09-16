@@ -1347,3 +1347,112 @@ EOF
 - Updating the CV PDF to reflect the Guelph position.
 - Retiring the 13 highlight images.
 - Any redirect for the old `/Research/`, `/Gallery/`, or CV page URLs beyond repointing internal links. Add `redirect_from` to the new pages if external sites link to the old ones.
+
+---
+
+### Task 8: Rolling news window on the home page
+
+Runs after Task 6, before Task 7's audit. The home page currently shows a fixed count of news items regardless of age, so a quiet period leaves years-old entries under a heading called "News". Replace the fixed count with a rolling time window.
+
+**Files:**
+- Modify: `_includes/widgets/news_card.html`
+- Modify: `_data/display.yml`
+- Modify: `index.html` (the include's parameters)
+
+**Interfaces:**
+- Consumes: `site.news` from Task 4; the "All news" header link already added in Task 4.
+- Produces: a home-page news block showing only items inside the window, with a minimum floor so it is never empty.
+
+**Behaviour:** show every news item dated within the last 12 months. If fewer than `min_news` items fall inside that window, show the most recent `min_news` instead, so the block never renders empty during a quiet stretch. The full list stays one click away via the existing "All news" link.
+
+- [ ] **Step 1: Write the failing assertion**
+
+With today's content, four items fall inside a 12-month window (Guelph appointment, ISPRS Congress, OGC DGGS AI panel, Innovation Summit NL) and nothing from 2024 or earlier should appear on the home page:
+
+```bash
+cd /e/UCalgary_postdoc/Erin-1919.github.io && bundle exec jekyll build 2>&1 | tail -3 && grep -c "130th OGC\|CanCH4 Symposium" _site/index.html
+```
+
+- [ ] **Step 2: Run it to verify it fails**
+
+Expected: a non-zero count — 2024/2025 items are currently on the home page because the widget takes a fixed slice by count, not by date.
+
+- [ ] **Step 3: Add the window to `_data/display.yml`**
+
+Replace the `num_news` key:
+
+```yaml
+homepage:
+  show_experience: true
+  show_news: true
+  show_selected_publications: true
+  news_months: 12
+  min_news: 3
+```
+
+- [ ] **Step 4: Pass the new parameters in `index.html`**
+
+Replace the news include line:
+
+```html
+        {% include widgets/news_card.html months=site.data.display.homepage.news_months min=site.data.display.homepage.min_news %}
+```
+
+- [ ] **Step 5: Compute the window in `news_card.html`**
+
+Replace the widget's first line (the `assign news_by_year = ...` line) with:
+
+```liquid
+{%- assign sorted = site.news | sort: "date" | reverse -%}
+{%- assign window_seconds = include.months | times: 2629746 -%}
+{%- assign cutoff = site.time | date: "%s" | plus: 0 | minus: window_seconds -%}
+{%- assign n = 0 -%}
+{%- for item in sorted -%}
+  {%- assign ts = item.date | date: "%s" | plus: 0 -%}
+  {%- if ts >= cutoff -%}{%- assign n = n | plus: 1 -%}{%- endif -%}
+{%- endfor -%}
+{%- if n < include.min -%}{%- assign n = include.min -%}{%- endif -%}
+{%- assign news_by_year = sorted | slice: 0, n | group_by_exp: "item", "item.date | date: '%Y'" -%}
+```
+
+This works because `sorted` is in descending date order, so every item inside the window is a prefix of the list — counting them and taking `slice: 0, n` is equivalent to filtering, without needing an array-append filter that Jekyll's Liquid does not provide. `2629746` is the average seconds per month.
+
+Leave the rest of the widget untouched, including the two-shape linked/unlinked branch from Task 4 and the "All news" header link.
+
+- [ ] **Step 6: Rebuild and run the assertion**
+
+```bash
+cd /e/UCalgary_postdoc/Erin-1919.github.io && bundle exec jekyll build 2>&1 | tail -3
+echo "--- 2024-and-older items must be absent from the home page ---"
+grep -c "130th OGC\|CanCH4 Symposium\|GIS Education" _site/index.html
+echo "--- recent items must be present ---"
+grep -c "Guelph\|ISPRS Congress" _site/index.html
+echo "--- full list still reachable ---"
+grep -c "All news" _site/index.html
+```
+
+Expected: `0` for the old items, non-zero for the recent ones, and `1` for the "All news" link.
+
+- [ ] **Step 7: Prove the floor works**
+
+The floor only triggers when the window is nearly empty, which today's content does not exercise. Test it by temporarily setting `news_months: 1` in `_data/display.yml`, rebuilding, and confirming the home page still lists `min_news` items rather than none:
+
+```bash
+cd /e/UCalgary_postdoc/Erin-1919.github.io && sed -i 's/news_months: 12/news_months: 1/' _data/display.yml && bundle exec jekyll build 2>&1 | tail -2 && grep -c "fas fa-rss" _site/index.html && grep -o 'news/[a-z0-9-]*/' _site/index.html | sort -u | wc -l
+```
+
+Expected: the News block is still present and lists at least `min_news` entries. **Then restore `news_months: 12`** and rebuild before committing — do not leave the test value in place.
+
+- [ ] **Step 8: Commit**
+
+```bash
+cd /e/UCalgary_postdoc/Erin-1919.github.io && git commit _includes/widgets/news_card.html _data/display.yml index.html -m "$(cat <<'EOF'
+Show only the last 12 months of news on the home page
+
+Fall back to the most recent few items when the window is empty, so the
+block never renders blank. The full list stays behind the All news link.
+
+Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>
+EOF
+)"
+```
