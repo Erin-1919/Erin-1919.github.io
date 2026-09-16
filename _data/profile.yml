@@ -3,9 +3,9 @@ secondary_name: ""
 navbar_name: "Mingke (Erin) Li"
 
 positions:
-- name: Assistant Professor
+- name: Incoming Assistant Professor
 - name: Department of Geography, Environment & Geomatics
-- name: College of Social and Applied Human Sciences, University of Guelph
+- name: University of Guelph (from December 2026)
 
 email: "mli.erin1919@gmail.com"
 cv_link: /assets/pdf/cv/Mingke_Li_CV_2026.pdf
@@ -17,8 +17,10 @@ researchgate: Mingke-Li
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    I am an Assistant Professor in the Department of Geography, Environment &amp; Geomatics at the <a href="https://www.uoguelph.ca/" target="_blank">University of Guelph</a>,
-    working at the intersection of geospatial data science, GeoAI, and Digital Earth. My research centres on
+    I am a postdoctoral associate at the University of Calgary and an incoming Assistant Professor in the
+    Department of Geography, Environment &amp; Geomatics at the
+    <a href="https://www.uoguelph.ca/" target="_blank">University of Guelph</a>, starting December 2026.
+    My work sits at the intersection of geospatial data science, GeoAI, and Digital Earth, centred on
     Discrete Global Grid Systems (DGGS) as a spatial framework for integrating and analysing heterogeneous
     Earth observation data across scales.
   </p>

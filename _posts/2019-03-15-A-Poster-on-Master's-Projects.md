@@ -1,10 +1,6 @@
 ---
 title: "A Poster on Master's Projects"
-layout: news
 date: 2019-03-15
-redirect_from:
-  - /A-Poster-on-Master's-Projects/
-
 ---
 
 ![poster](/assets/img/20190315/PosterNew.jpg)
