@@ -249,11 +249,12 @@ positions:
 - name: Assistant Professor
 - name: University of Guelph
 
-email: "<collected email>"
+email: "mli.erin1919@gmail.com"
 cv_link: /assets/pdf/cv/Mingke_Li_CV_2026.pdf
 gscholar: <collected Google Scholar ID>
 github: Erin-1919
 linkedin: mingke-erin-li
+researchgate: Mingke-Li
 
 short_bio_text_justify: false
 short_bio: >-
@@ -264,32 +265,39 @@ short_bio: >-
     Earth observation data across scales.
   </p>
   <p>
-    My work spans multi-resolution terrain and hydrological modelling, greenhouse gas inventories on discrete
-    global grids, and more recently how large language models reason about space. I hold a Ph.D. from the
-    University of Calgary and was previously a postdoctoral scholar there.
+    My work spans multi-resolution terrain and hydrological modelling, methane and greenhouse gas inventories
+    on equal-area discrete global grids, and agentic multi-LLM systems for spatial reasoning. I contribute to
+    the Open Geospatial Consortium's DGGS and EmissionML working groups. I hold a Ph.D. in Geomatics
+    Engineering from the University of Calgary, where I was previously a postdoctoral associate.
   </p>
 
-portrait_url: /assets/img/CanCH4_EL_1.jpg
+portrait_url: /assets/img/Erin_Li_34.jpg
 
 education:
 - name: University of Calgary
   position: >-
     Department of Geomatics Engineering <br/>
     Ph.D. in Geomatics Engineering
-  date: 2019 - 2023
+  date: 2023
 - name: University of New Brunswick
-  position: M.Sc. in Forestry and Environmental Management
-  date: 2017 - 2019
-- name: <collected undergraduate institution>
-  position: <collected undergraduate degree>
-  date: <collected undergraduate dates>
+  position: M.Sc. in Forestry
+  date: 2019
+- name: Nanjing Forestry University
+  position: B.Sc. in Geographic Information Science
+  date: 2017
 
 experience:
 - name: University of Calgary
+  position: Postdoctoral Associate
+  date: 2024 - 2026
+- name: Geosapiens Inc.
+  position: Geospatial Scientist
+  date: 2023 - 2024
+- name: University of Calgary
   position: >-
     Department of Geomatics Engineering <br/>
-    Postdoctoral Scholar
-  date: 2023 - 2026
+    Sessional Instructor
+  date: 2020 - 2023
 
 # Awards are omitted from the homepage while the site is framed around the
 # faculty position. Restore by setting show_awards: true in _data/display.yml.
@@ -358,6 +366,32 @@ Delete these three lines from `index.html`:
         {% include widgets/debug_url.html %}
 ```
 
+- [ ] **Step 7b: Add a ResearchGate branch to both profile cards**
+
+The theme supports Google Scholar, GitHub, Twitter, LinkedIn, and ORCID, but not ResearchGate. Erin keeps ResearchGate, so both cards need a fifth branch.
+
+In `_includes/widgets/profile_card_mini.html`, immediately after the `linkedin` block's `{% endif %}`, insert:
+
+```html
+                        {% if site.data.profile.researchgate %}
+                        <a class="px-1 no-break" target="_blank" href="https://www.researchgate.net/profile/{{ site.data.profile.researchgate }}">
+                            <i class="fab fa-researchgate"></i>
+                        </a>
+                        {% endif %}
+```
+
+In `_includes/widgets/profile_card.html`, in the same position, insert the labelled variant matching that file's style:
+
+```html
+                        {% if site.data.profile.researchgate %}
+                        <a class="pr-3 no-break" target="_blank" href="https://www.researchgate.net/profile/{{ site.data.profile.researchgate }}">
+                            <i class="fab fa-researchgate"></i> ResearchGate
+                        </a>
+                        {% endif %}
+```
+
+`fa-researchgate` ships in Font Awesome's brands set, which the theme already loads, so no new dependency.
+
 - [ ] **Step 8: Rebuild and run the assertion**
 
 ```bash
@@ -369,7 +403,7 @@ Expected: `PASS`.
 - [ ] **Step 9: Verify the portrait and Twitter removal**
 
 ```bash
-cd /e/UCalgary_postdoc/Erin-1919.github.io && grep -o "CanCH4_EL_1.jpg" _site/index.html | head -1 && grep -c "twitter" _site/index.html
+cd /e/UCalgary_postdoc/Erin-1919.github.io && grep -o "Erin_Li_34.jpg" _site/index.html | head -1 && grep -c "twitter" _site/index.html
 ```
 
 Expected: the portrait filename appears; the twitter count is `0`. If twitter markup persists, the `twitter:` key was left in `profile.yml` — remove it.
@@ -469,6 +503,8 @@ Rules that apply to every file:
 - PDF links change from the absolute `https://Erin-1919.github.io/assets/pdf/...` form to site-relative `/assets/pdf/...`. The files themselves do not move.
 - Entries with no abstract in the source simply omit the `abstract` key.
 - `selected` is `false` on every file at this step; Step 10 flips ~5 of them.
+
+`research.md` is the authoritative source for this task. The CV PDF lists several 2026 items that `research.md` does not — four under review (IJGIS, Scientific Data, JOSS, Computers and Geosciences) and one published (International Journal of Digital Earth 19(1), 2607210). Do not add them here. Whether under-review work appears publicly is Erin's editorial call, and it is raised with her separately.
 
 - [ ] **Step 5: Verify the file count and category spread**
 

@@ -63,7 +63,7 @@ roughly 20 entries will not fit the home feed, which shows the latest 5.
 
 | Block | Source |
 |---|---|
-| Portrait, name, position | `assets/img/CanCH4_EL_1.jpg`; Assistant Professor, University of Guelph |
+| Portrait, name, position | `assets/img/Erin_Li_34.jpg`; Assistant Professor, University of Guelph |
 | Social | LinkedIn, Google Scholar, GitHub |
 | About Me | New prose bio. The current home page is a fact list, not prose. |
 | Education | PhD, University of Calgary (2023); M.Sc., University of New Brunswick (2019); undergraduate degree supplied by Erin |
