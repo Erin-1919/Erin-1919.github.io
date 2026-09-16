@@ -600,7 +600,17 @@ Expected: a non-zero bold count, a PDF link count matching the entries that have
 
 - [ ] **Step 10: Mark selected publications and add covers**
 
-Requires Erin's list. For each of the ~5 chosen papers, set `selected: true` and add `cover: /assets/images/covers/<slug>.jpg` pointing at an image she supplies or approves. Place covers in `assets/images/covers/`. Papers not selected keep `selected: false` and no `cover` key — the theme renders a generated visual hash for them, which is a deliberate design feature, not a missing image.
+Erin's chosen five, with covers already generated from each paper's own PDF and committed at 600×400:
+
+| File | cover |
+|---|---|
+| `_publications/2026/2026-li-gridmind.md` | `/assets/images/covers/cover_gridmind.jpg` |
+| `_publications/2026/2026-li-methane-digital-earth.md` | `/assets/images/covers/cover_methane.jpg` |
+| `_publications/2024/2024-li-serverless-visualization.md` | `/assets/images/covers/cover_serverless.jpg` |
+| `_publications/2022/2022-li-multiresolution-topographic.md` | `/assets/images/covers/cover_topographic.jpg` |
+| `_publications/2020/2020-li-geospatial-operations-comparison.md` | `/assets/images/covers/cover_operations.jpg` |
+
+Every other entry keeps `selected: false` and no `cover` key — the theme renders a generated visual hash for them, which is a deliberate design feature, not a missing image.
 
 Verify:
 
