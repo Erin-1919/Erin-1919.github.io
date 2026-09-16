@@ -439,7 +439,7 @@ Migrates the ~20 entries in the old `research.md` into `_publications/`, adds th
 - [ ] **Step 1: Write the failing assertion**
 
 ```bash
-cd /e/UCalgary_postdoc/Erin-1919.github.io && grep -q 'id="tab-presentation"' _site/publications.html && grep -q "QuadGridSIM" _site/publications.html && echo PASS || echo FAIL
+cd /e/UCalgary_postdoc/Erin-1919.github.io && grep -q 'id="tab-presentation"' _site/publications/index.html && grep -q "QuadGridSIM" _site/publications/index.html && echo PASS || echo FAIL
 ```
 
 - [ ] **Step 2: Run it to verify it fails**
@@ -585,7 +585,7 @@ This uses Bootstrap 4's pill-tab component, which the theme already bundles — 
 - [ ] **Step 8: Rebuild and run the assertion**
 
 ```bash
-cd /e/UCalgary_postdoc/Erin-1919.github.io && bundle exec jekyll build 2>&1 | tail -5 && grep -q 'id="tab-presentation"' _site/publications.html && grep -q "QuadGridSIM" _site/publications.html && echo PASS || echo FAIL
+cd /e/UCalgary_postdoc/Erin-1919.github.io && bundle exec jekyll build 2>&1 | tail -5 && grep -q 'id="tab-presentation"' _site/publications/index.html && grep -q "QuadGridSIM" _site/publications/index.html && echo PASS || echo FAIL
 ```
 
 Expected: `PASS`.
@@ -593,7 +593,7 @@ Expected: `PASS`.
 - [ ] **Step 9: Verify author bolding and PDF paths**
 
 ```bash
-cd /e/UCalgary_postdoc/Erin-1919.github.io && grep -c "font-weight-bold\|<strong>" _site/publications.html && grep -o 'href="/assets/pdf/papers/[^"]*"' _site/publications.html | wc -l && grep -c "Erin-1919.github.io/assets" _site/publications.html
+cd /e/UCalgary_postdoc/Erin-1919.github.io && grep -c "font-weight-bold\|<strong>" _site/publications/index.html && grep -o 'href="/assets/pdf/papers/[^"]*"' _site/publications/index.html | wc -l && grep -c "Erin-1919.github.io/assets" _site/publications/index.html
 ```
 
 Expected: a non-zero bold count, a PDF link count matching the entries that have PDFs, and `0` absolute `Erin-1919.github.io/assets` links remaining.
@@ -670,7 +670,7 @@ Use exactly this test everywhere, so the two templates never disagree about whic
 - [ ] **Step 1: Write the failing assertion**
 
 ```bash
-cd /e/UCalgary_postdoc/Erin-1919.github.io && test -f _site/news.html && grep -q "ISPRS" _site/news.html && echo PASS || echo FAIL
+cd /e/UCalgary_postdoc/Erin-1919.github.io && test -f _site/news/index.html && grep -q "ISPRS" _site/news/index.html && echo PASS || echo FAIL
 ```
 
 - [ ] **Step 2: Run it to verify it fails**
@@ -888,7 +888,7 @@ Expected: no `DUPLICATE` lines.
 - [ ] **Step 9: Rebuild and run the assertion**
 
 ```bash
-cd /e/UCalgary_postdoc/Erin-1919.github.io && bundle exec jekyll build 2>&1 | tail -5 && test -f _site/news.html && grep -q "ISPRS" _site/news.html && echo PASS || echo FAIL
+cd /e/UCalgary_postdoc/Erin-1919.github.io && bundle exec jekyll build 2>&1 | tail -5 && test -f _site/news/index.html && grep -q "ISPRS" _site/news/index.html && echo PASS || echo FAIL
 ```
 
 Expected: `PASS`.
@@ -899,7 +899,7 @@ Expected: `PASS`.
 cd /e/UCalgary_postdoc/Erin-1919.github.io && test -f "_site/ISPRS-Webinar/index.html" && grep -q "refresh" "_site/ISPRS-Webinar/index.html" && echo "REDIRECT OK" ; find _site/news -name index.html | wc -l ; grep -c "<img" _site/news/2022-01-10-ISPRS-Webinar/index.html
 ```
 
-Expected: `REDIRECT OK`; a news page count equal to the number of moved files (the `/news` index is written to `_site/news.html`, not into this tree, so it is not counted here); and a non-zero image count proving bodies and photos survived.
+Expected: `REDIRECT OK`; a news page count equal to the number of moved files (the `/news` index is written to `_site/news/index.html`, not into this tree, so it is not counted here); and a non-zero image count proving bodies and photos survived.
 
 - [ ] **Step 10b: Verify both news shapes render correctly**
 
@@ -919,9 +919,9 @@ Then confirm the two shapes behave differently:
 ```bash
 cd /e/UCalgary_postdoc/Erin-1919.github.io && bundle exec jekyll build 2>&1 | tail -3
 echo "--- title-only item must NOT be a link on the index ---"
-grep -A3 'Joined the University of Guelph' _site/news.html | grep -c '<a href' 
+grep -A3 'Joined the University of Guelph' _site/news/index.html | grep -c '<a href' 
 echo "--- an item WITH a body must be a link ---"
-grep -B2 -A3 'ISPRS' _site/news.html | grep -c '<a href'
+grep -B2 -A3 'ISPRS' _site/news/index.html | grep -c '<a href'
 ```
 
 Expected: `0` for the title-only item and a non-zero count for the item with a body. If the title-only item renders as a link, the `body != ""` branch is wrong and would produce a link to an empty page.
@@ -979,7 +979,7 @@ Expected: `0`.
 - [ ] **Step 4: Rebuild and verify every post rendered**
 
 ```bash
-cd /e/UCalgary_postdoc/Erin-1919.github.io && bundle exec jekyll build 2>&1 | tail -5 && ls _posts/*.md | wc -l && grep -c "blog_card\|Read more" _site/blog.html
+cd /e/UCalgary_postdoc/Erin-1919.github.io && bundle exec jekyll build 2>&1 | tail -5 && ls _posts/*.md | wc -l && grep -c "blog_card\|Read more" _site/blog/index.html
 ```
 
 Expected: a clean build, and the blog index listing a "Read more" per remaining post.
@@ -991,7 +991,7 @@ The old theme loaded KaTeX from the local `assets/katex/` bundle, gated on `math
 Verify math still renders on a post that uses it:
 
 ```bash
-cd /e/UCalgary_postdoc/Erin-1919.github.io && grep -rl "^mathjax: true" _posts | head -3 && grep -c "katex" _site/blog.html
+cd /e/UCalgary_postdoc/Erin-1919.github.io && grep -rl "^mathjax: true" _posts | head -3 && grep -c "katex" _site/blog/index.html
 ```
 
 Expected: a non-zero `katex` count, confirming the theme's KaTeX tags reach rendered pages. If any post is listed, open it in the local server during Task 7 Step 7 and confirm its formulae render.
@@ -1076,7 +1076,7 @@ Three poster cards with click-to-enlarge. The 13 highlight images stay on disk, 
 - [ ] **Step 1: Write the failing assertion**
 
 ```bash
-cd /e/UCalgary_postdoc/Erin-1919.github.io && grep -q "glightbox" _site/showcase.html && grep -c "CanCH4" _site/showcase.html && echo PASS || echo FAIL
+cd /e/UCalgary_postdoc/Erin-1919.github.io && grep -q "glightbox" _site/showcase/index.html && grep -c "CanCH4" _site/showcase/index.html && echo PASS || echo FAIL
 ```
 
 - [ ] **Step 2: Run it to verify it fails**
@@ -1181,7 +1181,7 @@ If Erin would rather not depend on a CDN at all, vendor both files into `assets/
 - [ ] **Step 5: Rebuild and run the assertion**
 
 ```bash
-cd /e/UCalgary_postdoc/Erin-1919.github.io && bundle exec jekyll build 2>&1 | tail -5 && grep -q "glightbox" _site/showcase.html && grep -q "CanCH4" _site/showcase.html && echo PASS || echo FAIL
+cd /e/UCalgary_postdoc/Erin-1919.github.io && bundle exec jekyll build 2>&1 | tail -5 && grep -q "glightbox" _site/showcase/index.html && grep -q "CanCH4" _site/showcase/index.html && echo PASS || echo FAIL
 ```
 
 Expected: `PASS`.
@@ -1189,7 +1189,7 @@ Expected: `PASS`.
 - [ ] **Step 6: Verify the poster images and PDFs resolve**
 
 ```bash
-cd /e/UCalgary_postdoc/Erin-1919.github.io && for p in $(grep -o '/assets/[^"]*\.\(jpg\|pdf\)' _site/showcase.html | sort -u); do test -f "_site$p" && echo "OK $p" || echo "MISSING $p"; done
+cd /e/UCalgary_postdoc/Erin-1919.github.io && for p in $(grep -o '/assets/[^"]*\.\(jpg\|pdf\)' _site/showcase/index.html | sort -u); do test -f "_site$p" && echo "OK $p" || echo "MISSING $p"; done
 ```
 
 Expected: every line reads `OK`. Any `MISSING` means a filename mismatch — fix before committing.
