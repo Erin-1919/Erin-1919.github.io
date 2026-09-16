@@ -6,7 +6,7 @@ redirect_from:
   - /DGGS-Spatial-Harness-for-AI-ISPRS-Congress/
 
 ---
-![Presenting at the 2026 ISPRS Congress Forum session in Toronto](/assets/img/20260709/isprs-forum.png)
+![Presenting at the 2026 ISPRS Congress Forum session in Toronto](/assets/img/20260709/isprs-forum.jpg)
 
 **At the XXV ISPRS Congress in Toronto, I gave a Forum talk on how Discrete Global Grid Systems can act as a spatial harness for AI agents. The core argument is simple: an AI agent is a language model plus a harness, and DGGS is the harness that gives spatial work the structure, scale, and traceability that language alone cannot provide.** [View the slides](/assets/pdf/slides/2026-07-ISPRS-Forum.pdf)
 
