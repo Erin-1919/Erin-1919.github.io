@@ -1576,3 +1576,140 @@ Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>
 EOF
 )"
 ```
+
+---
+
+### Task 10: Home-page card fixes and uniform publication covers
+
+Fixes three rendering defects the site owner found while reviewing the built site, and makes publication covers consistent.
+
+**Files:**
+- Modify: `_includes/widgets/experience_card.html`
+- Modify: `_includes/widgets/publication_card.html`
+- Modify: `_includes/widgets/publication_item.html`
+- Modify: 25 files under `_publications/` (add a `cover:` key)
+
+**Interfaces:**
+- Consumes: the cover images committed at `assets/images/covers/` (30 files: 5 curated figures, 10 `paper_*.jpg`, 15 `slide_*.jpg`).
+- Produces: an Education/Experience block with no broken images, a single "All publications" link, and publication entries that either show a real cover or show no image at all.
+
+- [ ] **Step 1: Write the failing assertions**
+
+```bash
+cd /e/UCalgary_postdoc/Erin-1919.github.io && bundle exec jekyll build -d _site_t10 2>&1 | tail -3
+echo "--- broken logo imgs on home (expect >0 now, 0 after) ---"; grep -c 'img src="" ' _site_t10/index.html
+echo "--- duplicate all-publications links (expect 2 now, 1 after) ---"; grep -c "publications\">" _site_t10/index.html
+echo "--- generated bubble-hash placeholders (expect >0 now, 0 after) ---"; grep -c "bubble-visual-hash" _site_t10/publications/index.html
+```
+
+- [ ] **Step 2: Run them and record the actual counts**
+
+- [ ] **Step 3: Only render an institution logo when one exists**
+
+In `_includes/widgets/experience_card.html` there are TWO identical `<img>` lines — one in the Education loop, one in the Experience loop. Neither entry type in this site sets `logo:`, so both render `src=""`, producing a broken-image icon whose 18px-wide `alt` text wraps one character per line. That is the vertical letter-stacking on the home page.
+
+Replace **both** occurrences of:
+
+```html
+                                    <img src="{{ item.logo | relative_url }}" alt="{{ item.name }}" style="width: 18px;" class="mr-1 mt-1">
+```
+
+with:
+
+```html
+                                    {%- if item.logo -%}
+                                    <img src="{{ item.logo | relative_url }}" alt="{{ item.name }}" style="width: 18px;" class="mr-1 mt-1">
+                                    {%- endif -%}
+```
+
+Do not add logo images. The owner has not supplied any and inventing institutional logos is not wanted.
+
+- [ ] **Step 4: Keep one "All publications" link, matching the news card**
+
+`_includes/widgets/publication_card.html` currently renders the link twice: `(view all »)` in the header and `All publications »` in a footer. Replace the whole widget's header and drop the footer, so it matches `news_card.html`'s pattern exactly:
+
+```html
+{% assign publications = include.publications %}
+<div class="my-3 p-0 bg-white shadow-sm rounded-xl">
+    <h6 class="border-bottom border-gray p-3 mb-0 d-flex">
+        <span>{% if include.title %}{{ include.title }}{% else %}<i class="fas fa-star"></i> Selected Recent Publications{% endif %}</span>
+        <a class="ml-auto small no-break" href="{{ '/publications' | relative_url }}">All publications <i class="fas fa-angle-double-right"></i></a>
+    </h6>
+    {% for item in publications limit:include.limit %}
+        {% include widgets/publication_item.html item=item first=false last=false %}
+    {% endfor %}
+</div>
+```
+
+- [ ] **Step 5: Show no image at all when an entry has no cover**
+
+`_includes/widgets/publication_item.html` falls back to a generated `bubble-visual-hash` SVG whenever `cover:` is absent. The owner wants no placeholder: entries without a cover should show text only.
+
+In the **desktop block**, replace the whole cover column:
+
+```html
+        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3">
+            {%- if item.cover -%}
+            <img data-src="{{ item.cover | relative_url }}" alt="{{ item.title }}" class="lazy w-100 rounded-sm" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
+            {%- else -%}
+            <svg class="bubble-visual-hash lazy w-100 rounded-sm" data-bubble-visual-hash="{{ item.id }}" viewBox="0 0 300 200"></svg>
+            {%- endif -%}
+        </div>
+```
+
+with a version that omits the column entirely when there is no cover, letting the text span the full width:
+
+```html
+        {%- if item.cover -%}
+        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3">
+            <img data-src="{{ item.cover | relative_url }}" alt="{{ item.title }}" class="lazy w-100 rounded-sm" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
+        </div>
+        {%- endif -%}
+```
+
+The text column immediately after it is `<div class="col-md-9 col-xl-10 p-3 pl-md-0">`. Make its width conditional so it fills the row when there is no cover:
+
+```html
+        <div class="{% if item.cover %}col-md-9 col-xl-10 p-3 pl-md-0{% else %}col-12 p-3{% endif %}">
+```
+
+In the **mobile block** lower in the same file, the cover is used as a background image via `data-src` on the outer row div; that already degrades correctly when `item.cover` is empty, so leave the mobile block alone apart from confirming it renders no broken image.
+
+`assets/images/empty_300x200.png` is still required as the lazy-load placeholder — do not remove it.
+
+- [ ] **Step 6: Add the `cover:` key to 25 publication entries**
+
+The exact file-to-cover mapping is in `.superpowers/sdd/2026-09-16-academic-homepage-migration/cover_map.md`. Apply it verbatim: insert a `cover:` line into each listed file's front matter, aligned with the existing keys. All 25 target images already exist under `assets/images/covers/`.
+
+The 7 files listed in `.superpowers/sdd/2026-09-16-academic-homepage-migration/no_cover.md` get NO cover key — the two theses (the owner asked for no thesis covers) and five entries that have neither a slide deck nor a hosted PDF.
+
+- [ ] **Step 7: Rebuild and run the assertions**
+
+```bash
+cd /e/UCalgary_postdoc/Erin-1919.github.io && rm -rf _site_t10 && bundle exec jekyll build -d _site_t10 2>&1 | tail -3
+echo "--- broken logo imgs (expect 0) ---"; grep -c 'img src="" ' _site_t10/index.html
+echo "--- bubble-hash placeholders (expect 0) ---"; grep -c "bubble-visual-hash" _site_t10/publications/index.html
+echo "--- entries with covers (expect 30) ---"; grep -rc "^cover:" _publications | grep -v ":0" | wc -l
+echo "--- every referenced cover resolves ---"
+for p in $(grep -rhoE '/assets/images/covers/[A-Za-z0-9._-]+' _publications | sort -u); do test -f "_site_t10$p" && echo "OK $p" || echo "MISSING $p"; done | grep -c OK
+for p in $(grep -rhoE '/assets/images/covers/[A-Za-z0-9._-]+' _publications | sort -u); do test -f "_site_t10$p" || echo "MISSING $p"; done
+echo "--- single all-publications link on home ---"; grep -c "All publications" _site_t10/index.html
+rm -rf _site_t10
+```
+
+Expected: `0` broken logo images, `0` bubble hashes, `30` entries with covers, every cover `OK` with no `MISSING`, and exactly `1` "All publications" link.
+
+- [ ] **Step 8: Commit**
+
+```bash
+cd /e/UCalgary_postdoc/Erin-1919.github.io && git commit _includes/widgets/experience_card.html _includes/widgets/publication_card.html _includes/widgets/publication_item.html _publications -m "$(cat <<'EOF'
+Fix home-page cards and give publications consistent covers
+
+Only render an institution logo when one is set, keep a single All
+publications link, and show no placeholder graphic for entries that have
+no cover.
+
+Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>
+EOF
+)"
+```
