@@ -1,6 +1,10 @@
 ---
 title: "Webinar Series by ISPRS TC IV"
-layout: post
+layout: news
+date: 2022-01-10
+redirect_from:
+  - /ISPRS-Webinar/
+
 ---
 ![COVER_PAGE](/assets/img/20220110/cover.png)
 

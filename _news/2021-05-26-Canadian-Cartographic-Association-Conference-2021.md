@@ -1,6 +1,10 @@
 ---
 title: "Canadian Cartographic Association Conference 2021"
-layout: post
+layout: news
+date: 2021-05-26
+redirect_from:
+  - /Canadian-Cartographic-Association-Conference-2021/
+
 ---
 ![PPT](/assets/img/20210527/ppt.png)
 

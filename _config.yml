@@ -15,10 +15,15 @@ plugins:
   - jekyll-paginate
 
 collections:
-  - publications
-  - news
-  - showcase
-  - posts
+  publications:
+    output: false
+  news:
+    output: true
+    permalink: /news/:path/
+  showcase:
+    output: false
+  posts:
+    output: true
 
 defaults:
   - scope:
@@ -26,6 +31,11 @@ defaults:
       type: "posts"
     values:
       layout: "blog_post"
+  - scope:
+      path: ""
+      type: "news"
+    values:
+      layout: "news"
 
 exclude:
   - Gemfile

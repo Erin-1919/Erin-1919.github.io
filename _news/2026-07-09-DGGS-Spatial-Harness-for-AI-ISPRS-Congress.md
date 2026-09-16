@@ -1,6 +1,10 @@
 ---
 title: "DGGS as a Spatial Harness for AI Agents at the 2026 ISPRS Congress"
-layout: post
+layout: news
+date: 2026-07-09
+redirect_from:
+  - /DGGS-Spatial-Harness-for-AI-ISPRS-Congress/
+
 ---
 ![Presenting at the 2026 ISPRS Congress Forum session in Toronto](/assets/img/20260709/isprs-forum.png)
 

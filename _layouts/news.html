@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div class="row">
+    <div class="col-12 col-lg-10 mx-auto">
+        <div class="my-3 p-4 bg-white shadow-sm rounded-xl">
+            <h2 class="mt-0 mb-2">{{ page.title }}</h2>
+            <div class="text-muted small mb-4">
+                <i class="fas fa-calendar-alt"></i> {{ page.date | date: "%B %d, %Y" }}
+            </div>
+            <div class="news-content">
+                {{ content }}
+            </div>
+            <div class="mt-4 pt-3 border-top border-gray">
+                <a href="{{ '/news' | relative_url }}"><i class="fas fa-angle-double-left"></i> All news</a>
+            </div>
+        </div>
+    </div>
+</div>

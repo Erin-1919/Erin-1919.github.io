@@ -1,6 +1,10 @@
 ---
 title: "Video Feature: Talking Geomatics Engineering and Geospatial Data Science"
-layout: post
+layout: news
+date: 2023-06-02
+redirect_from:
+  - /Video-Feature-on-Geomatics-Engineering/
+
 ---
 ![video-preview](/assets/img/20230602/video.jpg)
 

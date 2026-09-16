@@ -1,6 +1,10 @@
 ---
 title: "AutoCarto Conference 2020"
-layout: post
+layout: news
+date: 2020-11-18
+redirect_from:
+  - /AutoCarto-Conference-2020/
+
 ---
 
 ![PPT](/assets/img/20201118/ppt.png)

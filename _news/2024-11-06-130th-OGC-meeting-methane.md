@@ -1,6 +1,10 @@
 ---
 title: "130th OGC Member Meeting - Mapping Methane"
-layout: post
+layout: news
+date: 2024-11-06
+redirect_from:
+  - /130th-OGC-meeting-methane/
+
 ---
 
 ![methane-grids](/assets/img/20241106/methane.jpg)

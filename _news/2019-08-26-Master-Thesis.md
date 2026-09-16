@@ -1,6 +1,10 @@
 ---
 title: "Master Thesis"
-layout: post
+layout: news
+date: 2019-08-26
+redirect_from:
+  - /Master-Thesis/
+
 ---
 
 <img src="/assets/img/20190826/thesis2.jpg" width="500">

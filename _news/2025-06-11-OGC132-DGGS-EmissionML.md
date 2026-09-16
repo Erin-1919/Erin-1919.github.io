@@ -1,6 +1,10 @@
 ---
 title: "Presenting at the 132nd OGC Member Meeting"
-layout: post
+layout: news
+date: 2025-06-11
+redirect_from:
+  - /OGC132-DGGS-EmissionML/
+
 ---
 
 ![ogc132-sessions](/assets/img/20250611/ogc132_sessions.jpg)

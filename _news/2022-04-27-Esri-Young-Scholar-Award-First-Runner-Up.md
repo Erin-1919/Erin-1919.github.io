@@ -1,6 +1,10 @@
 ---
 title: "Esri Young Scholar Award — First Runner Up"
-layout: post
+layout: news
+date: 2022-04-27
+redirect_from:
+  - /Esri-Young-Scholar-Award-First-Runner-Up/
+
 ---
 ![poster](/assets/img/20220427/ESRI_poster_Li_2022.jpg)
 

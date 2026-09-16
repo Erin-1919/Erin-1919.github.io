@@ -1,6 +1,10 @@
 ---
 title: "GIS in Education and Research Conference 2023"
-layout: post
+layout: news
+date: 2023-03-03
+redirect_from:
+  - /GIS-Education-Research-Conference/
+
 ---
 ![hart-house](/assets/img/20230303/harthouse.jpg)
 

@@ -1,6 +1,10 @@
 ---
 title: "Doggone Candidacy Exam"
-layout: post
+layout: news
+date: 2021-01-12
+redirect_from:
+  - /Doggone-Candidacy-Exam/
+
 ---
 ![mindmap](/assets/img/20210112/mind_map_part.png)
 

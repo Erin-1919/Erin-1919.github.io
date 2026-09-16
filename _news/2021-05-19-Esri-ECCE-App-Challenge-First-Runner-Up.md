@@ -1,6 +1,10 @@
 ---
 title: "Esri ECCE App Challenge — First Runner Up"
-layout: post
+layout: news
+date: 2021-05-19
+redirect_from:
+  - /Esri-ECCE-App-Challenge-First-Runner-Up/
+
 ---
 ![app](/assets/img/20210519/certificate.png)
 

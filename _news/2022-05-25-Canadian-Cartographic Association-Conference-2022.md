@@ -1,6 +1,10 @@
 ---
 title: "Canadian Cartographic Association Conference 2022"
-layout: post
+layout: news
+date: 2022-05-25
+redirect_from:
+  - /Canadian-Cartographic Association-Conference-2022/
+
 ---
 ![PPT](/assets/img/20220525/ppt.png)
 

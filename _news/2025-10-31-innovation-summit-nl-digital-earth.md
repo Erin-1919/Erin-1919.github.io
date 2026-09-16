@@ -1,6 +1,10 @@
 ---
 title: "Innovation Summit - Talking to the Planet: Natural Language × Digital Earth for Disasters"
-layout: post
+layout: news
+date: 2025-10-31
+redirect_from:
+  - /innovation-summit-nl-digital-earth/
+
 ---
 
 ![talking-to-planet](/assets/img/20251031/ogc.jpg)

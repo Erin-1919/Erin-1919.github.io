@@ -1,6 +1,10 @@
 ---
 title: "Sharing DGGS-Based Methane Inventories at the 2025 CanCH4 Symposium"
-layout: post
+layout: news
+date: 2025-05-08
+redirect_from:
+  - /CanCH4-Symposium-Ottawa/
+
 ---
 ![canch4](/assets/img/20250508/canch4.jpg)
 
