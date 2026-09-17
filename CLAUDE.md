@@ -106,7 +106,7 @@ Resize to 1600px on the long edge before committing, and use JPEG for photograph
 
 ### Publication covers
 
-600×400 in `assets/images/covers/`. Papers use a figure from the paper; presentations and talks with slides use the deck's title page; everything else has none. `assets/images/empty_300x200.png` is the lazy-load placeholder and is referenced only from a Liquid template — a `_site`-only grep will not see it, so do not "clean it up".
+600×400 in `assets/images/covers/`. Papers use a figure from the paper; presentations and talks with slides use the deck's title page; everything else has none. **Always the whole figure, contain-fit with white padding — never a crop.** A centre-crop cuts subfigure labels, legends, and scale bars; every paper cover carried that defect until they were re-rendered. The canvas size is only for consistent row heights, since the template renders covers with no `object-fit`. `assets/images/empty_300x200.png` is the lazy-load placeholder and is referenced only from a Liquid template — a `_site`-only grep will not see it, so do not "clean it up".
 
 ### External scripts
 
