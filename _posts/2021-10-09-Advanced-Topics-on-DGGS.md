@@ -6,7 +6,7 @@ title: "Advanced Topics on DGGS"
 
 ## DGGS-Powered Datacubes
 
-According to Purss et al. [1], DGGS and geospatial datacubes are different views of the same foundational concept—**congruent geography** [2]. This means that all layers or themes are represented using the same spatial units, enabling consistent horizontal and vertical analysis.
+According to Purss et al. [1], DGGS and geospatial datacubes are different views of the same foundational concept: **congruent geography** [2]. This means that all layers or themes are represented using the same spatial units, enabling consistent horizontal and vertical analysis.
 
 A datacube built on a DGGS benefits from global consistency, resolution flexibility, and improved integration of multi-source datasets [1]. While early applications (e.g., [3, 4]) show promise, several areas still require deeper exploration:
 

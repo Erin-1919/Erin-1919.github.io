@@ -1,5 +1,5 @@
 ---
-title: "Esri Young Scholar Award — First Runner Up"
+title: "Esri Young Scholar Award – First Runner Up"
 layout: news
 date: 2022-04-27
 redirect_from:

@@ -26,7 +26,7 @@ Many gridded methane inventories adopt latitude–longitude grids (also known as
 Beyond the shortcomings of latitude–longitude grids, several broader spatial challenges persist:
 
 - **Ambiguous Spatial Scales**: There is often no clear and quantitative definition of what constitutes a “site,” “facility,” or “urban area,” making cross-scale analysis problematic.
-- **Multi-Source Data Integration**: Satellite, airborne, and ground-based observations must be fused to generate comprehensive inventories—but this is difficult without a common spatial framework.
+- **Multi-Source Data Integration**: Satellite, airborne, and ground-based observations must be fused to generate comprehensive inventories, but this is difficult without a common spatial framework.
 
 ## The Way Forward
 

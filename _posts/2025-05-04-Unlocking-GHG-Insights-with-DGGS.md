@@ -7,7 +7,7 @@ title: "Unlocking GHG Insights with DGGS"
 
 ## Integration of Multi-Source Data
 
-GHG monitoring relies on data from satellites, aircraft, ground-based sensors, and industry reports. A DGGS provides a spatially consistent framework to integrate these diverse data sources—regardless of resolution, origin, or format.
+GHG monitoring relies on data from satellites, aircraft, ground-based sensors, and industry reports. A DGGS provides a spatially consistent framework to integrate these diverse data sources, regardless of resolution, origin, or format.
 
 ## A Standard Data Bucket for Facility and Asset Management
 

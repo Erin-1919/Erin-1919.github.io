@@ -26,7 +26,7 @@ Scientists can use Digital Earth as a platform to communicate findings and educa
 
 ### Basic Areal Unit
 
-In ecological fields such as ornithology, agriculture, and wildlife biology, DGGS cells—especially hexagons—serve as equal-area, seamless analytical units. These have been used in bird migration studies to estimate species assemblages [16], summarize species richness [17], map presence or absence globally [18], analyze climate-migration associations [19], explore migration destinations [18], and predict future transatlantic routes under climate change [20]. In some cases, DGGS cells have also functioned as transitional analytical layers within study pipelines [21].
+In ecological fields such as ornithology, agriculture, and wildlife biology, DGGS cells, especially hexagons, serve as equal-area, seamless analytical units. These have been used in bird migration studies to estimate species assemblages [16], summarize species richness [17], map presence or absence globally [18], analyze climate-migration associations [19], explore migration destinations [18], and predict future transatlantic routes under climate change [20]. In some cases, DGGS cells have also functioned as transitional analytical layers within study pipelines [21].
 
 ### Data Integration
 

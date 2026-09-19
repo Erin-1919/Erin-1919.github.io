@@ -7,7 +7,7 @@ title: "Multi-resolution DEM Fusion"
 ### General steps of DEM fusion
 
 1. **Preprocessing**  
-Systematic differences in geo-referencing between two independent DEMs—both in planimetry and height—must be unified. This includes horizontal and vertical datum transformation, projection conversion, grid size standardization (via interpolation), and vertical offset adjustment.
+Systematic differences in geo-referencing between two independent DEMs, both in planimetry and height, must be unified. This includes horizontal and vertical datum transformation, projection conversion, grid size standardization (via interpolation), and vertical offset adjustment.
 
 2. **Repairing data quality issues**  
 Depending on the collection technique, land cover, and terrain type, DEMs may have voids, anomalies, or noise. Void-filling methods are applied to address these issues before fusion.

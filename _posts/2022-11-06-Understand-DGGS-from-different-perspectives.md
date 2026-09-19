@@ -23,7 +23,7 @@ These terms reflect the various functions a DGGS can fulfill in representing spa
 
 ## DGGS as a Data Framework
 
-DGGS is often used as a **uniform data framework**, especially when integrating heterogeneous datasets from multiple sources. Because all data points are aligned to a common spatial grid, DGGS enables seamless comparison, fusion, and aggregation of spatial data. This makes it particularly useful in environmental monitoring, national reporting, and multi-sensor data integration. Most applied research that leverages DGGS uses it in this way—to create spatial consistency across otherwise incompatible datasets.
+DGGS is often used as a **uniform data framework**, especially when integrating heterogeneous datasets from multiple sources. Because all data points are aligned to a common spatial grid, DGGS enables seamless comparison, fusion, and aggregation of spatial data. This makes it particularly useful in environmental monitoring, national reporting, and multi-sensor data integration. Most applied research that leverages DGGS uses it in this way: to create spatial consistency across otherwise incompatible datasets.
 
 ## DGGS as a Data Cube
 

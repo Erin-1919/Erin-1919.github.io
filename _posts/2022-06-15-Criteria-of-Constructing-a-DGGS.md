@@ -14,7 +14,7 @@ DGGS are defined by hierarchical tessellations. Each resolution level is produce
 
 ## Initial Polyhedral Tessellation
 
-DGGS are typically based on tessellations of regular polyhedra—such as the icosahedron, octahedron, hexahedron, dodecahedron, or tetrahedron—mapped to the Earth’s surface. The icosahedron is the most common due to its small face area and near-uniform geometry. Orientation of the polyhedron can vary based on use case, such as placing vertices in oceans or aligning face centers with the poles. The tessellation defines the framework for cell subdivision. This corresponds to Requirement 9.
+DGGS are typically based on tessellations of regular polyhedra (such as the icosahedron, octahedron, hexahedron, dodecahedron, or tetrahedron) mapped to the Earth’s surface. The icosahedron is the most common due to its small face area and near-uniform geometry. Orientation of the polyhedron can vary based on use case, such as placing vertices in oceans or aligning face centers with the poles. The tessellation defines the framework for cell subdivision. This corresponds to Requirement 9.
 
 ## Simple Geometry and Equal-Area Cells
 
