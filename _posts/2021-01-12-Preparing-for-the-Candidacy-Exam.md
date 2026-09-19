@@ -1,20 +1,22 @@
 ---
-title: "Doggone Candidacy Exam"
+title: "Preparing for the Candidacy Exam"
 date: 2021-01-12
+redirect_from:
+  - /Doggone-Candidacy-Exam/
 ---
 ![mindmap](/assets/img/20210112/mind_map_part.png)
 
-**I suppose no one would describe a PhD candidacy exam as fun. Mine took place on January 12, 2021. I survived, but the preparation was overwhelming and intense.**
+**A PhD candidacy exam is a demanding milestone. Mine took place on January 12, 2021. I passed, and the preparation taught me a great deal.**
 
-I began studying in mid-November, and the process stretched across two months, including the entire Christmas break. One of my examiners specialized in photogrammetry, a subject I had no background in, which meant I had to start from scratch. I spent weeks working through calculus and linear algebra to get up to speed. I am not here to complain but to encourage those who are preparing for a candidacy exam with a less-than-ideal academic match. I came into my PhD in Geomatics Engineering with a Master of Science in Forestry.
+I began studying in mid-November, and the process stretched across two months, including the entire Christmas break. One of my examiners specialized in photogrammetry, a subject that was new to me, so I started from the ground up. I spent weeks working through calculus and linear algebra to get up to speed. I share this to encourage anyone preparing for a candidacy exam outside their original field. I came into my PhD in Geomatics Engineering with a Master of Science in Forestry.
 
 Here are a few tips I would recommend based on my experience:
 
 - Start early and break your prep into small weekly goals.  
 - Temporarily pause your research to fully focus on the preparation. It helps to speak with your supervisor in advance.  
 - After going through the reading material provided by your examiners once, try to draw a framework that reflects what you have studied. You can also extend it with your own knowledge. I used a mind map for this and found it very helpful.  
-- Once the framework is ready, review it by speaking out loud or writing everything down without looking at the original texts. This will show you what you remember and what you need to revisit. I chose to write and ended up with over 30,000 words. It helped me organize my thoughts and logic.  
-- Do not isolate yourself. Try to hang out with friends, even if that means doing so virtually during a lockdown.  
+- Once the framework is ready, review it by speaking out loud or writing everything down without looking at the original texts. This will show you what you remember and what is worth revisiting. I chose to write and ended up with over 30,000 words. It helped me organize my thoughts and logic.  
+- Stay connected with friends, even if that means meeting virtually during a lockdown.  
 - Most importantly, remember that your goal is to pass, not to be perfect. Aim for 60 percent, not 100.
 
 I have organized the documents and mind map I created during the prep, and I hope they can help others in the same situation. I also shared my experience on the Esri ECCE blog:  
