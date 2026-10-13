@@ -2,13 +2,17 @@
 title:          "Harmonized Global-to-Regional Gridded Methane Inventories in a Discrete Global Grid Framework"
 date:           2026-01-01
 selected:       false
+cover:          /assets/images/covers/cover_harmonized_methane.jpg
 category:       paper
 pub:            "ISPRS International Journal of Geo-Information"
 pub_date:       "2026"
-pub_post:       ", accepted."
-abstract: "Heterogeneous gridded environmental datasets are increasingly used in Earth system modeling, atmospheric studies, and spatial analytics, but differences in coordinate reference systems, spatial resolutions, sector classifications, reporting units, and data formats hinder interoperability and cross-dataset comparison. Conventional latitude-longitude grids further introduce unequal cell areas that bias aggregation and regional comparison. This study investigates whether a Discrete Global Grid System (DGGS) can serve as a unified spatial framework for harmonizing heterogeneous emission inventories across scales. Using methane as a demanding case, we transformed 13 open-access gridded inventories spanning global to sub-national domains into the rearranged Hierarchical Equal Area isoLatitude Pixelization (rHEALPix) DGGS through an area-weighted, mass-preserving workflow, and harmonized their spatial structure, sector classifications, and reporting units under a common sector classification and per-cell mass unit. Validation showed that the conversion preserved original emission totals, with negligible differences for continental, national, and regional inventories and differences within 2% to 3% for global inventories. The harmonized representation enabled direct, like-for-like comparison of otherwise incompatible products on a single equal-area grid. The approach is reproducible and extensible to other gridded spatial data, providing an interoperable foundation for cross-scale geospatial analysis."
+pub_post:       ", 15(10), 466."
+abstract: "Heterogeneous gridded environmental datasets are increasingly used in Earth system modeling, atmospheric studies, and spatial analytics, but differences in coordinate reference systems, spatial resolutions, sector classifications, reporting units, and data formats hinder interoperability and cross-dataset comparison. Conventional latitude–longitude grids further introduce unequal cell areas that bias aggregation and regional comparison. This study presents a framework for harmonizing heterogeneous gridded datasets within a Discrete Global Grid System (DGGS), using explicit grid-selection criteria, area-weighted mass-preserving conversion, cross-scheme sector mapping, and five measurable evaluation criteria. Using methane as a demanding case, we transformed 13 open-access inventories from global to subnational scales into the rearranged Hierarchical Equal-Area isoLatitude Pixelization (rHEALPix) DGGS, harmonizing 324 source variables from five classification schemes and standardizing values to megagrams per year per cell. Conversion preserved emission totals, with negligible differences for continental, national, and regional inventories and differences within 2% to 3% for global inventories. Cell area is constant by construction, aggregation along the hierarchy is exact, and inventories at different resolutions can be compared after aggregation. The framework is reproducible and extensible to other gridded spatial data."
 authors:
 - "Li, M.E."
 - "Gao, M."
 - "Liang, S.H.L."
+links:
+  DOI: https://doi.org/10.3390/ijgi15100466
+  PDF: /assets/pdf/papers/2026_ISPRS-IJGI_Li_HarmonizedMethaneInventories_published.pdf
 ---
