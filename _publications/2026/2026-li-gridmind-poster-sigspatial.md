@@ -1,6 +1,6 @@
 ---
 title:          "GridMind: A DGGS-Grounded Multi-Agent System for Spatial Reasoning"
-date:           2026-11-03
+date:           2026-11-04
 selected:       false
 category:       presentation
 cover:          /assets/images/covers/slide_2026-li-gridmind-poster-sigspatial.jpg
